@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="23"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="192287675416391"
+    token="6253593108210527688"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="614" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="511" />
+    <task
+        name="verifier"
+        duration="266" />
+
+    <artifact
+        location="C:\Users\san\AndroidStudioProjects\Raktar_atvetel3_inputbox_button_ok\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="192287675416391"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\san\AndroidStudioProjects\Raktar_atvetel3_inputbox_button_ok\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

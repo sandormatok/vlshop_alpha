@@ -1,0 +1,4 @@
+#Mon Oct 30 09:47:52 CET 2017
+base.0=C\:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

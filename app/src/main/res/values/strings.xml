@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">A kamera nem elérhető!</string>
+    <string name="no_camera_permission">Ez az app nem tud elindulni ezen a készüléken. Kamera jogosultságra van szükség!</string>
+    <string name="low_storage_error">Az arcfelismerő nem tölthető le, mert kevés a hely!</string>
+    <string name="title_activity_main">VL-SCAN Raktár</string>
+    <string name="barcode_header"></string>
+    <string name="read_barcode">BEOLVASÁS</string>
+    <string name="enter_barcode">BEÍRÁS</string>
+    <string name="auto_focus">Autófókusz</string>
+    <string name="use_flash">Vaku</string>
+    <string name="barcode_success">Vonalkód beolvasva!</string>
+    <string name="barcode_failure">Nincs vonalkód!</string>
+    <string name="barcode_error">"Hiba a vonalkód olvasása közben: %1$s"</string>
+    <string name="results_marka">\nMárka:\t</string>
+    <string name="results_termek">\nTermék:\t</string>
+    <string name="results_ar">\nKészlet:\t</string>
+    <string name="boltok_prompt">Válassz boltot!</string>
+    <string name="spinner_prompt">Válassz ki egy üzletet!</string>
+    <string name="multiprocessor">Gyors mód</string>
+    multiprocessor
+</resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.google.android.gms.oem.raktar.atvetel.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:text="Nyomdj meg alul egy gombot..."
+        android:layout_height="30dp"
+        android:background="#b40027"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:minLines="4"
+        android:textSize="24sp"
+        android:id="@+id/barcode_value2"
+        android:layout_below="@+id/barcode_value"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignRight="@+id/status_message"
+        android:layout_alignEnd="@+id/status_message"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/barcode_value"
+        android:minLines="4"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/status_message"
+        android:layout_alignEnd="@+id/status_message"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/white" />
+
+    <View android:id="@+id/fakeView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="@string/read_barcode"
+        android:id="@+id/read_barcode"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:background="@android:color/darker_gray"
+        android:layout_alignRight="@+id/fakeView"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="2dp"
+        android:layout_alignEnd="@+id/fakeView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="@string/enter_barcode"
+        android:id="@+id/enter_barcode"
+        android:textSize="20sp"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:background="@android:color/darker_gray"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/fakeView"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_toEndOf="@+id/fakeView" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/barcode_header"
+        android:textSize="32sp"
+        android:layout_marginTop="33dp"
+        android:id="@+id/status_message"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/read_barcode"
+        android:layout_alignStart="@+id/read_barcode" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/use_flash"
+        android:id="@+id/use_flash"
+
+        android:checked="false"
+        android:layout_above="@+id/enter_barcode"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="18dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_focus"
+        android:id="@+id/auto_focus"
+        android:checked="false"
+        android:layout_above="@+id/read_barcode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp" />
+
+</RelativeLayout>

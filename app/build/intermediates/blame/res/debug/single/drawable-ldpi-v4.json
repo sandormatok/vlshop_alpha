@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\common_ic_googleplayservices.png",
+        "source": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
+    },
+    {
+        "merged": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\common_ic_googleplayservices.png",
+        "source": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
+    }
+]

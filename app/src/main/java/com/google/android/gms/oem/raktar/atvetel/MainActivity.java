@@ -20,6 +20,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -202,6 +203,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode == RC_BARCODE_CAPTURE) {
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
+                    final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound2);
+
+                    mp.start();
 
                     String barcode3 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     //Barcode barcode2 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);

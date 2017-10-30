@@ -26,6 +26,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -195,10 +196,10 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
             @Override
             public void receiveDetections(Detector.Detections<Barcode> detections) {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
-                //MediaPlayer mp = MediaPlayer.create(this, R.raw.sound);
                 if (barcodes.size() != 0) {
+               /*     final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound);
 
-                  //  mp.start();
+                    mp.start(); */
                     barcode3 = barcodes.valueAt(0).displayValue;
                     Log.w(TAG, barcode3);
                     Intent data = new Intent();

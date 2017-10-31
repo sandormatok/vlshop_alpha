@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-
 //>>>Ez jó leket hogy hova kattint...     de inkább feljebb kell több view-et definiálni
 
     /**
@@ -127,7 +126,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      *
      * @param v The view that was clicked.
      */
-
 
 //>>>Gombok megnomására más más view
 

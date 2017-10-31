@@ -19,5 +19,4 @@
     <string name="boltok_prompt">Válassz boltot!</string>
     <string name="spinner_prompt">Válassz ki egy üzletet!</string>
     <string name="multiprocessor">Gyors mód</string>
-    multiprocessor
 </resources>

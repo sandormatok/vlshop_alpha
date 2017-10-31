@@ -16,12 +16,12 @@
         "source": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
         "merged": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
         "source": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
@@ -92,12 +92,12 @@
         "source": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
         "merged": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
         "source": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
@@ -380,8 +380,16 @@
         "source": "C:\\Users\\san\\AndroidStudioProjects\\Raktar_atvetel3_inputbox_button_ok\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
+        "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
         "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_login.xml",
+        "source": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\src\\main\\res\\layout\\content_login.xml"
     },
     {
         "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",

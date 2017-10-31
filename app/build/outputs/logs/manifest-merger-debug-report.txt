@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:2:1-47:12
+ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:2:1-55:12
 	package
 		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:3:5-56
 		INJECTED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml
@@ -44,7 +44,7 @@ ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:16:22-69
 application
-ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:18:5-45:19
+ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:18:5-53:19
 MERGED from [com.android.support:design:24.2.1] C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:24.2.1] C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
@@ -90,27 +90,33 @@ ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:30:13-70
 activity#com.google.android.gms.oem.raktar.atvetel.MainActivity
-ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:33:9-41:20
+ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:33:9-36:20
 	android:label
 		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:35:13-56
 	android:name
 		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:34:13-41
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:36:13-40:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:37:17-69
-	android:name
-		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:37:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:39:17-77
-	android:name
-		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:39:27-74
 activity#com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity
-ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:42:9-44:60
+ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:38:9-40:60
+	android:label
+		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:40:13-57
+	android:name
+		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:39:13-51
+activity#com.google.android.gms.oem.raktar.atvetel.LoginActivity
+ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:42:9-52:20
 	android:label
 		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:44:13-57
 	android:name
-		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:43:13-51
+		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:43:13-42
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:47:13-50:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:48:17-69
+	android:name
+		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:48:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:49:17-77
+	android:name
+		ADDED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml:49:27-74
 uses-sdk
 INJECTED from C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.2.1] C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:20:5-43

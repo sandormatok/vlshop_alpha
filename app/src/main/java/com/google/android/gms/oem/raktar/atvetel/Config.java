@@ -19,4 +19,5 @@ public class Config {
     public static final String KEY_NETTO = "nettoar";
     public static final String KEY_AFA = "afa";
     public static final String KEY_AKCIO = "akcios";
+    public static final String URL_FOR_LOGIN = "http://webserver.vleuro.hu/raktar_keszlet.php?";
 }

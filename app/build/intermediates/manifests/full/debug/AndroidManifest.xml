@@ -39,15 +39,21 @@
         <activity
             android:name="com.google.android.gms.oem.raktar.atvetel.MainActivity"
             android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity"
+            android:label="Válassz ki egy vonalkódot..." />
+        <activity
+            android:name="com.google.android.gms.oem.raktar.atvetel.LoginActivity"
+            android:label="@string/title_activity_login" >
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity"
-            android:label="Válassz ki egy vonalkódot..." />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

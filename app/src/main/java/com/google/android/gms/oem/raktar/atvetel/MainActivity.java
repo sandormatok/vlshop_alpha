@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode == RC_BARCODE_CAPTURE) {
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
-                    final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound2);
+                    final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound3);
 
                     mp.start();
 

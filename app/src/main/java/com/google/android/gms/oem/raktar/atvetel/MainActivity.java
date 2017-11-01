@@ -26,6 +26,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
@@ -53,6 +54,7 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
+import static android.R.attr.id;
 import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
 import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
 
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView barcodeValue;
     private TextView barcodeValue2;
     String barcode = "barcode";
+    String globalMainURL = "";
 
     private static final int RC_BARCODE_CAPTURE = 9001;
     private static final String TAG = "BarcodeMain";
@@ -248,11 +251,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         }
 
-        String url = Config.DATA_URL + id + "&bkod=" + boltnev2;
+        //String url = Config.DATA_URL + id + "&bkod=" + boltnev2;
 
-        if (boltnev.equals("Raktár")) {
-            url = DATA_RAKTAR_KESZLET_URL + id;
-        }
+        //if (boltnev.equals("Raktár")) {
+            url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod=000010";
+        globalMainURL = url;
+        //}
+
+        Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -269,7 +276,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+// VONALKOD!!!
         barcodeInfo.setText(id);
+        //barcodeInfo.setText(globalMainURL);
     }
 
 
@@ -306,8 +315,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             akcios = termekData.getBoolean(Config.KEY_AKCIO);
 
 
-
-
           /*  ar = termekData.getString(Config.KEY_KESZLET);
             kinalo = termekData.getString(Config.KEY_KINALO);
             karton = termekData.getString(Config.KEY_KARTON);
@@ -317,7 +324,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
+/*
+        Toast toast= Toast.makeText(getApplicationContext(),marka + "; " + termek, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER,0,0); toast.show();
+*/
         //textViewResult.setText(getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek);
         //textViewResult.setText(getString(R.string.results_vonalkod)+barcode+getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek);
 

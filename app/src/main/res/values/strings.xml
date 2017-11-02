@@ -10,6 +10,7 @@
     <string name="enter_barcode">BEÍRÁS</string>
     <string name="auto_focus">Autófókusz</string>
     <string name="use_flash">Vaku</string>
+    <string name="remote_DB">Távoli adatbázis</string>
     <string name="barcode_success">Vonalkód beolvasva!</string>
     <string name="barcode_failure">Nincs vonalkód!</string>
     <string name="barcode_error">"Hiba a vonalkód olvasása közben: %1$s"</string>
@@ -19,5 +20,5 @@
     <string name="boltok_prompt">Válassz boltot!</string>
     <string name="spinner_prompt">Válassz ki egy üzletet!</string>
     <string name="multiprocessor">Gyors mód</string>
-    <string name="title_activity_login">Bejelentkezés</string>
+    <string name="title_activity_login">VL-Scan Raktár</string>
 </resources>

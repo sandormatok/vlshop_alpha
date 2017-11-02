@@ -8,6 +8,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -22,17 +23,21 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.common.api.CommonStatusCodes;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.net.InetAddress;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
+import static android.R.attr.data;
 import static android.R.attr.password;
+import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.BarcodeObject;
 import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
 import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
 import static com.google.android.gms.oem.raktar.atvetel.Config.URL_FOR_LOGIN;
@@ -46,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnlogin;
     private static final String TAG = "LoginActivity";
     private String globalVevokod, globalPassword = "";
+    Boolean adminMode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +62,11 @@ public class LoginActivity extends AppCompatActivity {
 
 //san
         loginInputVevokod = (EditText) findViewById(R.id.input_vevokod);
+        loginInputVevokod.setInputType(InputType.TYPE_CLASS_NUMBER);
+
         loginInputPassword = (EditText) findViewById(R.id.input_password);
+        loginInputPassword.setInputType(InputType.TYPE_CLASS_NUMBER);
+
         btnlogin = (Button) findViewById(R.id.btn_login);
 
         // Progress dialog
@@ -76,17 +86,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser( final String vevokod, final String password) {
-        // Tag used to cancel the request
-//
-        //String cancel_req_tag = "login";
+
+        //olyan gyors, hogy nem kell
         //progressDialog.setMessage("Bejelentkezés folyamatban...");
-
-
-/*
-        progressDialog.setMessage(vevokod + ", " + password);
-        showDialog();
-*/
-
 
 /* beírt adatok kiiratása
         Toast toast= Toast.makeText(getApplicationContext(),vevokod + ", " + password, Toast.LENGTH_LONG);
@@ -95,7 +97,25 @@ public class LoginActivity extends AppCompatActivity {
 
         globalVevokod = vevokod;
         globalPassword = password;
-        getData2();
+
+        if (globalVevokod.equals("11111111")) {
+            if (globalPassword.equals("99999999")) {
+
+                Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
+                mainIntent.putExtra("adminMode", true);
+                startActivity(mainIntent);
+                setResult(CommonStatusCodes.SUCCESS, mainIntent);
+                finish();
+            }
+        }
+
+//        Intent data = new Intent();
+//        data.putExtra(BarcodeObject, barcode3);
+
+        if(!adminMode){
+            getData2();
+        }
+
     }
 
 //
@@ -104,26 +124,8 @@ public class LoginActivity extends AppCompatActivity {
         //final TextView barcodeInfo = (TextView) findViewById(R.id.status_message);
 
         String id = "5997076721852";
-
-
-//ha az id-t nem kell URL encode-olni, akkor a vevokodot sem!
-
-/*        try {
-
-            String encodedString = URLEncoder.encode(vevokod, "UTF-8");
-            boltnev2 = encodedString;
-            Log.d("TEST", encodedString);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-*/
-
-//bolti URL nem kell most
-        //String url = Config.DATA_URL + id + "&bkod=" + boltnev2;
-
-        //if (boltnev.equals("Raktár")) {
         String url = DATA_RAKTAR_KESZLET_URL + id + "&vkod=" + globalVevokod;
-        //}
+
 
 /* toast
         Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
@@ -151,27 +153,8 @@ public class LoginActivity extends AppCompatActivity {
     //>>>JSON feldolgozása, adatok kiirasa
     private void showJSON(String response) {
 
-        //final TextView barcodeInfo = (TextView) findViewById(R.id.code_info);
-        //final TextView barcodeInfo = (TextView) findViewById(R.id.status_message);
-        //final TextView code_results = (TextView) findViewById(R.id.read_barcode);
-
-        /*
-        String marka = "";
-        String termek = "";
-        String ar = "";
-        String menny = "";
-        Double netto = 0.00;
-        Double afa = 0.00;
-        Boolean akcios = false;
-        */
-
-
-        /* String kinalo = "";
-        String karton = "";
-        String raklap = ""; */
-
-        //Double netto = 0.00;
-        String jujel = "";
+           String jujel = "";
+        String vevonev = "";
 
 
 //Válasz adatok tárolása
@@ -181,51 +164,29 @@ public class LoginActivity extends AppCompatActivity {
             JSONObject termekData2 = result2.getJSONObject(0);
             //netto = termekData.getDouble(Config.KEY_NETTO);
              jujel = termekData2.getString(Config.KEY_JUJEL);
+             vevonev = termekData2.getString(Config.KEY_VEVONEV);
 
-            hideDialog();
+            //hideDialog();
 
-/* toast
-            Toast toast= Toast.makeText(getApplicationContext(),jujel, Toast.LENGTH_LONG);
+/*
+            Toast toast= Toast.makeText(getApplicationContext(),vevonev, Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM,0,0); toast.show();
 */
-          /*  ar = termekData.getString(Config.KEY_KESZLET);
-            kinalo = termekData.getString(Config.KEY_KINALO);
-            karton = termekData.getString(Config.KEY_KARTON);
-            raklap = termekData.getString(Config.KEY_RAKLAP); */
 
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        //textViewResult.setText(getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek);
-        //textViewResult.setText(getString(R.string.results_vonalkod)+barcode+getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek);
-
-        /*
-        if (marka.equals("null")) {
-            //barcodeValue.setTextColor(0xFFFF033A);
-            barcodeValue.setText("A VONALKÓD NINCS A RAKTÁRI RENDSZERBEN");
-            barcodeValue2.setText("");
-        } else {
-            Double brutto = 0.00;
-
-            brutto = netto * (afa + 100) / 100;
-            //barcodeValue.setTextColor(0xFF00DDFF);
-            barcodeValue.setText(marka + "\n" + termek);
-            //barcodeValue.setText(boltnev);
-            barcodeValue2.setText("Nettó: " + netto + " Ft" + "\nBruttó: " + brutto + " Ft" + "\nRaktáron: " + menny);
-        }
-
-        */
-
-        // beírt adatok kiiratása
-
-
 
 
         if (globalPassword.equals(jujel)){
         Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
+            mainIntent.putExtra("vevoneve", vevonev);
             startActivity(mainIntent);
+            setResult(CommonStatusCodes.SUCCESS, mainIntent);
+
+            finish();
         } else {
             Toast toast= Toast.makeText(getApplicationContext(),"Hibás vevőkód, vagy jelszó!", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
@@ -250,15 +211,4 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
-
-
-
-
- //san közé kell a cucc
 }

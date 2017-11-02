@@ -615,13 +615,14 @@
     <string name="ok">OK</string>
     <string name="permission_camera_rationale">A kamera nem elérhető!</string>
     <string name="read_barcode">BEOLVASÁS</string>
+    <string name="remote_DB">Távoli adatbázis</string>
     <string name="results_ar">\nKészlet:\t</string>
     <string name="results_marka">\nMárka:\t</string>
     <string name="results_termek">\nTermék:\t</string>
     <string name="search_menu_title">Search</string>
     <string name="spinner_prompt">Válassz ki egy üzletet!</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="title_activity_login">Bejelentkezés</string>
+    <string name="title_activity_login">VL-Scan Raktár</string>
     <string name="title_activity_main">VL-SCAN Raktár</string>
     <string name="use_flash">Vaku</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

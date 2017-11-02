@@ -17,6 +17,7 @@
 package com.google.android.gms.oem.raktar.atvetel;
 
 import android.app.AlertDialog;
+import android.app.Application;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -32,6 +33,7 @@ import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,6 +57,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 import static android.R.attr.id;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
 import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
 
@@ -69,14 +72,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private CompoundButton autoFocus;
     private CompoundButton useFlash;
-
+    private CompoundButton remoteDB;
+    Boolean globaladminMode = false;
 
 
     private TextView statusMessage;
     private TextView barcodeValue;
     private TextView barcodeValue2;
+    private TextView toptextView;
     String barcode = "barcode";
-    String globalMainURL = "";
+    String globalvevoNev, globalMainURL = "";
+
 
     private static final int RC_BARCODE_CAPTURE = 9001;
     private static final String TAG = "BarcodeMain";
@@ -87,8 +93,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String manualInput = "NO";
 
     //class members
-    String countries[] = {"Raktár", "Erzsébet 1.", "Alkotás", "Bartók 71.", "Békéscsaba 1.", "Békéscsaba 2.", "Bicske", "Csepel", "Csongrád", "Damjanich", "Debrecen 1.", "Debrecen 2.", "Dékán", "Dunaújváros", "Erzsébet 2.", "Fehérvári út", "Ferenc Krt.", "Gyula", "Harminckettesek", "Hattyú", "K?rösi", "Karcag", "Kecskemét 1.", "Kecskemét 2.", "Kisk?rös", "Környe", "Mester u.", "Mez?túr", "Nagyk?rös", "Orosháza", "Oroszlány 1.", "Oroszlány 2.", "Pablo Neruda", "Paks", "Pécs 1.", "Pécs 2", "Piliscsaba", "Püspökladány", "Szeged 1.", "Szeged 2.", "Tatabánya 1.", "Tatabánya 2.", "Tatabánya 3.", "Teréz krt.", "Tolna", "Újhegyi stny.", "Újpest"};
-    ArrayAdapter<String> adapter;
+    //String countries[] = {"Raktár", "Erzsébet 1.", "Alkotás", "Bartók 71.", "Békéscsaba 1.", "Békéscsaba 2.", "Bicske", "Csepel", "Csongrád", "Damjanich", "Debrecen 1.", "Debrecen 2.", "Dékán", "Dunaújváros", "Erzsébet 2.", "Fehérvári út", "Ferenc Krt.", "Gyula", "Harminckettesek", "Hattyú", "K?rösi", "Karcag", "Kecskemét 1.", "Kecskemét 2.", "Kisk?rös", "Környe", "Mester u.", "Mez?túr", "Nagyk?rös", "Orosháza", "Oroszlány 1.", "Oroszlány 2.", "Pablo Neruda", "Paks", "Pécs 1.", "Pécs 2", "Piliscsaba", "Püspökladány", "Szeged 1.", "Szeged 2.", "Tatabánya 1.", "Tatabánya 2.", "Tatabánya 3.", "Teréz krt.", "Tolna", "Újhegyi stny.", "Újpest"};
+    //ArrayAdapter<String> adapter;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -107,11 +113,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         statusMessage = (TextView) findViewById(R.id.status_message);
         barcodeValue = (TextView) findViewById(R.id.barcode_value);
         barcodeValue2 = (TextView) findViewById(R.id.barcode_value2);
+        toptextView = (TextView) findViewById(R.id.toptextView);
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
         useFlash = (CompoundButton) findViewById(R.id.use_flash);
+        remoteDB = (CompoundButton) findViewById(R.id.remote_db);
+
+
+
         autoFocus.setChecked(true);
 
+        autoFocus.setVisibility(View.GONE);
+        remoteDB.setVisibility(View.GONE);
+
         // Application of the Array to the Spinner
+
+
+        Intent intent = getIntent();
+        if(intent.hasExtra("adminMode")) {
+            Boolean adminMode = getIntent().getExtras().getBoolean("adminMode");
+            if(adminMode) {
+                    remoteDB.setVisibility(View.VISIBLE);
+                    Toast toast = Toast.makeText(getApplicationContext(), "!!! ADMIN MÓD !!!  ", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.BOTTOM, 0, 100);
+                    toast.show();
+                    globaladminMode = adminMode;
+
+                final TextView barcodeInfo = (TextView) findViewById(R.id.status_message);
+                    barcodeInfo.setText("ADMIN MÓD!\n Távoli adatbázis elérhető...");
+            }
+        }
+
+
 
 //>>>Itt adom meg, hogy melyik gombra melyig view jelenjen meg... (layout.xml)
 
@@ -209,6 +241,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     mp.start();
 
+                    String vevonev = data.getExtras().getString("vevoneve");
+                    globalvevoNev = vevonev;
+                    toptextView.setText(globalvevoNev);
+//
+                  Toast toast= Toast.makeText(getApplicationContext(),vevonev, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER,0,0); toast.show();
+
+
+
                     String barcode3 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     //Barcode barcode2 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     //statusMessage.setText(barcode2.displayValue);
@@ -251,15 +292,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         }
 
-        //String url = Config.DATA_URL + id + "&bkod=" + boltnev2;
 
-        //if (boltnev.equals("Raktár")) {
+        if (remoteDB.isChecked()) {
+            url = Config.DATA_RAKTAR_KESZLET_REMOTE_URL + id + "&vkod=000010";
+        } else {
+
             url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod=000010";
-        globalMainURL = url;
-        //}
+        }
 
-        Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER,0,0); toast.show();
+        globalMainURL = url;
+
+
+        //Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
+        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -340,9 +385,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             brutto = netto * (afa + 100) / 100;
             //barcodeValue.setTextColor(0xFF00DDFF);
+
+/*
+            double roundTwoDecimals(double d)
+            {
+                DecimalFormat twoDForm = new DecimalFormat("#.##");
+                return Double.valueOf(twoDForm.format(d));
+            }
+  */
+// TODO: Lokalizálni kell a parancsot, mert angolul kiakadhat
+            String bruttoRound = String.format("%.2f", brutto);
+
             barcodeValue.setText(marka + "\n" + termek);
             //barcodeValue.setText(boltnev);
-            barcodeValue2.setText("Nettó: " + netto + " Ft" + "\nBruttó: " + brutto + " Ft" + "\nRaktáron: " + menny);
+            barcodeValue2.setText("Nettó: " + netto + " Ft" + "\nBruttó: " + bruttoRound + " Ft" + "\nRaktáron: " + menny);
+
         }
         //getSupportActionBar().setTitle(ar+"db ("+termek+")");
         //sleepAwhile();

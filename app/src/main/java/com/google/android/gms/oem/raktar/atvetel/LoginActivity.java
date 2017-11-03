@@ -40,6 +40,7 @@ import static android.R.attr.data;
 import static android.R.attr.password;
 import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.BarcodeObject;
 import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
+import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_AKCIO_URL;
 import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
 import static com.google.android.gms.oem.raktar.atvetel.Config.URL_FOR_LOGIN;
 
@@ -123,6 +124,7 @@ public class LoginActivity extends AppCompatActivity {
         String id = "5997076721852";
         String url = DATA_RAKTAR_KESZLET_URL + id + "&vkod=" + globalVevokod;
 
+//        String akcurl = Config.DATA_RAKTAR_AKCIO_URL
 
 /* toast
         Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
@@ -150,8 +152,10 @@ public class LoginActivity extends AppCompatActivity {
     //>>>JSON feldolgozása, adatok kiirasa
     private void showJSON(String response) {
 
-           String vevonev,jujel = "";
-        vevonev = "Teszt";
+           String aroszt = "";
+                   String vevonev = "";
+        String jujel = "";
+
 
 
 //Válasz adatok tárolása
@@ -161,6 +165,7 @@ public class LoginActivity extends AppCompatActivity {
             JSONObject termekData2 = result2.getJSONObject(0);
             jujel = termekData2.getString(Config.KEY_JUJEL);
             vevonev = termekData2.getString(Config.KEY_VEVONEV);
+            aroszt = termekData2.getString(Config.KEY_AROSZT);
 
             //hideDialog();
 
@@ -173,10 +178,8 @@ public class LoginActivity extends AppCompatActivity {
         Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
 
 
-
-
-
             mainIntent.putExtra("intentvevonev", vevonev);
+            mainIntent.putExtra("intentaroszt", aroszt);
 
             setResult(CommonStatusCodes.SUCCESS, mainIntent);
             startActivity(mainIntent);

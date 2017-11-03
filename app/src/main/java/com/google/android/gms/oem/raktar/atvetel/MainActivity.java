@@ -79,8 +79,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView barcodeValue2;
     private TextView barcodeInfo;
     private TextView toptextView;
+
+    private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52;
+
+
     String barcode = "barcode";
     String globalMainURL = "";
+    String bruttoRound,nettoRound;
+    String globalAroszt;
 
     private static final int RC_BARCODE_CAPTURE = 9001;
     private static final String TAG = "BarcodeMain";
@@ -105,11 +111,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //getSupportActionBar().setTitle("Raktári Készletellenörző");
-        statusMessage = (TextView) findViewById(R.id.status_message);
-        barcodeValue = (TextView) findViewById(R.id.barcode_value);
-        barcodeValue2 = (TextView) findViewById(R.id.barcode_value2);
+        //statusMessage = (TextView) findViewById(R.id.status_message);
+        //barcodeValue = (TextView) findViewById(R.id.barcode_value);
+        //barcodeValue2 = (TextView) findViewById(R.id.barcode_value2);
         toptextView = (TextView) findViewById(R.id.toptextView);
-        barcodeInfo = (TextView) findViewById(R.id.status_message);
+        //barcodeInfo = (TextView) findViewById(R.id.status_message);
+
+        //tablerows
+        tableRow02 = (TextView) findViewById(R.id.table02);
+        tableRow12 = (TextView) findViewById(R.id.table12);
+        tableRow22 = (TextView) findViewById(R.id.table22);
+        tableRow32 = (TextView) findViewById(R.id.table32);
+        tableRow42 = (TextView) findViewById(R.id.table42);
+        tableRow52 = (TextView) findViewById(R.id.table52);
+
+
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
         useFlash = (CompoundButton) findViewById(R.id.use_flash);
         remoteDB = (CompoundButton) findViewById(R.id.remote_db);
@@ -119,29 +135,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         remoteDB.setVisibility(View.GONE);
 
         Intent intent = getIntent();
-/*
-        String newString;
-        if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if(extras == null) {
-                newString= null;
-            } else {
-                newString= extras.getString("intentvevonev");
-            }
-        } else {
-            newString= (String) savedInstanceState.getSerializable("intentvevonev");
-        }
 
-*/
         if(intent.hasExtra("intentvevonev")) {
             String vevonev = getIntent().getExtras().getString("intentvevonev");
-            toptextView.setText("Vevő: " + vevonev);
+            String aroszt = getIntent().getExtras().getString("intentaroszt");
+            toptextView.setText("Vevő: " + vevonev + "; " + aroszt);
+            globalAroszt = aroszt;
         }
 
         if(intent.hasExtra("adminMode")) {
             Boolean adminMode = getIntent().getExtras().getBoolean("adminMode");
                 if(adminMode) {
                     remoteDB.setVisibility(View.VISIBLE);
+                    remoteDB.setChecked(true);
                     globaladminMode = adminMode;
                     toptextView.setText("ADMIN MÓD!\n Távoli adatbázis elérhető...");
             }
@@ -245,15 +251,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     String barcode3 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     //Barcode barcode2 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     //statusMessage.setText(barcode2.displayValue);
-                    statusMessage.setText(barcode3);
+                    //statusMessage.setText(barcode3);
                     getData();
                     Log.d(TAG, "Vonalkód (MainActivity) " + barcode3);
                 } else {
-                    statusMessage.setText(R.string.barcode_failure);
+                    tableRow22.setText(R.string.barcode_failure);
                     Log.d(TAG, "No barcode captured, intent data is null");
                 }
             } else {
-                statusMessage.setText(String.format(getString(R.string.barcode_error),
+                tableRow22.setText(String.format(getString(R.string.barcode_error),
                         CommonStatusCodes.getStatusCodeString(resultCode)));
             }
         } else {
@@ -281,6 +287,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } */
+
+        String akcurl = Config.DATA_RAKTAR_AKCIO_URL + globalAroszt;
+
 
         //String url = Config.DATA_URL + id + "&bkod=" + boltnev2;
         if (remoteDB.isChecked()) {
@@ -311,7 +320,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 // VONALKOD!!!
-        barcodeInfo.setText(id);
+        tableRow02.setText(id);
         //barcodeInfo.setText(globalMainURL);
     }
 
@@ -350,8 +359,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             akcios = termekData.getBoolean(Config.KEY_AKCIO);
             vevonev = termekData.getString(Config.KEY_VEVONEV);
 
-        Toast toast= Toast.makeText(getApplicationContext(),vevonev, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER,0,0); toast.show();
+        //Toast toast= Toast.makeText(getApplicationContext(),vevonev, Toast.LENGTH_LONG);
+        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -365,8 +374,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (marka.equals("null")) {
             //barcodeValue.setTextColor(0xFFFF033A);
-            barcodeValue.setText("A VONALKÓD NINCS A RAKTÁRI RENDSZERBEN");
-            barcodeValue2.setText("");
+            tableRow22.setText("A VONALKÓD NINCS A RAKTÁRI RENDSZERBEN");
+
         } else {
             Double brutto = 0.00;
 
@@ -380,12 +389,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return Double.valueOf(twoDForm.format(d));
             }
   */
-            String bruttoRound = String.format("%.2f", brutto);
+            bruttoRound = String.format("%.2f", brutto);
+            nettoRound = String.format("%.2f", netto);
 
-            barcodeValue.setText(marka + "\n" + termek);
+         //   barcodeValue.setText(marka + "\n" + termek);
             //barcodeValue.setText(boltnev);
-            barcodeValue2.setText("Nettó: " + netto + " Ft" + "\nBruttó: " + bruttoRound + " Ft" + "\nRaktáron: " + menny);
+         //   barcodeValue2.setText("Nettó: " + netto + " Ft" + "\nBruttó: " + bruttoRound + " Ft" + "\nRaktáron: " + menny);
+            tableRow12.setText(marka);
+            tableRow22.setText(termek);
+            tableRow32.setText(nettoRound + " Ft");
+            tableRow42.setText(bruttoRound + " Ft");
+            tableRow52.setText(menny);
         }
+
+
         //getSupportActionBar().setTitle(ar+"db ("+termek+")");
         //sleepAwhile();
         //textViewResult.setText(getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek+ getString(R.string.results_ar)+ ar);

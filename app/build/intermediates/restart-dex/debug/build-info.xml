@@ -5,33 +5,64 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="154429372239804"
+    timestamp="172269202464436"
     token="5787902044833624353"
-    verifier="MANIFEST_FILE_CHANGE" >
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="2341" />
+        duration="3279" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="105" />
+        duration="473" />
     <task
         name="verifier"
-        duration="6" />
+        duration="71" />
 
     <artifact
-        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="154429372239804"
-        verifier="MANIFEST_FILE_CHANGE" >
+        timestamp="168526779548264"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="172269202464436"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

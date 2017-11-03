@@ -5,46 +5,33 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="89730450000831"
+    timestamp="154429372239804"
     token="5787902044833624353"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="MANIFEST_FILE_CHANGE" >
 
     <task
         name="javac"
-        duration="974" />
+        duration="2341" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="50" />
+        duration="105" />
     <task
         name="verifier"
-        duration="15" />
+        duration="6" />
 
     <artifact
-        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-        type="DEX" />
+        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="89418860802605"
-        verifier="FULL_BUILD_REQUESTED" >
+        timestamp="154429372239804"
+        verifier="MANIFEST_FILE_CHANGE" >
         <artifact
             location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="89730450000831"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

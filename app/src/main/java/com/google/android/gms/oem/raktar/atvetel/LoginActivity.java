@@ -3,6 +3,7 @@ package com.google.android.gms.oem.raktar.atvetel;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -52,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private String globalVevokod, globalPassword = "";
     Boolean adminMode = false;
+    SharedPreferences mPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,18 +87,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+
     private void loginUser( final String vevokod, final String password) {
-
-        //olyan gyors, hogy nem kell
         //progressDialog.setMessage("Bejelentkezés folyamatban...");
-
-
-
-
-/* beírt adatok kiiratása
-        Toast toast= Toast.makeText(getApplicationContext(),vevokod + ", " + password, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.BOTTOM,0,0); toast.show();
-*/
 
         globalVevokod = vevokod;
         globalPassword = password;
@@ -106,9 +99,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
                 mainIntent.putExtra("adminMode", true);
+                adminMode = true;
                 startActivity(mainIntent);
-                setResult(CommonStatusCodes.SUCCESS, mainIntent);
-                finish();
+                //setResult(CommonStatusCodes.SUCCESS, mainIntent);
+                //finish();
             }
         }
 
@@ -156,7 +150,8 @@ public class LoginActivity extends AppCompatActivity {
     //>>>JSON feldolgozása, adatok kiirasa
     private void showJSON(String response) {
 
-           String jujel = "";
+           String vevonev,jujel = "";
+        vevonev = "Teszt";
 
 
 //Válasz adatok tárolása
@@ -164,15 +159,10 @@ public class LoginActivity extends AppCompatActivity {
             JSONObject jsonObject2 = new JSONObject(response);
             JSONArray result2 = jsonObject2.getJSONArray(Config.JSON_ARRAY);
             JSONObject termekData2 = result2.getJSONObject(0);
-            //netto = termekData.getDouble(Config.KEY_NETTO);
-             jujel = termekData2.getString(Config.KEY_JUJEL);
+            jujel = termekData2.getString(Config.KEY_JUJEL);
+            vevonev = termekData2.getString(Config.KEY_VEVONEV);
 
-            hideDialog();
-
-/* toast
-            Toast toast= Toast.makeText(getApplicationContext(),jujel, Toast.LENGTH_LONG);
-            toast.setGravity(Gravity.BOTTOM,0,0); toast.show();
-*/
+            //hideDialog();
 
 
         } catch (JSONException e) {
@@ -181,8 +171,15 @@ public class LoginActivity extends AppCompatActivity {
 
         if (globalPassword.equals(jujel)){
         Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(mainIntent);
+
+
+
+
+
+            mainIntent.putExtra("intentvevonev", vevonev);
+
             setResult(CommonStatusCodes.SUCCESS, mainIntent);
+            startActivity(mainIntent);
             finish();
         } else {
             Toast toast= Toast.makeText(getApplicationContext(),"Hibás vevőkód, vagy jelszó!", Toast.LENGTH_LONG);

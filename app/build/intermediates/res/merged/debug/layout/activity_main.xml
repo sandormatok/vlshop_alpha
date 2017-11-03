@@ -10,10 +10,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/textView"
-        android:text="Nyomdj meg alul egy gombot..."
-        android:layout_height="30dp"
-        android:background="#b40027"
+        android:id="@+id/toptextView"
+
+        android:layout_height="wrap_content"
+        android:background="#37474f"
         android:textAlignment="center"
         android:textSize="20sp"
         android:layout_alignParentRight="true"
@@ -102,20 +102,6 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/barcode_header"
-        android:id="@+id/status_message"
-        android:textSize="32sp"
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/white"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/barcode_value"
         android:minLines="4"
@@ -135,5 +121,19 @@
         android:layout_above="@+id/auto_focus"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/barcode_header"
+        android:id="@+id/status_message"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/toptextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

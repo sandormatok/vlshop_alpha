@@ -3160,7 +3160,6 @@ containing a value of this type.
         public static final int text1=0x7f0d003b;
         public static final int text2=0x7f0d003c;
         public static final int textSpacerNoButtons=0x7f0d006e;
-        public static final int textView=0x7f0d008c;
         public static final int text_input_password_toggle=0x7f0d00a8;
         public static final int thing_proto=0x7f0d003d;
         public static final int time=0x7f0d00af;
@@ -3170,6 +3169,7 @@ containing a value of this type.
         public static final int top=0x7f0d002b;
         public static final int topLayout=0x7f0d0097;
         public static final int topPanel=0x7f0d0068;
+        public static final int toptextView=0x7f0d008c;
         public static final int touch_outside=0x7f0d009f;
         public static final int up=0x7f0d0009;
         public static final int url=0x7f0d004d;

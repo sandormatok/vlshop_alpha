@@ -59,6 +59,8 @@ import java.net.URLEncoder;
 import static android.R.attr.id;
 import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
 import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
+import static com.google.android.gms.oem.raktar.atvetel.Config.KEY_VEVONEV;
+import static java.util.logging.Logger.global;
 
 /**
  * Main activity demonstrating how to pass extra parameters to an activity that
@@ -67,34 +69,28 @@ import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZL
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     // use a compound button so either checkbox or switch widgets work.
-
-
     private CompoundButton autoFocus;
     private CompoundButton useFlash;
     private CompoundButton remoteDB;
     Boolean globaladminMode = false;
 
-
     private TextView statusMessage;
     private TextView barcodeValue;
     private TextView barcodeValue2;
+    private TextView barcodeInfo;
     private TextView toptextView;
     String barcode = "barcode";
     String globalMainURL = "";
 
-
     private static final int RC_BARCODE_CAPTURE = 9001;
     private static final String TAG = "BarcodeMain";
     String url, boltnev2;
-    String boltnev = "Raktár";
+    //String boltnev = "Raktár";
 
     private String m_Text = "";
     private String manualInput = "NO";
 
-    //class members
-    //String countries[] = {"Raktár", "Erzsébet 1.", "Alkotás", "Bartók 71.", "Békéscsaba 1.", "Békéscsaba 2.", "Bicske", "Csepel", "Csongrád", "Damjanich", "Debrecen 1.", "Debrecen 2.", "Dékán", "Dunaújváros", "Erzsébet 2.", "Fehérvári út", "Ferenc Krt.", "Gyula", "Harminckettesek", "Hattyú", "K?rösi", "Karcag", "Kecskemét 1.", "Kecskemét 2.", "Kisk?rös", "Környe", "Mester u.", "Mez?túr", "Nagyk?rös", "Orosháza", "Oroszlány 1.", "Oroszlány 2.", "Pablo Neruda", "Paks", "Pécs 1.", "Pécs 2", "Piliscsaba", "Püspökladány", "Szeged 1.", "Szeged 2.", "Tatabánya 1.", "Tatabánya 2.", "Tatabánya 3.", "Teréz krt.", "Tolna", "Újhegyi stny.", "Újpest"};
-    //ArrayAdapter<String> adapter;
-    /**
+     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
@@ -112,38 +108,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         statusMessage = (TextView) findViewById(R.id.status_message);
         barcodeValue = (TextView) findViewById(R.id.barcode_value);
         barcodeValue2 = (TextView) findViewById(R.id.barcode_value2);
-        //toptextView = (TextView) findViewById(R.id.toptextView);
+        toptextView = (TextView) findViewById(R.id.toptextView);
+        barcodeInfo = (TextView) findViewById(R.id.status_message);
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
         useFlash = (CompoundButton) findViewById(R.id.use_flash);
         remoteDB = (CompoundButton) findViewById(R.id.remote_db);
 
-
-
         autoFocus.setChecked(true);
-
         autoFocus.setVisibility(View.GONE);
         remoteDB.setVisibility(View.GONE);
 
-        // Application of the Array to the Spinner
-
-
         Intent intent = getIntent();
-        if(intent.hasExtra("adminMode")) {
-            Boolean adminMode = getIntent().getExtras().getBoolean("adminMode");
-
-                if(adminMode) {
-                    remoteDB.setVisibility(View.VISIBLE);
-                    Toast toast = Toast.makeText(getApplicationContext(), "!!! ADMIN MÓD !!!", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.BOTTOM, 0, 60);
-                    toast.show();
-                    globaladminMode = adminMode;
-
-                final TextView barcodeInfo = (TextView) findViewById(R.id.status_message);
-                    barcodeInfo.setText("ADMIN MÓD!\n Távoli adatbázis elérhető...");
+/*
+        String newString;
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                newString= null;
+            } else {
+                newString= extras.getString("intentvevonev");
             }
+        } else {
+            newString= (String) savedInstanceState.getSerializable("intentvevonev");
         }
 
+*/
+        if(intent.hasExtra("intentvevonev")) {
+            String vevonev = getIntent().getExtras().getString("intentvevonev");
+            toptextView.setText("Vevő: " + vevonev);
+        }
 
+        if(intent.hasExtra("adminMode")) {
+            Boolean adminMode = getIntent().getExtras().getBoolean("adminMode");
+                if(adminMode) {
+                    remoteDB.setVisibility(View.VISIBLE);
+                    globaladminMode = adminMode;
+                    toptextView.setText("ADMIN MÓD!\n Távoli adatbázis elérhető...");
+            }
+        }
 
 //>>>Itt adom meg, hogy melyik gombra melyig view jelenjen meg... (layout.xml)
 
@@ -238,7 +240,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
                     final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound3);
-
                     mp.start();
 
                     String barcode3 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
@@ -261,8 +262,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
- //>>>URL Request, kólön RAKTÁR és BOLTI URL-el
-
+ //>>>URL Request, kólön RAKTÁR és TÁVOLI URL-el
     private void getData() {
         //final TextView barcodeInfo = (TextView) findViewById(R.id.code_info);
         final TextView barcodeInfo = (TextView) findViewById(R.id.status_message);
@@ -274,17 +274,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             manualInput = "NO";
         }
 
-        try {
-
+  /*      try {
             String encodedString = URLEncoder.encode(boltnev, "UTF-8");
             boltnev2 = encodedString;
             Log.d("TEST", encodedString);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
-        }
+        } */
 
         //String url = Config.DATA_URL + id + "&bkod=" + boltnev2;
-
         if (remoteDB.isChecked()) {
             url = Config.DATA_RAKTAR_KESZLET_REMOTE_URL + id + "&vkod=000010";
         } else {
@@ -294,12 +292,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         globalMainURL = url;
 
-
-
-        //}
-
-        Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER,0,0); toast.show();
+//        Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
+//        toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -332,6 +326,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String termek = "";
         String ar = "";
         String menny = "";
+        String vevonev= "";
         Double netto = 0.00;
         Double afa = 0.00;
         Boolean akcios = false;
@@ -353,13 +348,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             netto = termekData.getDouble(Config.KEY_NETTO);
             afa = termekData.getDouble(Config.KEY_AFA);
             akcios = termekData.getBoolean(Config.KEY_AKCIO);
+            vevonev = termekData.getString(Config.KEY_VEVONEV);
 
-
-          /*  ar = termekData.getString(Config.KEY_KESZLET);
-            kinalo = termekData.getString(Config.KEY_KINALO);
-            karton = termekData.getString(Config.KEY_KARTON);
-            raklap = termekData.getString(Config.KEY_RAKLAP); */
-
+        Toast toast= Toast.makeText(getApplicationContext(),vevonev, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         } catch (JSONException e) {
             e.printStackTrace();

@@ -7,10 +7,9 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:id="@+id/textView"
-        android:text="Nyomj meg alul egy gombot..."
-        android:layout_height="50dp"
-        android:background="#b40027"
+        android:id="@+id/toptextView"
+        android:layout_height="wrap_content"
+        android:background="#37474f"
         android:textAlignment="center"
         android:textSize="20sp"
         android:layout_alignParentTop="true"
@@ -20,7 +19,6 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/barcode_value"
@@ -31,7 +29,8 @@
         android:layout_alignEnd="@+id/status_message"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content" />
 
     <View android:id="@+id/fakeView"
         android:layout_width="0dp"
@@ -72,21 +71,6 @@
         android:layout_marginRight="4dp"
         android:layout_toEndOf="@+id/fakeView" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/barcode_header"
-        android:textSize="32sp"
-        android:layout_marginTop="33dp"
-        android:id="@+id/status_message"
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/white"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/read_barcode"
-        android:layout_alignStart="@+id/read_barcode" />
-
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -112,23 +96,6 @@
         android:layout_marginBottom="18dp"
         android:layout_alignTop="@+id/use_flash" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:minLines="4"
-        android:textSize="30sp"
-        android:id="@+id/barcode_value2"
-        android:layout_below="@+id/barcode_value"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignRight="@+id/status_message"
-        android:layout_alignEnd="@+id/status_message"
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/white" />
-
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -138,6 +105,33 @@
         android:layout_above="@+id/use_flash"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/barcode_header"
+        android:textSize="32sp"
+        android:id="@+id/status_message"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/toptextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:minLines="4"
+        android:textSize="30sp"
+        android:id="@+id/barcode_value2"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/barcode_value"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

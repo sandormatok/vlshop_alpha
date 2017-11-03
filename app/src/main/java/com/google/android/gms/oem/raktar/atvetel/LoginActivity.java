@@ -90,6 +90,9 @@ public class LoginActivity extends AppCompatActivity {
         //olyan gyors, hogy nem kell
         //progressDialog.setMessage("Bejelentkezés folyamatban...");
 
+
+
+
 /* beírt adatok kiiratása
         Toast toast= Toast.makeText(getApplicationContext(),vevokod + ", " + password, Toast.LENGTH_LONG);
         toast.setGravity(Gravity.BOTTOM,0,0); toast.show();
@@ -154,7 +157,6 @@ public class LoginActivity extends AppCompatActivity {
     private void showJSON(String response) {
 
            String jujel = "";
-        String vevonev = "";
 
 
 //Válasz adatok tárolása
@@ -164,12 +166,11 @@ public class LoginActivity extends AppCompatActivity {
             JSONObject termekData2 = result2.getJSONObject(0);
             //netto = termekData.getDouble(Config.KEY_NETTO);
              jujel = termekData2.getString(Config.KEY_JUJEL);
-             vevonev = termekData2.getString(Config.KEY_VEVONEV);
 
-            //hideDialog();
+            hideDialog();
 
-/*
-            Toast toast= Toast.makeText(getApplicationContext(),vevonev, Toast.LENGTH_LONG);
+/* toast
+            Toast toast= Toast.makeText(getApplicationContext(),jujel, Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM,0,0); toast.show();
 */
 
@@ -178,14 +179,10 @@ public class LoginActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-
         if (globalPassword.equals(jujel)){
         Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
-            mainIntent.putExtra("vevoneve", vevonev);
             startActivity(mainIntent);
             setResult(CommonStatusCodes.SUCCESS, mainIntent);
-
             finish();
         } else {
             Toast toast= Toast.makeText(getApplicationContext(),"Hibás vevőkód, vagy jelszó!", Toast.LENGTH_LONG);
@@ -211,4 +208,15 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+ //san közé kell a cucc
 }

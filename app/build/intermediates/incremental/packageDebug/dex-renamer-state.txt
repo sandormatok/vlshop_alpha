@@ -1,4 +1,4 @@
-#Thu Nov 02 16:48:18 CET 2017
+#Thu Nov 02 17:43:46 CET 2017
 base.0=C\:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_2c78de9e43f08fc6702880a093d28c11c1671def
 renamed.1=classes.dex
 renamed.0=classes2.dex

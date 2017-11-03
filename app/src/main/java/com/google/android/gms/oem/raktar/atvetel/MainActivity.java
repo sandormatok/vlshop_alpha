@@ -57,7 +57,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 import static android.R.attr.id;
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
 import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
 
@@ -81,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView barcodeValue2;
     private TextView toptextView;
     String barcode = "barcode";
-    String globalvevoNev, globalMainURL = "";
+    String globalMainURL = "";
 
 
     private static final int RC_BARCODE_CAPTURE = 9001;
@@ -113,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         statusMessage = (TextView) findViewById(R.id.status_message);
         barcodeValue = (TextView) findViewById(R.id.barcode_value);
         barcodeValue2 = (TextView) findViewById(R.id.barcode_value2);
-        toptextView = (TextView) findViewById(R.id.toptextView);
+        //toptextView = (TextView) findViewById(R.id.toptextView);
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
         useFlash = (CompoundButton) findViewById(R.id.use_flash);
         remoteDB = (CompoundButton) findViewById(R.id.remote_db);
@@ -131,10 +130,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = getIntent();
         if(intent.hasExtra("adminMode")) {
             Boolean adminMode = getIntent().getExtras().getBoolean("adminMode");
-            if(adminMode) {
+
+                if(adminMode) {
                     remoteDB.setVisibility(View.VISIBLE);
-                    Toast toast = Toast.makeText(getApplicationContext(), "!!! ADMIN MÓD !!!  ", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.BOTTOM, 0, 100);
+                    Toast toast = Toast.makeText(getApplicationContext(), "!!! ADMIN MÓD !!!", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.BOTTOM, 0, 60);
                     toast.show();
                     globaladminMode = adminMode;
 
@@ -241,15 +241,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     mp.start();
 
-                    String vevonev = data.getExtras().getString("vevoneve");
-                    globalvevoNev = vevonev;
-                    toptextView.setText(globalvevoNev);
-//
-                  Toast toast= Toast.makeText(getApplicationContext(),vevonev, Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER,0,0); toast.show();
-
-
-
                     String barcode3 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     //Barcode barcode2 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     //statusMessage.setText(barcode2.displayValue);
@@ -292,6 +283,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         }
 
+        //String url = Config.DATA_URL + id + "&bkod=" + boltnev2;
 
         if (remoteDB.isChecked()) {
             url = Config.DATA_RAKTAR_KESZLET_REMOTE_URL + id + "&vkod=000010";
@@ -303,8 +295,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         globalMainURL = url;
 
 
-        //Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
-        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
+
+        //}
+
+        Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -393,13 +388,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return Double.valueOf(twoDForm.format(d));
             }
   */
-// TODO: Lokalizálni kell a parancsot, mert angolul kiakadhat
             String bruttoRound = String.format("%.2f", brutto);
 
             barcodeValue.setText(marka + "\n" + termek);
             //barcodeValue.setText(boltnev);
             barcodeValue2.setText("Nettó: " + netto + " Ft" + "\nBruttó: " + bruttoRound + " Ft" + "\nRaktáron: " + menny);
-
         }
         //getSupportActionBar().setTitle(ar+"db ("+termek+")");
         //sleepAwhile();

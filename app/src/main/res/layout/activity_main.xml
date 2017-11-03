@@ -10,14 +10,31 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/toptextView"
-        android:text="Nyomj meg alul egy gombot..."
+        android:id="@+id/textView"
+        android:text="Nyomdj meg alul egy gombot..."
         android:layout_height="30dp"
         android:background="#b40027"
         android:textAlignment="center"
         android:textSize="20sp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:minLines="4"
+        android:textSize="30sp"
+        android:id="@+id/barcode_value2"
+        android:layout_below="@+id/barcode_value"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignRight="@+id/status_message"
+        android:layout_alignEnd="@+id/status_message"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/white" />
 
 
     <View android:id="@+id/fakeView"
@@ -83,15 +100,6 @@
         android:layout_marginBottom="22dp" />
 
 
-    <CheckBox
-        android:text="@string/remote_DB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/switch1"
-        android:layout_above="@+id/auto_focus"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -102,9 +110,9 @@
         android:textAlignment="center"
         android:textStyle="normal|bold"
         android:textColor="@android:color/white"
-        android:layout_below="@+id/toptextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="match_parent"
@@ -116,21 +124,16 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
         android:layout_below="@+id/status_message"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="match_parent"
+    <CheckBox
+        android:text="@string/remote_DB"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:minLines="4"
-        android:textSize="30sp"
-        android:id="@+id/barcode_value2"
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/white"
-        android:layout_below="@+id/barcode_value"
-        android:layout_toStartOf="@+id/use_flash"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/switch1"
+        android:layout_above="@+id/auto_focus"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

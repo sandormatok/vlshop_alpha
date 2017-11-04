@@ -60,7 +60,12 @@ import static android.R.attr.id;
 import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
 import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
 import static com.google.android.gms.oem.raktar.atvetel.Config.KEY_VEVONEV;
+import static com.google.android.gms.oem.raktar.atvetel.R.id.tableRow2;
 import static java.util.logging.Logger.global;
+
+
+import android.view.KeyEvent;
+
 
 /**
  * Main activity demonstrating how to pass extra parameters to an activity that
@@ -80,11 +85,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView barcodeInfo;
     private TextView toptextView;
 
-    private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52;
+    private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62;
 
 
     String barcode = "barcode";
-    String globalMainURL = "";
     String bruttoRound,nettoRound;
     String globalAroszt;
 
@@ -124,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tableRow32 = (TextView) findViewById(R.id.table32);
         tableRow42 = (TextView) findViewById(R.id.table42);
         tableRow52 = (TextView) findViewById(R.id.table52);
+        tableRow62 = (TextView) findViewById(R.id.table62);
 
 
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
@@ -133,13 +138,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         autoFocus.setChecked(true);
         autoFocus.setVisibility(View.GONE);
         remoteDB.setVisibility(View.GONE);
+        useFlash.setVisibility(View.GONE);
 
         Intent intent = getIntent();
 
         if(intent.hasExtra("intentvevonev")) {
             String vevonev = getIntent().getExtras().getString("intentvevonev");
             String aroszt = getIntent().getExtras().getString("intentaroszt");
-            toptextView.setText("Vevő: " + vevonev + "; " + aroszt);
+            toptextView.setText("Vevő: " + vevonev);
             globalAroszt = aroszt;
         }
 
@@ -171,15 +177,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @param v The view that was clicked.
      */
 
-//>>>Gombok megnomására más más view
+    /* átkerült a BarcodeCaptureActivity-be!
+// VOLUME BUTTON TEST !!!
 
+
+    static int counter = 0;
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
+            toptextView.setText("Counter : " + String.valueOf(++counter));
+            Toast.makeText(this, "Volume Down Pressed", Toast.LENGTH_SHORT)
+                    .show();
+            return true;
+        }
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
+            toptextView.setText("Counter : " + String.valueOf(--counter));
+            Toast.makeText(this, "Volume Up Pressed", Toast.LENGTH_SHORT)
+                    .show();
+            return true;
+        }
+
+        else {
+            return super.onKeyDown(keyCode, event);
+        }
+    }
+*/
+
+    //>>>Gombok megnomására más más view
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.read_barcode) {
             // launch barcode activity.
             Intent intent = new Intent(this, BarcodeCaptureActivity.class);
+
+            /*
             intent.putExtra(BarcodeCaptureActivity.AutoFocus, autoFocus.isChecked());
             intent.putExtra(BarcodeCaptureActivity.UseFlash, useFlash.isChecked());
+*/
+            intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
+            intent.putExtra(BarcodeCaptureActivity.UseFlash, false);
 
             startActivityForResult(intent, RC_BARCODE_CAPTURE);
         }
@@ -268,6 +304,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+
+
+
  //>>>URL Request, kólön RAKTÁR és TÁVOLI URL-el
     private void getData() {
         //final TextView barcodeInfo = (TextView) findViewById(R.id.code_info);
@@ -288,10 +327,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         } */
 
-        String akcurl = Config.DATA_RAKTAR_AKCIO_URL + globalAroszt;
-
-
-        //String url = Config.DATA_URL + id + "&bkod=" + boltnev2;
         if (remoteDB.isChecked()) {
             url = Config.DATA_RAKTAR_KESZLET_REMOTE_URL + id + "&vkod=000010";
         } else {
@@ -299,7 +334,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod=000010";
         }
 
-        globalMainURL = url;
 
 //        Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
 //        toast.setGravity(Gravity.CENTER,0,0); toast.show();
@@ -321,8 +355,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         requestQueue.add(stringRequest);
 // VONALKOD!!!
         tableRow02.setText(id);
-        //barcodeInfo.setText(globalMainURL);
-    }
+            }
 
 
 //>>>JSON feldolgozása, adatok kiirasa
@@ -400,6 +433,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tableRow32.setText(nettoRound + " Ft");
             tableRow42.setText(bruttoRound + " Ft");
             tableRow52.setText(menny);
+            if(akcios){
+                tableRow62.setText("IGEN");
+            } else {
+                tableRow62.setText("NEM");
+            }
+
         }
 
 

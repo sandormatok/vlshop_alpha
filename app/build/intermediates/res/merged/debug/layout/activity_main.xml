@@ -36,7 +36,7 @@
         android:layout_alignParentStart="true"
         android:textColor="@android:color/background_light"
         android:textStyle="normal|bold"
-        android:background="?android:attr/colorButtonNormal"
+        android:background="?attr/colorButtonNormal"
         android:layout_alignRight="@+id/fakeView"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="2dp"
@@ -102,7 +102,7 @@
         android:layout_alignParentStart="true"
         android:id="@+id/textview_akcio"
         android:minLines="3"
-        android:background="#ff0000"
+        android:background="#d50000"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="10dp" />
@@ -119,7 +119,7 @@
         android:layout_alignStart="@+id/read_barcode">
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow0"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -127,10 +127,10 @@
                 android:id="@+id/table01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#37474f"
+                android:background="#212121"
                 android:text="EAN"
                 android:padding="8dip"
-                android:textColor="#ffffff"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="18dp"
                 android:textAlignment="center"
                 android:textStyle="normal|bold" />
@@ -157,10 +157,10 @@
                 android:id="@+id/table11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#37474f"
+                android:background="#212121"
                 android:padding="8dip"
                 android:text="MÁRKA"
-                android:textColor="#ffffff"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="18dp"
                 android:textAlignment="center"
                 android:textStyle="normal|bold" />
@@ -178,19 +178,20 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow2"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
                 android:layout_margin="1dp"
                 android:id="@+id/table21"
                 android:minLines="3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#37474f"
-                android:padding="8dip"
-                android:text="\nTERMÉK"
-                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_weight="0"
+                android:layout_height="match_parent"
+                android:background="#212121"
+
+                android:text=" \nTERMÉK\n "
+                android:textColor="@android:color/darker_gray"
                 android:textSize="18dp"
                 android:textAlignment="center"
                 android:textStyle="normal|bold" />
@@ -200,16 +201,18 @@
                 android:id="@+id/table22"
                 android:minLines="3"
                 android:background="#212121"
-                android:padding="8dip"
+
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:fontFamily="sans-serif"
                 android:textSize="18sp"
-                android:textStyle="normal|bold" />
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/white" />
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow3"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -217,10 +220,10 @@
                 android:id="@+id/table31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#37474f"
+                android:background="#212121"
                 android:padding="8dip"
                 android:text="NETTÓ"
-                android:textColor="#ffffff"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="18dp"
                 android:textAlignment="center"
                 android:textStyle="normal|bold" />
@@ -238,7 +241,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow4"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -246,10 +249,10 @@
                 android:id="@+id/table41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#37474f"
+                android:background="#212121"
                 android:padding="8dip"
                 android:text="BRUTTÓ"
-                android:textColor="#ffffff"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="18dp"
                 android:textAlignment="center"
                 android:textStyle="normal|bold" />
@@ -268,7 +271,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow5"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -276,10 +279,10 @@
                 android:id="@+id/table51"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#37474f"
+                android:background="#212121"
                 android:padding="8dip"
                 android:text="KÉSZLET"
-                android:textColor="#ffffff"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="18dp"
                 android:textAlignment="center"
                 android:textStyle="normal|bold" />

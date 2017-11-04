@@ -37,7 +37,7 @@
         android:layout_alignParentStart="true"
         android:textColor="@android:color/background_light"
         android:textStyle="normal|bold"
-        android:background="?attr/colorButtonNormal"
+        android:background="?android:attr/colorBackgroundFloating"
         android:layout_alignRight="@+id/fakeView"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="2dp"
@@ -51,7 +51,7 @@
         android:textSize="20sp"
         android:textColor="@android:color/background_light"
         android:textStyle="normal|bold"
-        android:background="?attr/colorButtonNormal"
+        android:background="?android:attr/colorBackgroundFloating"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -85,16 +85,6 @@
         android:layout_marginBottom="18dp"
         android:layout_alignTop="@+id/use_flash" />
 
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/remote_DB"
-        android:layout_marginBottom="12dp"
-        android:id="@+id/remote_db"
-        android:layout_above="@+id/use_flash"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <TextView
         android:text=""
         android:layout_width="wrap_content"
@@ -104,7 +94,7 @@
         android:layout_alignParentStart="true"
         android:id="@+id/textview_akcio"
         android:minLines="3"
-        android:background="#ff0000"
+        android:background="#d50000"
         android:layout_marginBottom="10dp"
 
         android:layout_alignParentRight="true"
@@ -118,10 +108,11 @@
         android:stretchColumns="1"
         android:layout_below="@+id/textview_akcio"
         android:layout_alignLeft="@+id/read_barcode"
-        android:layout_alignStart="@+id/read_barcode">
+        android:layout_alignStart="@+id/read_barcode"
+        android:layout_above="@+id/read_barcode">
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow0"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -180,7 +171,7 @@
     </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow2"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -214,7 +205,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow3"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -243,7 +234,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow4"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -273,7 +264,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tableRow5"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -302,9 +293,51 @@
 
         </TableRow>
 
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_margin="1dp"
+                android:id="@+id/table61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#212121"
+                android:padding="8dip"
+                android:text="AKCIÓS"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+            <TextView
+                android:layout_margin="1dp"
+                android:id="@+id/table62"
+                android:background="#212121"
+                android:padding="8dip"
+
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="normal|bold" />
+
+        </TableRow>
+
 
 
 </TableLayout>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remote_DB"
+        android:id="@+id/remote_db"
+        android:layout_alignBaseline="@+id/auto_focus"
+        android:layout_alignBottom="@+id/auto_focus"
+        android:layout_toRightOf="@+id/auto_focus"
+        android:layout_toEndOf="@+id/auto_focus"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp" />
 
 
 </RelativeLayout>

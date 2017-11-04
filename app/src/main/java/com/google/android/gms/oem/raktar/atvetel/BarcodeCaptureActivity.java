@@ -36,6 +36,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.GestureDetector;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
@@ -53,6 +54,8 @@ import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
+
+import static com.google.android.gms.oem.raktar.atvetel.R.id.toptextView;
 
 /**
  * Activity for the multi-tracker app.  This app detects barcodes and displays the value with the
@@ -83,6 +86,10 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
 
     public static Barcode barcode = null;
     public static String barcode3;
+
+    static int counter = 0;
+    private static final int RC_BARCODE_CAPTURE = 9001;
+
 
     /**
      * Initializes the UI and creates the detector pipeline.
@@ -119,7 +126,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
          //       Snackbar.LENGTH_LONG)
           //      .show();
 
-
     }
 
     /**
@@ -127,6 +133,40 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
      * showing a "Snackbar" message of why the permission is needed then
      * sending the request.
      */
+
+// TODO: Vakuval nem vewszi az első vonalkódot
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == android.view.KeyEvent.KEYCODE_VOLUME_DOWN) {
+            //  toptextView.setText("Counter : " + String.valueOf(++counter));
+            Toast.makeText(this, "Vaku Kikapcsolva!", Toast.LENGTH_SHORT)
+                    .show();
+            Intent intent = new Intent(this, BarcodeCaptureActivity.class);
+            intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
+            intent.putExtra(BarcodeCaptureActivity.UseFlash, false);
+            startActivityForResult(intent, RC_BARCODE_CAPTURE);
+            return true;
+        }
+        if (keyCode == android.view.KeyEvent.KEYCODE_VOLUME_UP) {
+            //  toptextView.setText("Counter : " + String.valueOf(--counter));
+            Toast.makeText(this, "Vaku Bekapcsolva!", Toast.LENGTH_SHORT)
+                    .show();
+
+            Intent intent = new Intent(this, BarcodeCaptureActivity.class);
+            intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
+            intent.putExtra(BarcodeCaptureActivity.UseFlash, true);
+            startActivityForResult(intent, RC_BARCODE_CAPTURE);
+            return true;
+        }
+
+        else {
+            return super.onKeyDown(keyCode, event);
+
+        }
+
+    }
+
+
     private void requestCameraPermission() {
         Log.w(TAG, "Nincs jogosultság a kamerához!");
 
@@ -197,9 +237,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
             public void receiveDetections(Detector.Detections<Barcode> detections) {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
                 if (barcodes.size() != 0) {
-               /*     final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound);
 
-                    mp.start(); */
                     barcode3 = barcodes.valueAt(0).displayValue;
                     Log.w(TAG, barcode3);
                     Intent data = new Intent();
@@ -242,12 +280,12 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         // to other detection examples to enable the barcode detector to detect small barcodes
         // at long distances.
 
-//>>>Felbontással kellene még foglalkozni
+// TODO: Felbontással kellene még foglalkozni
 
         CameraSource.Builder builder = new CameraSource.Builder(getApplicationContext(), barcodeDetector)
                 .setFacing(CameraSource.CAMERA_FACING_BACK)
-                .setRequestedPreviewSize(1600, 1024)
-                .setRequestedFps(15.0f);
+                .setRequestedPreviewSize(1280, 720)
+                .setRequestedFps(30.0f);
 
         // make sure that auto focus is an available option
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {

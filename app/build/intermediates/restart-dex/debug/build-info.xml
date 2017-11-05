@@ -5,60 +5,43 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="235233917041462"
+    timestamp="6978011285774"
     token="5787902044833624353"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="746" />
+        duration="4042" />
     <task
         name="instant-run-dex"
-        duration="843" />
+        duration="1195" />
     <task
         name="instant-run-transform"
-        duration="210" />
+        duration="298" />
     <task
         name="verifier"
-        duration="34" />
+        duration="58" />
 
     <artifact
         location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\reload-dex\debug\classes.dex"
         type="RELOAD_DEX" />
 
     <build
-        timestamp="234409915759339"
+        timestamp="6199248851212"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="234722616491392"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="234756735913815"
+        timestamp="6817235428904"
         verifier="COMPATIBLE" >
         <artifact
-            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\builds\debug\234756735913815\classes.dex"
+            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\builds\debug\6817235428904\classes.dex"
             type="RELOAD_DEX" />
     </build>
     <build
-        timestamp="234775598054917"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\builds\debug\234775598054917\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="235233917041462"
+        timestamp="6978011285774"
         verifier="COMPATIBLE" >
         <artifact
             location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\reload-dex\debug\classes.dex"

@@ -140,6 +140,7 @@ public class LoginActivity extends AppCompatActivity {
         },
                 new Response.ErrorListener() {
                     @Override
+                    //Todo: meg kell nezni, hogy van-e error message mielott tostringet hivsz ra....
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(LoginActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
                     }

@@ -21,6 +21,7 @@ import android.app.Application;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -60,7 +61,9 @@ import static android.R.attr.id;
 import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
 import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
 import static com.google.android.gms.oem.raktar.atvetel.Config.KEY_VEVONEV;
-import static com.google.android.gms.oem.raktar.atvetel.R.id.tableRow2;
+
+
+import static com.google.android.gms.oem.raktar.atvetel.R.id.tableRow61;
 import static java.util.logging.Logger.global;
 
 
@@ -77,7 +80,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private CompoundButton autoFocus;
     private CompoundButton useFlash;
     private CompoundButton remoteDB;
+
     Boolean globaladminMode = false;
+    Boolean globaltorchMode = false;
+
 
     private TextView statusMessage;
     private TextView barcodeValue;
@@ -85,12 +91,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView barcodeInfo;
     private TextView toptextView;
 
-    private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62;
+    private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
 
 
     String barcode = "barcode";
     String bruttoRound,nettoRound;
     String globalAroszt;
+    String globalvevoKod = "";
 
     private static final int RC_BARCODE_CAPTURE = 9001;
     private static final String TAG = "BarcodeMain";
@@ -110,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//notitle
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
@@ -128,27 +136,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tableRow32 = (TextView) findViewById(R.id.table32);
         tableRow42 = (TextView) findViewById(R.id.table42);
         tableRow52 = (TextView) findViewById(R.id.table52);
+        tableRow61 = (TextView) findViewById(R.id.table61);
         tableRow62 = (TextView) findViewById(R.id.table62);
 
 
-        autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
-        useFlash = (CompoundButton) findViewById(R.id.use_flash);
-        remoteDB = (CompoundButton) findViewById(R.id.remote_db);
+        //autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
+        //useFlash = (CompoundButton) findViewById(R.id.use_flash);
+        //remoteDB = (CompoundButton) findViewById(R.id.remote_db);
 
-        autoFocus.setChecked(true);
-        autoFocus.setVisibility(View.GONE);
-        remoteDB.setVisibility(View.GONE);
-        useFlash.setVisibility(View.GONE);
+        //autoFocus.setChecked(true);
+        //autoFocus.setVisibility(View.GONE);
+        //remoteDB.setVisibility(View.GONE);
+        //useFlash.setVisibility(View.GONE);
 
         Intent intent = getIntent();
 
         if(intent.hasExtra("intentvevonev")) {
             String vevonev = getIntent().getExtras().getString("intentvevonev");
-            String aroszt = getIntent().getExtras().getString("intentaroszt");
+            globalAroszt = getIntent().getExtras().getString("intentaroszt");
+            globalvevoKod = getIntent().getExtras().getString("intentvevokod");
             toptextView.setText("Vevő: " + vevonev);
-            globalAroszt = aroszt;
         }
-
+/*
+        if(intent.hasExtra("globaltourchmode")) {
+            globaltorchMode = getIntent().getExtras().getBoolean("globaltourchmode");
+        }
+*/
         if(intent.hasExtra("adminMode")) {
             Boolean adminMode = getIntent().getExtras().getBoolean("adminMode");
                 if(adminMode) {
@@ -289,6 +302,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //statusMessage.setText(barcode2.displayValue);
                     //statusMessage.setText(barcode3);
                     getData();
+                    //getakcioData();
                     Log.d(TAG, "Vonalkód (MainActivity) " + barcode3);
                 } else {
                     tableRow22.setText(R.string.barcode_failure);
@@ -327,13 +341,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         } */
 
+/*
         if (remoteDB.isChecked()) {
-            url = Config.DATA_RAKTAR_KESZLET_REMOTE_URL + id + "&vkod=000010";
+            url = Config.DATA_RAKTAR_KESZLET_REMOTE_URL + id + "&vkod="+globalvevoKod;
         } else {
 
-            url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod=000010";
+            url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
         }
-
+*/
+        url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
 
 //        Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
 //        toast.setGravity(Gravity.CENTER,0,0); toast.show();
@@ -355,7 +371,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         requestQueue.add(stringRequest);
 // VONALKOD!!!
         tableRow02.setText(id);
-            }
+    }
 
 
 //>>>JSON feldolgozása, adatok kiirasa
@@ -373,12 +389,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Double afa = 0.00;
         Boolean akcios = false;
 
-
-
-        /* String kinalo = "";
-        String karton = "";
-        String raklap = ""; */
-
 //Válasz adatok tárolása
         try {
             JSONObject jsonObject = new JSONObject(response);
@@ -392,8 +402,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             akcios = termekData.getBoolean(Config.KEY_AKCIO);
             vevonev = termekData.getString(Config.KEY_VEVONEV);
 
-        //Toast toast= Toast.makeText(getApplicationContext(),vevonev, Toast.LENGTH_LONG);
-        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -402,8 +410,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast toast= Toast.makeText(getApplicationContext(),marka + "; " + termek, Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER,0,0); toast.show();
 */
-        //textViewResult.setText(getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek);
-        //textViewResult.setText(getString(R.string.results_vonalkod)+barcode+getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek);
 
         if (marka.equals("null")) {
             //barcodeValue.setTextColor(0xFFFF033A);
@@ -432,8 +438,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tableRow22.setText(termek);
             tableRow32.setText(nettoRound + " Ft");
             tableRow42.setText(bruttoRound + " Ft");
-            tableRow52.setText(menny);
+            tableRow52.setText(menny + " db");
             if(akcios){
+                tableRow62.setBackgroundColor(Color.RED);
+                tableRow61.setBackgroundColor(Color.RED);
                 tableRow62.setText("IGEN");
             } else {
                 tableRow62.setText("NEM");
@@ -442,11 +450,76 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 
-        //getSupportActionBar().setTitle(ar+"db ("+termek+")");
-        //sleepAwhile();
-        //textViewResult.setText(getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek+ getString(R.string.results_ar)+ ar);
-        //barcodeInfo.setText(getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek+ getString(R.string.results_ar)+ ar);
+
     }
+
+
+
+    private void getakcioData() {
+        String id = globalAroszt;
+         url = Config.DATA_RAKTAR_AKCIO_URL + id + "&arkat=" + globalAroszt;
+
+        StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                //        loading.dismiss();
+                showJSON2
+                        (response);
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(MainActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                    }
+                });
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+
+
+    private void showJSON2(String response) {
+
+        String marka = "";
+        String marka2 = "";
+        String termek = "";
+        String akcar = "";
+
+        /* String kinalo = "";
+        String karton = "";
+        String raklap = ""; */
+
+//Válasz adatok tárolása
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray result = jsonObject.getJSONArray("");
+            JSONObject markaArray = result.getJSONObject(0);
+            JSONObject termekArray = result.getJSONObject(1);
+            JSONObject akcarArray = result.getJSONObject(2);
+
+
+            marka = markaArray.getString("marka");
+            //marka2 = markaArray.getString();
+            termek = termekArray.getString("termek");
+            akcar = akcarArray.getString("akcar");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        Toast toast= Toast.makeText(getApplicationContext(),marka + "; " + termek + "; " + akcar + "; " + marka2, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER,0,0); toast.show();
+
+        toptextView.setText(marka + ", " + marka2);
+        tableRow22.setText(termek);
+        tableRow32.setText(akcar);
+        tableRow42.setText(marka);
+        tableRow52.setText(marka2);
+
+    }
+
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.

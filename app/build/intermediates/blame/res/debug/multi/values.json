@@ -6013,8 +6013,8 @@
                     "startLine": 635,
                     "startColumn": 4,
                     "startOffset": 57341,
-                    "endColumn": 80,
-                    "endOffset": 57417
+                    "endColumn": 71,
+                    "endOffset": 57408
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\src\\main\\res\\values\\styles.xml",
@@ -6022,8 +6022,8 @@
                         "startLine": 2,
                         "startColumn": 4,
                         "startOffset": 19,
-                        "endColumn": 81,
-                        "endOffset": 96
+                        "endColumn": 72,
+                        "endOffset": 87
                     }
                 }
             },
@@ -6031,10 +6031,10 @@
                 "to": {
                     "startLine": 636,
                     "startColumn": 4,
-                    "startOffset": 57422,
+                    "startOffset": 57413,
                     "endLine": 642,
                     "endColumn": 12,
-                    "endOffset": 57918
+                    "endOffset": 57909
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6052,9 +6052,9 @@
                 "to": {
                     "startLine": 643,
                     "startColumn": 4,
-                    "startOffset": 57923,
+                    "startOffset": 57914,
                     "endColumn": 88,
-                    "endOffset": 58007
+                    "endOffset": 57998
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6071,10 +6071,10 @@
                 "to": {
                     "startLine": 644,
                     "startColumn": 4,
-                    "startOffset": 58012,
+                    "startOffset": 58003,
                     "endLine": 647,
                     "endColumn": 12,
-                    "endOffset": 58254
+                    "endOffset": 58245
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6092,10 +6092,10 @@
                 "to": {
                     "startLine": 648,
                     "startColumn": 4,
-                    "startOffset": 58259,
+                    "startOffset": 58250,
                     "endLine": 651,
                     "endColumn": 12,
-                    "endOffset": 58535
+                    "endOffset": 58526
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6113,10 +6113,10 @@
                 "to": {
                     "startLine": 652,
                     "startColumn": 4,
-                    "startOffset": 58540,
+                    "startOffset": 58531,
                     "endLine": 656,
                     "endColumn": 12,
-                    "endOffset": 58820
+                    "endOffset": 58811
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6134,10 +6134,10 @@
                 "to": {
                     "startLine": 657,
                     "startColumn": 4,
-                    "startOffset": 58825,
+                    "startOffset": 58816,
                     "endLine": 662,
                     "endColumn": 12,
-                    "endOffset": 59213
+                    "endOffset": 59204
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6155,10 +6155,10 @@
                 "to": {
                     "startLine": 663,
                     "startColumn": 4,
-                    "startOffset": 59218,
+                    "startOffset": 59209,
                     "endLine": 669,
                     "endColumn": 12,
-                    "endOffset": 59690
+                    "endOffset": 59681
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6176,10 +6176,10 @@
                 "to": {
                     "startLine": 670,
                     "startColumn": 4,
-                    "startOffset": 59695,
+                    "startOffset": 59686,
                     "endLine": 673,
                     "endColumn": 12,
-                    "endOffset": 59912
+                    "endOffset": 59903
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6197,10 +6197,10 @@
                 "to": {
                     "startLine": 674,
                     "startColumn": 4,
-                    "startOffset": 59917,
+                    "startOffset": 59908,
                     "endLine": 677,
                     "endColumn": 12,
-                    "endOffset": 60134
+                    "endOffset": 60125
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6218,10 +6218,10 @@
                 "to": {
                     "startLine": 678,
                     "startColumn": 4,
-                    "startOffset": 60139,
+                    "startOffset": 60130,
                     "endLine": 682,
                     "endColumn": 12,
-                    "endOffset": 60402
+                    "endOffset": 60393
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6239,10 +6239,10 @@
                 "to": {
                     "startLine": 683,
                     "startColumn": 4,
-                    "startOffset": 60407,
+                    "startOffset": 60398,
                     "endLine": 686,
                     "endColumn": 12,
-                    "endOffset": 60629
+                    "endOffset": 60620
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6260,10 +6260,10 @@
                 "to": {
                     "startLine": 687,
                     "startColumn": 4,
-                    "startOffset": 60634,
+                    "startOffset": 60625,
                     "endLine": 690,
                     "endColumn": 12,
-                    "endOffset": 60859
+                    "endOffset": 60850
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6281,10 +6281,10 @@
                 "to": {
                     "startLine": 691,
                     "startColumn": 4,
-                    "startOffset": 60864,
+                    "startOffset": 60855,
                     "endLine": 694,
                     "endColumn": 12,
-                    "endOffset": 61089
+                    "endOffset": 61080
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6302,10 +6302,10 @@
                 "to": {
                     "startLine": 695,
                     "startColumn": 4,
-                    "startOffset": 61094,
+                    "startOffset": 61085,
                     "endLine": 698,
                     "endColumn": 12,
-                    "endOffset": 61319
+                    "endOffset": 61310
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6323,10 +6323,10 @@
                 "to": {
                     "startLine": 699,
                     "startColumn": 4,
-                    "startOffset": 61324,
+                    "startOffset": 61315,
                     "endLine": 702,
                     "endColumn": 12,
-                    "endOffset": 61549
+                    "endOffset": 61540
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6344,10 +6344,10 @@
                 "to": {
                     "startLine": 703,
                     "startColumn": 4,
-                    "startOffset": 61554,
+                    "startOffset": 61545,
                     "endLine": 706,
                     "endColumn": 12,
-                    "endOffset": 61776
+                    "endOffset": 61767
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6365,10 +6365,10 @@
                 "to": {
                     "startLine": 707,
                     "startColumn": 4,
-                    "startOffset": 61781,
+                    "startOffset": 61772,
                     "endLine": 710,
                     "endColumn": 12,
-                    "endOffset": 62015
+                    "endOffset": 62006
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6386,10 +6386,10 @@
                 "to": {
                     "startLine": 711,
                     "startColumn": 4,
-                    "startOffset": 62020,
+                    "startOffset": 62011,
                     "endLine": 714,
                     "endColumn": 12,
-                    "endOffset": 62241
+                    "endOffset": 62232
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6407,10 +6407,10 @@
                 "to": {
                     "startLine": 715,
                     "startColumn": 4,
-                    "startOffset": 62246,
+                    "startOffset": 62237,
                     "endLine": 718,
                     "endColumn": 12,
-                    "endOffset": 62486
+                    "endOffset": 62477
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6428,10 +6428,10 @@
                 "to": {
                     "startLine": 719,
                     "startColumn": 4,
-                    "startOffset": 62491,
+                    "startOffset": 62482,
                     "endLine": 722,
                     "endColumn": 12,
-                    "endOffset": 62716
+                    "endOffset": 62707
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6449,10 +6449,10 @@
                 "to": {
                     "startLine": 723,
                     "startColumn": 4,
-                    "startOffset": 62721,
+                    "startOffset": 62712,
                     "endLine": 726,
                     "endColumn": 12,
-                    "endOffset": 62964
+                    "endOffset": 62955
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6470,10 +6470,10 @@
                 "to": {
                     "startLine": 727,
                     "startColumn": 4,
-                    "startOffset": 62969,
+                    "startOffset": 62960,
                     "endLine": 730,
                     "endColumn": 12,
-                    "endOffset": 63183
+                    "endOffset": 63174
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6491,10 +6491,10 @@
                 "to": {
                     "startLine": 731,
                     "startColumn": 4,
-                    "startOffset": 63188,
+                    "startOffset": 63179,
                     "endLine": 735,
                     "endColumn": 12,
-                    "endOffset": 63466
+                    "endOffset": 63457
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6512,10 +6512,10 @@
                 "to": {
                     "startLine": 736,
                     "startColumn": 4,
-                    "startOffset": 63471,
+                    "startOffset": 63462,
                     "endLine": 739,
                     "endColumn": 12,
-                    "endOffset": 63674
+                    "endOffset": 63665
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6533,10 +6533,10 @@
                 "to": {
                     "startLine": 740,
                     "startColumn": 4,
-                    "startOffset": 63679,
+                    "startOffset": 63670,
                     "endLine": 742,
                     "endColumn": 12,
-                    "endOffset": 63805
+                    "endOffset": 63796
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6554,10 +6554,10 @@
                 "to": {
                     "startLine": 743,
                     "startColumn": 4,
-                    "startOffset": 63810,
+                    "startOffset": 63801,
                     "endLine": 746,
                     "endColumn": 12,
-                    "endOffset": 64032
+                    "endOffset": 64023
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6575,10 +6575,10 @@
                 "to": {
                     "startLine": 747,
                     "startColumn": 4,
-                    "startOffset": 64037,
+                    "startOffset": 64028,
                     "endLine": 750,
                     "endColumn": 12,
-                    "endOffset": 64278
+                    "endOffset": 64269
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6596,10 +6596,10 @@
                 "to": {
                     "startLine": 751,
                     "startColumn": 4,
-                    "startOffset": 64283,
+                    "startOffset": 64274,
                     "endLine": 754,
                     "endColumn": 12,
-                    "endOffset": 64503
+                    "endOffset": 64494
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6617,10 +6617,10 @@
                 "to": {
                     "startLine": 755,
                     "startColumn": 4,
-                    "startOffset": 64508,
+                    "startOffset": 64499,
                     "endLine": 758,
                     "endColumn": 12,
-                    "endOffset": 64750
+                    "endOffset": 64741
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6638,10 +6638,10 @@
                 "to": {
                     "startLine": 759,
                     "startColumn": 4,
-                    "startOffset": 64755,
+                    "startOffset": 64746,
                     "endLine": 762,
                     "endColumn": 12,
-                    "endOffset": 64971
+                    "endOffset": 64962
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6659,10 +6659,10 @@
                 "to": {
                     "startLine": 763,
                     "startColumn": 4,
-                    "startOffset": 64976,
+                    "startOffset": 64967,
                     "endLine": 766,
                     "endColumn": 12,
-                    "endOffset": 65216
+                    "endOffset": 65207
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6680,10 +6680,10 @@
                 "to": {
                     "startLine": 767,
                     "startColumn": 4,
-                    "startOffset": 65221,
+                    "startOffset": 65212,
                     "endLine": 770,
                     "endColumn": 12,
-                    "endOffset": 65492
+                    "endOffset": 65483
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6701,10 +6701,10 @@
                 "to": {
                     "startLine": 771,
                     "startColumn": 4,
-                    "startOffset": 65497,
+                    "startOffset": 65488,
                     "endLine": 774,
                     "endColumn": 12,
-                    "endOffset": 65793
+                    "endOffset": 65784
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6722,10 +6722,10 @@
                 "to": {
                     "startLine": 775,
                     "startColumn": 4,
-                    "startOffset": 65798,
+                    "startOffset": 65789,
                     "endLine": 778,
                     "endColumn": 12,
-                    "endOffset": 66117
+                    "endOffset": 66108
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6743,10 +6743,10 @@
                 "to": {
                     "startLine": 779,
                     "startColumn": 4,
-                    "startOffset": 66122,
+                    "startOffset": 66113,
                     "endLine": 782,
                     "endColumn": 12,
-                    "endOffset": 66408
+                    "endOffset": 66399
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6764,10 +6764,10 @@
                 "to": {
                     "startLine": 783,
                     "startColumn": 4,
-                    "startOffset": 66413,
+                    "startOffset": 66404,
                     "endLine": 786,
                     "endColumn": 12,
-                    "endOffset": 66722
+                    "endOffset": 66713
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6785,9 +6785,9 @@
                 "to": {
                     "startLine": 787,
                     "startColumn": 4,
-                    "startOffset": 66727,
+                    "startOffset": 66718,
                     "endColumn": 136,
-                    "endOffset": 66859
+                    "endOffset": 66850
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6804,9 +6804,9 @@
                 "to": {
                     "startLine": 788,
                     "startColumn": 4,
-                    "startOffset": 66864,
+                    "startOffset": 66855,
                     "endColumn": 130,
-                    "endOffset": 66990
+                    "endOffset": 66981
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6823,9 +6823,9 @@
                 "to": {
                     "startLine": 789,
                     "startColumn": 4,
-                    "startOffset": 66995,
+                    "startOffset": 66986,
                     "endColumn": 104,
-                    "endOffset": 67095
+                    "endOffset": 67086
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6842,10 +6842,10 @@
                 "to": {
                     "startLine": 790,
                     "startColumn": 4,
-                    "startOffset": 67100,
+                    "startOffset": 67091,
                     "endLine": 792,
                     "endColumn": 12,
-                    "endOffset": 67299
+                    "endOffset": 67290
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6863,10 +6863,10 @@
                 "to": {
                     "startLine": 793,
                     "startColumn": 4,
-                    "startOffset": 67304,
+                    "startOffset": 67295,
                     "endLine": 795,
                     "endColumn": 12,
-                    "endOffset": 67507
+                    "endOffset": 67498
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6884,10 +6884,10 @@
                 "to": {
                     "startLine": 796,
                     "startColumn": 4,
-                    "startOffset": 67512,
+                    "startOffset": 67503,
                     "endLine": 799,
                     "endColumn": 12,
-                    "endOffset": 67778
+                    "endOffset": 67769
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6905,9 +6905,9 @@
                 "to": {
                     "startLine": 800,
                     "startColumn": 4,
-                    "startOffset": 67783,
+                    "startOffset": 67774,
                     "endColumn": 111,
-                    "endOffset": 67890
+                    "endOffset": 67881
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6924,9 +6924,9 @@
                 "to": {
                     "startLine": 801,
                     "startColumn": 4,
-                    "startOffset": 67895,
+                    "startOffset": 67886,
                     "endColumn": 111,
-                    "endOffset": 68002
+                    "endOffset": 67993
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6943,9 +6943,9 @@
                 "to": {
                     "startLine": 802,
                     "startColumn": 4,
-                    "startOffset": 68007,
+                    "startOffset": 67998,
                     "endColumn": 104,
-                    "endOffset": 68107
+                    "endOffset": 68098
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6962,9 +6962,9 @@
                 "to": {
                     "startLine": 803,
                     "startColumn": 4,
-                    "startOffset": 68112,
+                    "startOffset": 68103,
                     "endColumn": 116,
-                    "endOffset": 68224
+                    "endOffset": 68215
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -6981,10 +6981,10 @@
                 "to": {
                     "startLine": 804,
                     "startColumn": 4,
-                    "startOffset": 68229,
+                    "startOffset": 68220,
                     "endLine": 806,
                     "endColumn": 12,
-                    "endOffset": 68438
+                    "endOffset": 68429
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7002,10 +7002,10 @@
                 "to": {
                     "startLine": 807,
                     "startColumn": 4,
-                    "startOffset": 68443,
+                    "startOffset": 68434,
                     "endLine": 808,
                     "endColumn": 12,
-                    "endOffset": 68584
+                    "endOffset": 68575
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7023,10 +7023,10 @@
                 "to": {
                     "startLine": 809,
                     "startColumn": 4,
-                    "startOffset": 68589,
+                    "startOffset": 68580,
                     "endLine": 810,
                     "endColumn": 12,
-                    "endOffset": 68724
+                    "endOffset": 68715
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7044,10 +7044,10 @@
                 "to": {
                     "startLine": 811,
                     "startColumn": 4,
-                    "startOffset": 68729,
+                    "startOffset": 68720,
                     "endLine": 812,
                     "endColumn": 12,
-                    "endOffset": 68810
+                    "endOffset": 68801
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7065,10 +7065,10 @@
                 "to": {
                     "startLine": 813,
                     "startColumn": 4,
-                    "startOffset": 68815,
+                    "startOffset": 68806,
                     "endLine": 817,
                     "endColumn": 12,
-                    "endOffset": 69158
+                    "endOffset": 69149
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7086,9 +7086,9 @@
                 "to": {
                     "startLine": 818,
                     "startColumn": 4,
-                    "startOffset": 69163,
+                    "startOffset": 69154,
                     "endColumn": 87,
-                    "endOffset": 69246
+                    "endOffset": 69237
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7105,10 +7105,10 @@
                 "to": {
                     "startLine": 819,
                     "startColumn": 4,
-                    "startOffset": 69251,
+                    "startOffset": 69242,
                     "endLine": 822,
                     "endColumn": 12,
-                    "endOffset": 69476
+                    "endOffset": 69467
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7126,10 +7126,10 @@
                 "to": {
                     "startLine": 823,
                     "startColumn": 4,
-                    "startOffset": 69481,
+                    "startOffset": 69472,
                     "endLine": 828,
                     "endColumn": 12,
-                    "endOffset": 69894
+                    "endOffset": 69885
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7147,10 +7147,10 @@
                 "to": {
                     "startLine": 829,
                     "startColumn": 4,
-                    "startOffset": 69899,
+                    "startOffset": 69890,
                     "endLine": 832,
                     "endColumn": 12,
-                    "endOffset": 70127
+                    "endOffset": 70118
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7168,9 +7168,9 @@
                 "to": {
                     "startLine": 833,
                     "startColumn": 4,
-                    "startOffset": 70132,
+                    "startOffset": 70123,
                     "endColumn": 81,
-                    "endOffset": 70209
+                    "endOffset": 70200
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7187,10 +7187,10 @@
                 "to": {
                     "startLine": 834,
                     "startColumn": 4,
-                    "startOffset": 70214,
+                    "startOffset": 70205,
                     "endLine": 835,
                     "endColumn": 12,
-                    "endOffset": 70307
+                    "endOffset": 70298
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7208,10 +7208,10 @@
                 "to": {
                     "startLine": 836,
                     "startColumn": 4,
-                    "startOffset": 70312,
+                    "startOffset": 70303,
                     "endLine": 846,
                     "endColumn": 12,
-                    "endOffset": 70924
+                    "endOffset": 70915
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7229,9 +7229,9 @@
                 "to": {
                     "startLine": 847,
                     "startColumn": 4,
-                    "startOffset": 70929,
+                    "startOffset": 70920,
                     "endColumn": 99,
-                    "endOffset": 71024
+                    "endOffset": 71015
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7248,10 +7248,10 @@
                 "to": {
                     "startLine": 848,
                     "startColumn": 4,
-                    "startOffset": 71029,
+                    "startOffset": 71020,
                     "endLine": 851,
                     "endColumn": 12,
-                    "endOffset": 71260
+                    "endOffset": 71251
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7269,10 +7269,10 @@
                 "to": {
                     "startLine": 852,
                     "startColumn": 4,
-                    "startOffset": 71265,
+                    "startOffset": 71256,
                     "endLine": 857,
                     "endColumn": 12,
-                    "endOffset": 71684
+                    "endOffset": 71675
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7290,10 +7290,10 @@
                 "to": {
                     "startLine": 858,
                     "startColumn": 4,
-                    "startOffset": 71689,
+                    "startOffset": 71680,
                     "endLine": 861,
                     "endColumn": 12,
-                    "endOffset": 71923
+                    "endOffset": 71914
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7311,9 +7311,9 @@
                 "to": {
                     "startLine": 862,
                     "startColumn": 4,
-                    "startOffset": 71928,
+                    "startOffset": 71919,
                     "endColumn": 93,
-                    "endOffset": 72017
+                    "endOffset": 72008
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7330,9 +7330,9 @@
                 "to": {
                     "startLine": 863,
                     "startColumn": 4,
-                    "startOffset": 72022,
+                    "startOffset": 72013,
                     "endColumn": 88,
-                    "endOffset": 72106
+                    "endOffset": 72097
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7349,10 +7349,10 @@
                 "to": {
                     "startLine": 864,
                     "startColumn": 4,
-                    "startOffset": 72111,
+                    "startOffset": 72102,
                     "endLine": 867,
                     "endColumn": 12,
-                    "endOffset": 72343
+                    "endOffset": 72334
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7370,10 +7370,10 @@
                 "to": {
                     "startLine": 868,
                     "startColumn": 4,
-                    "startOffset": 72348,
+                    "startOffset": 72339,
                     "endLine": 893,
                     "endColumn": 12,
-                    "endOffset": 74294
+                    "endOffset": 74285
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7391,10 +7391,10 @@
                 "to": {
                     "startLine": 894,
                     "startColumn": 4,
-                    "startOffset": 74299,
+                    "startOffset": 74290,
                     "endLine": 897,
                     "endColumn": 12,
-                    "endOffset": 74536
+                    "endOffset": 74527
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7412,9 +7412,9 @@
                 "to": {
                     "startLine": 898,
                     "startColumn": 4,
-                    "startOffset": 74541,
+                    "startOffset": 74532,
                     "endColumn": 101,
-                    "endOffset": 74638
+                    "endOffset": 74629
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7431,10 +7431,10 @@
                 "to": {
                     "startLine": 899,
                     "startColumn": 4,
-                    "startOffset": 74643,
+                    "startOffset": 74634,
                     "endLine": 902,
                     "endColumn": 12,
-                    "endOffset": 74875
+                    "endOffset": 74866
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7452,10 +7452,10 @@
                 "to": {
                     "startLine": 903,
                     "startColumn": 4,
-                    "startOffset": 74880,
+                    "startOffset": 74871,
                     "endLine": 929,
                     "endColumn": 12,
-                    "endOffset": 76957
+                    "endOffset": 76948
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7473,10 +7473,10 @@
                 "to": {
                     "startLine": 930,
                     "startColumn": 4,
-                    "startOffset": 76962,
+                    "startOffset": 76953,
                     "endLine": 1088,
                     "endColumn": 12,
-                    "endOffset": 87118
+                    "endOffset": 87109
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7494,10 +7494,10 @@
                 "to": {
                     "startLine": 1089,
                     "startColumn": 4,
-                    "startOffset": 87123,
+                    "startOffset": 87114,
                     "endLine": 1110,
                     "endColumn": 12,
-                    "endOffset": 88369
+                    "endOffset": 88360
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7515,10 +7515,10 @@
                 "to": {
                     "startLine": 1111,
                     "startColumn": 4,
-                    "startOffset": 88374,
+                    "startOffset": 88365,
                     "endLine": 1269,
                     "endColumn": 12,
-                    "endOffset": 98629
+                    "endOffset": 98620
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7536,10 +7536,10 @@
                 "to": {
                     "startLine": 1270,
                     "startColumn": 4,
-                    "startOffset": 98634,
+                    "startOffset": 98625,
                     "endLine": 1291,
                     "endColumn": 12,
-                    "endOffset": 99892
+                    "endOffset": 99883
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7557,10 +7557,10 @@
                 "to": {
                     "startLine": 1292,
                     "startColumn": 4,
-                    "startOffset": 99897,
+                    "startOffset": 99888,
                     "endLine": 1313,
                     "endColumn": 12,
-                    "endOffset": 101157
+                    "endOffset": 101148
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7578,10 +7578,10 @@
                 "to": {
                     "startLine": 1314,
                     "startColumn": 4,
-                    "startOffset": 101162,
+                    "startOffset": 101153,
                     "endLine": 1320,
                     "endColumn": 12,
-                    "endOffset": 101693
+                    "endOffset": 101684
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7599,10 +7599,10 @@
                 "to": {
                     "startLine": 1321,
                     "startColumn": 4,
-                    "startOffset": 101698,
+                    "startOffset": 101689,
                     "endLine": 1325,
                     "endColumn": 12,
-                    "endOffset": 102023
+                    "endOffset": 102014
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7620,10 +7620,10 @@
                 "to": {
                     "startLine": 1326,
                     "startColumn": 4,
-                    "startOffset": 102028,
+                    "startOffset": 102019,
                     "endLine": 1347,
                     "endColumn": 12,
-                    "endOffset": 103288
+                    "endOffset": 103279
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7641,10 +7641,10 @@
                 "to": {
                     "startLine": 1348,
                     "startColumn": 4,
-                    "startOffset": 103293,
+                    "startOffset": 103284,
                     "endLine": 1352,
                     "endColumn": 12,
-                    "endOffset": 103544
+                    "endOffset": 103535
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7662,10 +7662,10 @@
                 "to": {
                     "startLine": 1353,
                     "startColumn": 4,
-                    "startOffset": 103549,
+                    "startOffset": 103540,
                     "endLine": 1357,
                     "endColumn": 12,
-                    "endOffset": 103780
+                    "endOffset": 103771
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7683,10 +7683,10 @@
                 "to": {
                     "startLine": 1358,
                     "startColumn": 4,
-                    "startOffset": 103785,
+                    "startOffset": 103776,
                     "endLine": 1367,
                     "endColumn": 12,
-                    "endOffset": 104327
+                    "endOffset": 104318
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7704,10 +7704,10 @@
                 "to": {
                     "startLine": 1368,
                     "startColumn": 4,
-                    "startOffset": 104332,
+                    "startOffset": 104323,
                     "endLine": 1376,
                     "endColumn": 12,
-                    "endOffset": 104821
+                    "endOffset": 104812
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7725,10 +7725,10 @@
                 "to": {
                     "startLine": 1377,
                     "startColumn": 4,
-                    "startOffset": 104826,
+                    "startOffset": 104817,
                     "endLine": 1385,
                     "endColumn": 12,
-                    "endOffset": 105426
+                    "endOffset": 105417
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7746,10 +7746,10 @@
                 "to": {
                     "startLine": 1386,
                     "startColumn": 4,
-                    "startOffset": 105431,
+                    "startOffset": 105422,
                     "endLine": 1389,
                     "endColumn": 12,
-                    "endOffset": 105624
+                    "endOffset": 105615
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7767,10 +7767,10 @@
                 "to": {
                     "startLine": 1390,
                     "startColumn": 4,
-                    "startOffset": 105629,
+                    "startOffset": 105620,
                     "endLine": 1396,
                     "endColumn": 12,
-                    "endOffset": 106204
+                    "endOffset": 106195
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7788,10 +7788,10 @@
                 "to": {
                     "startLine": 1397,
                     "startColumn": 4,
-                    "startOffset": 106209,
+                    "startOffset": 106200,
                     "endLine": 1404,
                     "endColumn": 12,
-                    "endOffset": 106768
+                    "endOffset": 106759
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7809,10 +7809,10 @@
                 "to": {
                     "startLine": 1405,
                     "startColumn": 4,
-                    "startOffset": 106773,
+                    "startOffset": 106764,
                     "endLine": 1411,
                     "endColumn": 12,
-                    "endOffset": 107143
+                    "endOffset": 107134
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7830,9 +7830,9 @@
                 "to": {
                     "startLine": 1412,
                     "startColumn": 4,
-                    "startOffset": 107148,
+                    "startOffset": 107139,
                     "endColumn": 117,
-                    "endOffset": 107261
+                    "endOffset": 107252
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7849,10 +7849,10 @@
                 "to": {
                     "startLine": 1413,
                     "startColumn": 4,
-                    "startOffset": 107266,
+                    "startOffset": 107257,
                     "endLine": 1421,
                     "endColumn": 12,
-                    "endOffset": 107799
+                    "endOffset": 107790
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7870,10 +7870,10 @@
                 "to": {
                     "startLine": 1422,
                     "startColumn": 4,
-                    "startOffset": 107804,
+                    "startOffset": 107795,
                     "endLine": 1424,
                     "endColumn": 12,
-                    "endOffset": 107956
+                    "endOffset": 107947
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7891,10 +7891,10 @@
                 "to": {
                     "startLine": 1425,
                     "startColumn": 4,
-                    "startOffset": 107961,
+                    "startOffset": 107952,
                     "endLine": 1427,
                     "endColumn": 12,
-                    "endOffset": 108130
+                    "endOffset": 108121
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7912,10 +7912,10 @@
                 "to": {
                     "startLine": 1428,
                     "startColumn": 4,
-                    "startOffset": 108135,
+                    "startOffset": 108126,
                     "endLine": 1432,
                     "endColumn": 12,
-                    "endOffset": 108450
+                    "endOffset": 108441
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7933,10 +7933,10 @@
                 "to": {
                     "startLine": 1433,
                     "startColumn": 4,
-                    "startOffset": 108455,
+                    "startOffset": 108446,
                     "endLine": 1436,
                     "endColumn": 12,
-                    "endOffset": 108706
+                    "endOffset": 108697
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7954,10 +7954,10 @@
                 "to": {
                     "startLine": 1437,
                     "startColumn": 4,
-                    "startOffset": 108711,
+                    "startOffset": 108702,
                     "endLine": 1440,
                     "endColumn": 12,
-                    "endOffset": 108876
+                    "endOffset": 108867
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7975,10 +7975,10 @@
                 "to": {
                     "startLine": 1441,
                     "startColumn": 4,
-                    "startOffset": 108881,
+                    "startOffset": 108872,
                     "endLine": 1443,
                     "endColumn": 12,
-                    "endOffset": 109017
+                    "endOffset": 109008
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -7996,9 +7996,9 @@
                 "to": {
                     "startLine": 1444,
                     "startColumn": 4,
-                    "startOffset": 109022,
+                    "startOffset": 109013,
                     "endColumn": 63,
-                    "endOffset": 109081
+                    "endOffset": 109072
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8015,10 +8015,10 @@
                 "to": {
                     "startLine": 1445,
                     "startColumn": 4,
-                    "startOffset": 109086,
+                    "startOffset": 109077,
                     "endLine": 1448,
                     "endColumn": 12,
-                    "endOffset": 109363
+                    "endOffset": 109354
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8036,10 +8036,10 @@
                 "to": {
                     "startLine": 1449,
                     "startColumn": 4,
-                    "startOffset": 109368,
+                    "startOffset": 109359,
                     "endLine": 1452,
                     "endColumn": 12,
-                    "endOffset": 109649
+                    "endOffset": 109640
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8057,10 +8057,10 @@
                 "to": {
                     "startLine": 1453,
                     "startColumn": 4,
-                    "startOffset": 109654,
+                    "startOffset": 109645,
                     "endLine": 1462,
                     "endColumn": 12,
-                    "endOffset": 110325
+                    "endOffset": 110316
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8078,10 +8078,10 @@
                 "to": {
                     "startLine": 1463,
                     "startColumn": 4,
-                    "startOffset": 110330,
+                    "startOffset": 110321,
                     "endLine": 1467,
                     "endColumn": 12,
-                    "endOffset": 110589
+                    "endOffset": 110580
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8099,10 +8099,10 @@
                 "to": {
                     "startLine": 1468,
                     "startColumn": 4,
-                    "startOffset": 110594,
+                    "startOffset": 110585,
                     "endLine": 1474,
                     "endColumn": 12,
-                    "endOffset": 110927
+                    "endOffset": 110918
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8120,10 +8120,10 @@
                 "to": {
                     "startLine": 1475,
                     "startColumn": 4,
-                    "startOffset": 110932,
+                    "startOffset": 110923,
                     "endLine": 1480,
                     "endColumn": 12,
-                    "endOffset": 111280
+                    "endOffset": 111271
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8141,9 +8141,9 @@
                 "to": {
                     "startLine": 1481,
                     "startColumn": 4,
-                    "startOffset": 111285,
+                    "startOffset": 111276,
                     "endColumn": 93,
-                    "endOffset": 111374
+                    "endOffset": 111365
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8160,10 +8160,10 @@
                 "to": {
                     "startLine": 1482,
                     "startColumn": 4,
-                    "startOffset": 111379,
+                    "startOffset": 111370,
                     "endLine": 1484,
                     "endColumn": 12,
-                    "endOffset": 111560
+                    "endOffset": 111551
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8181,10 +8181,10 @@
                 "to": {
                     "startLine": 1485,
                     "startColumn": 4,
-                    "startOffset": 111565,
+                    "startOffset": 111556,
                     "endLine": 1488,
                     "endColumn": 12,
-                    "endOffset": 111866
+                    "endOffset": 111857
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8202,10 +8202,10 @@
                 "to": {
                     "startLine": 1489,
                     "startColumn": 4,
-                    "startOffset": 111871,
+                    "startOffset": 111862,
                     "endLine": 1493,
                     "endColumn": 12,
-                    "endOffset": 112128
+                    "endOffset": 112119
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8223,10 +8223,10 @@
                 "to": {
                     "startLine": 1494,
                     "startColumn": 4,
-                    "startOffset": 112133,
+                    "startOffset": 112124,
                     "endLine": 1495,
                     "endColumn": 12,
-                    "endOffset": 112253
+                    "endOffset": 112244
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8244,10 +8244,10 @@
                 "to": {
                     "startLine": 1496,
                     "startColumn": 4,
-                    "startOffset": 112258,
+                    "startOffset": 112249,
                     "endLine": 1497,
                     "endColumn": 12,
-                    "endOffset": 112380
+                    "endOffset": 112371
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8265,10 +8265,10 @@
                 "to": {
                     "startLine": 1498,
                     "startColumn": 4,
-                    "startOffset": 112385,
+                    "startOffset": 112376,
                     "endLine": 1500,
                     "endColumn": 12,
-                    "endOffset": 112619
+                    "endOffset": 112610
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8286,10 +8286,10 @@
                 "to": {
                     "startLine": 1501,
                     "startColumn": 4,
-                    "startOffset": 112624,
+                    "startOffset": 112615,
                     "endLine": 1503,
                     "endColumn": 12,
-                    "endOffset": 112830
+                    "endOffset": 112821
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8307,10 +8307,10 @@
                 "to": {
                     "startLine": 1504,
                     "startColumn": 4,
-                    "startOffset": 112835,
+                    "startOffset": 112826,
                     "endLine": 1505,
                     "endColumn": 12,
-                    "endOffset": 112949
+                    "endOffset": 112940
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8328,10 +8328,10 @@
                 "to": {
                     "startLine": 1506,
                     "startColumn": 4,
-                    "startOffset": 112954,
+                    "startOffset": 112945,
                     "endLine": 1509,
                     "endColumn": 12,
-                    "endOffset": 113142
+                    "endOffset": 113133
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8349,10 +8349,10 @@
                 "to": {
                     "startLine": 1510,
                     "startColumn": 4,
-                    "startOffset": 113147,
+                    "startOffset": 113138,
                     "endLine": 1512,
                     "endColumn": 12,
-                    "endOffset": 113319
+                    "endOffset": 113310
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8370,10 +8370,10 @@
                 "to": {
                     "startLine": 1513,
                     "startColumn": 4,
-                    "startOffset": 113324,
+                    "startOffset": 113315,
                     "endLine": 1519,
                     "endColumn": 12,
-                    "endOffset": 113774
+                    "endOffset": 113765
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8391,10 +8391,10 @@
                 "to": {
                     "startLine": 1520,
                     "startColumn": 4,
-                    "startOffset": 113779,
+                    "startOffset": 113770,
                     "endLine": 1522,
                     "endColumn": 12,
-                    "endOffset": 113955
+                    "endOffset": 113946
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8412,10 +8412,10 @@
                 "to": {
                     "startLine": 1523,
                     "startColumn": 4,
-                    "startOffset": 113960,
+                    "startOffset": 113951,
                     "endLine": 1525,
                     "endColumn": 12,
-                    "endOffset": 114077
+                    "endOffset": 114068
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8433,10 +8433,10 @@
                 "to": {
                     "startLine": 1526,
                     "startColumn": 4,
-                    "startOffset": 114082,
+                    "startOffset": 114073,
                     "endLine": 1529,
                     "endColumn": 12,
-                    "endOffset": 114336
+                    "endOffset": 114327
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8454,10 +8454,10 @@
                 "to": {
                     "startLine": 1530,
                     "startColumn": 4,
-                    "startOffset": 114341,
+                    "startOffset": 114332,
                     "endLine": 1531,
                     "endColumn": 12,
-                    "endOffset": 114449
+                    "endOffset": 114440
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8475,10 +8475,10 @@
                 "to": {
                     "startLine": 1532,
                     "startColumn": 4,
-                    "startOffset": 114454,
+                    "startOffset": 114445,
                     "endLine": 1535,
                     "endColumn": 12,
-                    "endOffset": 114636
+                    "endOffset": 114627
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8496,10 +8496,10 @@
                 "to": {
                     "startLine": 1536,
                     "startColumn": 4,
-                    "startOffset": 114641,
+                    "startOffset": 114632,
                     "endLine": 1537,
                     "endColumn": 12,
-                    "endOffset": 114738
+                    "endOffset": 114729
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8517,10 +8517,10 @@
                 "to": {
                     "startLine": 1538,
                     "startColumn": 4,
-                    "startOffset": 114743,
+                    "startOffset": 114734,
                     "endLine": 1543,
                     "endColumn": 12,
-                    "endOffset": 115182
+                    "endOffset": 115173
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8538,10 +8538,10 @@
                 "to": {
                     "startLine": 1544,
                     "startColumn": 4,
-                    "startOffset": 115187,
+                    "startOffset": 115178,
                     "endLine": 1545,
                     "endColumn": 12,
-                    "endOffset": 115306
+                    "endOffset": 115297
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8559,10 +8559,10 @@
                 "to": {
                     "startLine": 1546,
                     "startColumn": 4,
-                    "startOffset": 115311,
+                    "startOffset": 115302,
                     "endLine": 1549,
                     "endColumn": 12,
-                    "endOffset": 115581
+                    "endOffset": 115572
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8580,10 +8580,10 @@
                 "to": {
                     "startLine": 1550,
                     "startColumn": 4,
-                    "startOffset": 115586,
+                    "startOffset": 115577,
                     "endLine": 1557,
                     "endColumn": 12,
-                    "endOffset": 116089
+                    "endOffset": 116080
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8601,10 +8601,10 @@
                 "to": {
                     "startLine": 1558,
                     "startColumn": 4,
-                    "startOffset": 116094,
+                    "startOffset": 116085,
                     "endLine": 1565,
                     "endColumn": 12,
-                    "endOffset": 116585
+                    "endOffset": 116576
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8622,10 +8622,10 @@
                 "to": {
                     "startLine": 1566,
                     "startColumn": 4,
-                    "startOffset": 116590,
+                    "startOffset": 116581,
                     "endLine": 1577,
                     "endColumn": 12,
-                    "endOffset": 117462
+                    "endOffset": 117453
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8643,10 +8643,10 @@
                 "to": {
                     "startLine": 1578,
                     "startColumn": 4,
-                    "startOffset": 117467,
+                    "startOffset": 117458,
                     "endLine": 1583,
                     "endColumn": 12,
-                    "endOffset": 117756
+                    "endOffset": 117747
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8664,10 +8664,10 @@
                 "to": {
                     "startLine": 1584,
                     "startColumn": 4,
-                    "startOffset": 117761,
+                    "startOffset": 117752,
                     "endLine": 1592,
                     "endColumn": 12,
-                    "endOffset": 118326
+                    "endOffset": 118317
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8685,10 +8685,10 @@
                 "to": {
                     "startLine": 1593,
                     "startColumn": 4,
-                    "startOffset": 118331,
+                    "startOffset": 118322,
                     "endLine": 1595,
                     "endColumn": 12,
-                    "endOffset": 118475
+                    "endOffset": 118466
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8706,10 +8706,10 @@
                 "to": {
                     "startLine": 1596,
                     "startColumn": 4,
-                    "startOffset": 118480,
+                    "startOffset": 118471,
                     "endLine": 1606,
                     "endColumn": 12,
-                    "endOffset": 119207
+                    "endOffset": 119198
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8727,10 +8727,10 @@
                 "to": {
                     "startLine": 1607,
                     "startColumn": 4,
-                    "startOffset": 119212,
+                    "startOffset": 119203,
                     "endLine": 1609,
                     "endColumn": 12,
-                    "endOffset": 119379
+                    "endOffset": 119370
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8748,10 +8748,10 @@
                 "to": {
                     "startLine": 1610,
                     "startColumn": 4,
-                    "startOffset": 119384,
+                    "startOffset": 119375,
                     "endLine": 1614,
                     "endColumn": 12,
-                    "endOffset": 119715
+                    "endOffset": 119706
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8769,10 +8769,10 @@
                 "to": {
                     "startLine": 1615,
                     "startColumn": 4,
-                    "startOffset": 119720,
+                    "startOffset": 119711,
                     "endLine": 1628,
                     "endColumn": 12,
-                    "endOffset": 120773
+                    "endOffset": 120764
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8790,10 +8790,10 @@
                 "to": {
                     "startLine": 1629,
                     "startColumn": 4,
-                    "startOffset": 120778,
+                    "startOffset": 120769,
                     "endLine": 1633,
                     "endColumn": 12,
-                    "endOffset": 121051
+                    "endOffset": 121042
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8811,10 +8811,10 @@
                 "to": {
                     "startLine": 1634,
                     "startColumn": 4,
-                    "startOffset": 121056,
+                    "startOffset": 121047,
                     "endLine": 1636,
                     "endColumn": 12,
-                    "endOffset": 121205
+                    "endOffset": 121196
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -8832,10 +8832,10 @@
                 "to": {
                     "startLine": 1637,
                     "startColumn": 4,
-                    "startOffset": 121210,
+                    "startOffset": 121201,
                     "endLine": 1646,
                     "endColumn": 12,
-                    "endOffset": 121796
+                    "endOffset": 121787
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -8853,10 +8853,10 @@
                 "to": {
                     "startLine": 1647,
                     "startColumn": 4,
-                    "startOffset": 121801,
+                    "startOffset": 121792,
                     "endLine": 1688,
                     "endColumn": 12,
-                    "endOffset": 124974
+                    "endOffset": 124965
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8874,10 +8874,10 @@
                 "to": {
                     "startLine": 1689,
                     "startColumn": 4,
-                    "startOffset": 124979,
+                    "startOffset": 124970,
                     "endLine": 1731,
                     "endColumn": 12,
-                    "endOffset": 128295
+                    "endOffset": 128286
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8895,9 +8895,9 @@
                 "to": {
                     "startLine": 1732,
                     "startColumn": 4,
-                    "startOffset": 128300,
+                    "startOffset": 128291,
                     "endColumn": 61,
-                    "endOffset": 128357
+                    "endOffset": 128348
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8914,10 +8914,10 @@
                 "to": {
                     "startLine": 1733,
                     "startColumn": 4,
-                    "startOffset": 128362,
+                    "startOffset": 128353,
                     "endLine": 1742,
                     "endColumn": 12,
-                    "endOffset": 128987
+                    "endOffset": 128978
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8935,10 +8935,10 @@
                 "to": {
                     "startLine": 1743,
                     "startColumn": 4,
-                    "startOffset": 128992,
+                    "startOffset": 128983,
                     "endLine": 1751,
                     "endColumn": 12,
-                    "endOffset": 129601
+                    "endOffset": 129592
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8956,9 +8956,9 @@
                 "to": {
                     "startLine": 1752,
                     "startColumn": 4,
-                    "startOffset": 129606,
+                    "startOffset": 129597,
                     "endColumn": 85,
-                    "endOffset": 129687
+                    "endOffset": 129678
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -8975,18 +8975,18 @@
                 "to": {
                     "startLine": 1753,
                     "startColumn": 4,
-                    "startOffset": 129692,
+                    "startOffset": 129683,
                     "endColumn": 70,
-                    "endOffset": 129758
+                    "endOffset": 129749
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 104,
+                        "startOffset": 93,
                         "endColumn": 71,
-                        "endOffset": 171
+                        "endOffset": 160
                     }
                 }
             },
@@ -8994,10 +8994,10 @@
                 "to": {
                     "startLine": 1754,
                     "startColumn": 4,
-                    "startOffset": 129763,
+                    "startOffset": 129754,
                     "endLine": 1755,
                     "endColumn": 12,
-                    "endOffset": 129871
+                    "endOffset": 129862
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9015,10 +9015,10 @@
                 "to": {
                     "startLine": 1756,
                     "startColumn": 4,
-                    "startOffset": 129876,
+                    "startOffset": 129867,
                     "endLine": 1759,
                     "endColumn": 12,
-                    "endOffset": 130100
+                    "endOffset": 130091
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9036,10 +9036,10 @@
                 "to": {
                     "startLine": 1760,
                     "startColumn": 4,
-                    "startOffset": 130105,
+                    "startOffset": 130096,
                     "endLine": 1762,
                     "endColumn": 12,
-                    "endOffset": 130260
+                    "endOffset": 130251
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9057,10 +9057,10 @@
                 "to": {
                     "startLine": 1763,
                     "startColumn": 4,
-                    "startOffset": 130265,
+                    "startOffset": 130256,
                     "endLine": 1765,
                     "endColumn": 12,
-                    "endOffset": 130412
+                    "endOffset": 130403
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9078,10 +9078,10 @@
                 "to": {
                     "startLine": 1766,
                     "startColumn": 4,
-                    "startOffset": 130417,
+                    "startOffset": 130408,
                     "endLine": 1768,
                     "endColumn": 12,
-                    "endOffset": 130583
+                    "endOffset": 130574
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9099,10 +9099,10 @@
                 "to": {
                     "startLine": 1769,
                     "startColumn": 4,
-                    "startOffset": 130588,
+                    "startOffset": 130579,
                     "endLine": 1771,
                     "endColumn": 12,
-                    "endOffset": 130750
+                    "endOffset": 130741
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9120,10 +9120,10 @@
                 "to": {
                     "startLine": 1772,
                     "startColumn": 4,
-                    "startOffset": 130755,
+                    "startOffset": 130746,
                     "endLine": 1775,
                     "endColumn": 12,
-                    "endOffset": 130993
+                    "endOffset": 130984
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9141,10 +9141,10 @@
                 "to": {
                     "startLine": 1776,
                     "startColumn": 4,
-                    "startOffset": 130998,
+                    "startOffset": 130989,
                     "endLine": 1778,
                     "endColumn": 12,
-                    "endOffset": 131163
+                    "endOffset": 131154
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9162,10 +9162,10 @@
                 "to": {
                     "startLine": 1779,
                     "startColumn": 4,
-                    "startOffset": 131168,
+                    "startOffset": 131159,
                     "endLine": 1781,
                     "endColumn": 12,
-                    "endOffset": 131336
+                    "endOffset": 131327
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9183,10 +9183,10 @@
                 "to": {
                     "startLine": 1782,
                     "startColumn": 4,
-                    "startOffset": 131341,
+                    "startOffset": 131332,
                     "endLine": 1784,
                     "endColumn": 12,
-                    "endOffset": 131507
+                    "endOffset": 131498
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9204,10 +9204,10 @@
                 "to": {
                     "startLine": 1785,
                     "startColumn": 4,
-                    "startOffset": 131512,
+                    "startOffset": 131503,
                     "endLine": 1788,
                     "endColumn": 12,
-                    "endOffset": 131781
+                    "endOffset": 131772
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9225,10 +9225,10 @@
                 "to": {
                     "startLine": 1789,
                     "startColumn": 4,
-                    "startOffset": 131786,
+                    "startOffset": 131777,
                     "endLine": 1791,
                     "endColumn": 12,
-                    "endOffset": 131980
+                    "endOffset": 131971
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9246,10 +9246,10 @@
                 "to": {
                     "startLine": 1792,
                     "startColumn": 4,
-                    "startOffset": 131985,
+                    "startOffset": 131976,
                     "endLine": 1795,
                     "endColumn": 12,
-                    "endOffset": 132185
+                    "endOffset": 132176
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9267,10 +9267,10 @@
                 "to": {
                     "startLine": 1796,
                     "startColumn": 4,
-                    "startOffset": 132190,
+                    "startOffset": 132181,
                     "endLine": 1799,
                     "endColumn": 12,
-                    "endOffset": 132515
+                    "endOffset": 132506
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9288,9 +9288,9 @@
                 "to": {
                     "startLine": 1800,
                     "startColumn": 4,
-                    "startOffset": 132520,
+                    "startOffset": 132511,
                     "endColumn": 83,
-                    "endOffset": 132599
+                    "endOffset": 132590
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9307,9 +9307,9 @@
                 "to": {
                     "startLine": 1801,
                     "startColumn": 4,
-                    "startOffset": 132604,
+                    "startOffset": 132595,
                     "endColumn": 95,
-                    "endOffset": 132695
+                    "endOffset": 132686
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9326,9 +9326,9 @@
                 "to": {
                     "startLine": 1802,
                     "startColumn": 4,
-                    "startOffset": 132700,
+                    "startOffset": 132691,
                     "endColumn": 95,
-                    "endOffset": 132791
+                    "endOffset": 132782
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9345,9 +9345,9 @@
                 "to": {
                     "startLine": 1803,
                     "startColumn": 4,
-                    "startOffset": 132796,
+                    "startOffset": 132787,
                     "endColumn": 97,
-                    "endOffset": 132889
+                    "endOffset": 132880
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9364,9 +9364,9 @@
                 "to": {
                     "startLine": 1804,
                     "startColumn": 4,
-                    "startOffset": 132894,
+                    "startOffset": 132885,
                     "endColumn": 99,
-                    "endOffset": 132989
+                    "endOffset": 132980
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9383,9 +9383,9 @@
                 "to": {
                     "startLine": 1805,
                     "startColumn": 4,
-                    "startOffset": 132994,
+                    "startOffset": 132985,
                     "endColumn": 101,
-                    "endOffset": 133091
+                    "endOffset": 133082
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9402,9 +9402,9 @@
                 "to": {
                     "startLine": 1806,
                     "startColumn": 4,
-                    "startOffset": 133096,
+                    "startOffset": 133087,
                     "endColumn": 101,
-                    "endOffset": 133193
+                    "endOffset": 133184
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9421,9 +9421,9 @@
                 "to": {
                     "startLine": 1807,
                     "startColumn": 4,
-                    "startOffset": 133198,
+                    "startOffset": 133189,
                     "endColumn": 101,
-                    "endOffset": 133295
+                    "endOffset": 133286
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9440,9 +9440,9 @@
                 "to": {
                     "startLine": 1808,
                     "startColumn": 4,
-                    "startOffset": 133300,
+                    "startOffset": 133291,
                     "endColumn": 101,
-                    "endOffset": 133397
+                    "endOffset": 133388
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9459,9 +9459,9 @@
                 "to": {
                     "startLine": 1809,
                     "startColumn": 4,
-                    "startOffset": 133402,
+                    "startOffset": 133393,
                     "endColumn": 101,
-                    "endOffset": 133499
+                    "endOffset": 133490
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9478,9 +9478,9 @@
                 "to": {
                     "startLine": 1810,
                     "startColumn": 4,
-                    "startOffset": 133504,
+                    "startOffset": 133495,
                     "endColumn": 99,
-                    "endOffset": 133599
+                    "endOffset": 133590
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9497,9 +9497,9 @@
                 "to": {
                     "startLine": 1811,
                     "startColumn": 4,
-                    "startOffset": 133604,
+                    "startOffset": 133595,
                     "endColumn": 95,
-                    "endOffset": 133695
+                    "endOffset": 133686
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9516,9 +9516,9 @@
                 "to": {
                     "startLine": 1812,
                     "startColumn": 4,
-                    "startOffset": 133700,
+                    "startOffset": 133691,
                     "endColumn": 111,
-                    "endOffset": 133807
+                    "endOffset": 133798
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9535,9 +9535,9 @@
                 "to": {
                     "startLine": 1813,
                     "startColumn": 4,
-                    "startOffset": 133812,
+                    "startOffset": 133803,
                     "endColumn": 128,
-                    "endOffset": 133936
+                    "endOffset": 133927
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9554,9 +9554,9 @@
                 "to": {
                     "startLine": 1814,
                     "startColumn": 4,
-                    "startOffset": 133941,
+                    "startOffset": 133932,
                     "endColumn": 122,
-                    "endOffset": 134059
+                    "endOffset": 134050
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9573,9 +9573,9 @@
                 "to": {
                     "startLine": 1815,
                     "startColumn": 4,
-                    "startOffset": 134064,
+                    "startOffset": 134055,
                     "endColumn": 130,
-                    "endOffset": 134190
+                    "endOffset": 134181
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9592,9 +9592,9 @@
                 "to": {
                     "startLine": 1816,
                     "startColumn": 4,
-                    "startOffset": 134195,
+                    "startOffset": 134186,
                     "endColumn": 130,
-                    "endOffset": 134321
+                    "endOffset": 134312
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9611,9 +9611,9 @@
                 "to": {
                     "startLine": 1817,
                     "startColumn": 4,
-                    "startOffset": 134326,
+                    "startOffset": 134317,
                     "endColumn": 97,
-                    "endOffset": 134419
+                    "endOffset": 134410
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9630,9 +9630,9 @@
                 "to": {
                     "startLine": 1818,
                     "startColumn": 4,
-                    "startOffset": 134424,
+                    "startOffset": 134415,
                     "endColumn": 113,
-                    "endOffset": 134533
+                    "endOffset": 134524
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9649,9 +9649,9 @@
                 "to": {
                     "startLine": 1819,
                     "startColumn": 4,
-                    "startOffset": 134538,
+                    "startOffset": 134529,
                     "endColumn": 93,
-                    "endOffset": 134627
+                    "endOffset": 134618
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9668,10 +9668,10 @@
                 "to": {
                     "startLine": 1820,
                     "startColumn": 4,
-                    "startOffset": 134632,
+                    "startOffset": 134623,
                     "endLine": 1821,
                     "endColumn": 12,
-                    "endOffset": 134767
+                    "endOffset": 134758
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9689,10 +9689,10 @@
                 "to": {
                     "startLine": 1822,
                     "startColumn": 4,
-                    "startOffset": 134772,
+                    "startOffset": 134763,
                     "endLine": 1823,
                     "endColumn": 12,
-                    "endOffset": 134901
+                    "endOffset": 134892
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9710,9 +9710,9 @@
                 "to": {
                     "startLine": 1824,
                     "startColumn": 4,
-                    "startOffset": 134906,
+                    "startOffset": 134897,
                     "endColumn": 95,
-                    "endOffset": 134997
+                    "endOffset": 134988
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9729,9 +9729,9 @@
                 "to": {
                     "startLine": 1825,
                     "startColumn": 4,
-                    "startOffset": 135002,
+                    "startOffset": 134993,
                     "endColumn": 111,
-                    "endOffset": 135109
+                    "endOffset": 135100
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9748,9 +9748,9 @@
                 "to": {
                     "startLine": 1826,
                     "startColumn": 4,
-                    "startOffset": 135114,
+                    "startOffset": 135105,
                     "endColumn": 99,
-                    "endOffset": 135209
+                    "endOffset": 135200
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9767,9 +9767,9 @@
                 "to": {
                     "startLine": 1827,
                     "startColumn": 4,
-                    "startOffset": 135214,
+                    "startOffset": 135205,
                     "endColumn": 115,
-                    "endOffset": 135325
+                    "endOffset": 135316
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9786,9 +9786,9 @@
                 "to": {
                     "startLine": 1828,
                     "startColumn": 4,
-                    "startOffset": 135330,
+                    "startOffset": 135321,
                     "endColumn": 95,
-                    "endOffset": 135421
+                    "endOffset": 135412
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9805,9 +9805,9 @@
                 "to": {
                     "startLine": 1829,
                     "startColumn": 4,
-                    "startOffset": 135426,
+                    "startOffset": 135417,
                     "endColumn": 111,
-                    "endOffset": 135533
+                    "endOffset": 135524
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9824,10 +9824,10 @@
                 "to": {
                     "startLine": 1830,
                     "startColumn": 4,
-                    "startOffset": 135538,
+                    "startOffset": 135529,
                     "endLine": 1831,
                     "endColumn": 12,
-                    "endOffset": 135673
+                    "endOffset": 135664
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9845,9 +9845,9 @@
                 "to": {
                     "startLine": 1832,
                     "startColumn": 4,
-                    "startOffset": 135678,
+                    "startOffset": 135669,
                     "endColumn": 135,
-                    "endOffset": 135809
+                    "endOffset": 135800
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9864,10 +9864,10 @@
                 "to": {
                     "startLine": 1833,
                     "startColumn": 4,
-                    "startOffset": 135814,
+                    "startOffset": 135805,
                     "endLine": 1834,
                     "endColumn": 12,
-                    "endOffset": 135973
+                    "endOffset": 135964
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9885,9 +9885,9 @@
                 "to": {
                     "startLine": 1835,
                     "startColumn": 4,
-                    "startOffset": 135978,
+                    "startOffset": 135969,
                     "endColumn": 129,
-                    "endOffset": 136103
+                    "endOffset": 136094
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9904,10 +9904,10 @@
                 "to": {
                     "startLine": 1836,
                     "startColumn": 4,
-                    "startOffset": 136108,
+                    "startOffset": 136099,
                     "endLine": 1837,
                     "endColumn": 12,
-                    "endOffset": 136261
+                    "endOffset": 136252
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9925,10 +9925,10 @@
                 "to": {
                     "startLine": 1838,
                     "startColumn": 4,
-                    "startOffset": 136266,
+                    "startOffset": 136257,
                     "endLine": 1839,
                     "endColumn": 12,
-                    "endOffset": 136411
+                    "endOffset": 136402
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9946,9 +9946,9 @@
                 "to": {
                     "startLine": 1840,
                     "startColumn": 4,
-                    "startOffset": 136416,
+                    "startOffset": 136407,
                     "endColumn": 140,
-                    "endOffset": 136552
+                    "endOffset": 136543
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9965,10 +9965,10 @@
                 "to": {
                     "startLine": 1841,
                     "startColumn": 4,
-                    "startOffset": 136557,
+                    "startOffset": 136548,
                     "endLine": 1842,
                     "endColumn": 12,
-                    "endOffset": 136696
+                    "endOffset": 136687
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -9986,9 +9986,9 @@
                 "to": {
                     "startLine": 1843,
                     "startColumn": 4,
-                    "startOffset": 136701,
+                    "startOffset": 136692,
                     "endColumn": 134,
-                    "endOffset": 136831
+                    "endOffset": 136822
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10005,9 +10005,9 @@
                 "to": {
                     "startLine": 1844,
                     "startColumn": 4,
-                    "startOffset": 136836,
+                    "startOffset": 136827,
                     "endColumn": 111,
-                    "endOffset": 136943
+                    "endOffset": 136934
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10024,9 +10024,9 @@
                 "to": {
                     "startLine": 1845,
                     "startColumn": 4,
-                    "startOffset": 136948,
+                    "startOffset": 136939,
                     "endColumn": 127,
-                    "endOffset": 137071
+                    "endOffset": 137062
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10043,10 +10043,10 @@
                 "to": {
                     "startLine": 1846,
                     "startColumn": 4,
-                    "startOffset": 137076,
+                    "startOffset": 137067,
                     "endLine": 1847,
                     "endColumn": 12,
-                    "endOffset": 137207
+                    "endOffset": 137198
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10064,9 +10064,9 @@
                 "to": {
                     "startLine": 1848,
                     "startColumn": 4,
-                    "startOffset": 137212,
+                    "startOffset": 137203,
                     "endColumn": 131,
-                    "endOffset": 137339
+                    "endOffset": 137330
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10083,9 +10083,9 @@
                 "to": {
                     "startLine": 1849,
                     "startColumn": 4,
-                    "startOffset": 137344,
+                    "startOffset": 137335,
                     "endColumn": 129,
-                    "endOffset": 137469
+                    "endOffset": 137460
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10102,9 +10102,9 @@
                 "to": {
                     "startLine": 1850,
                     "startColumn": 4,
-                    "startOffset": 137474,
+                    "startOffset": 137465,
                     "endColumn": 129,
-                    "endOffset": 137599
+                    "endOffset": 137590
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10121,9 +10121,9 @@
                 "to": {
                     "startLine": 1851,
                     "startColumn": 4,
-                    "startOffset": 137604,
+                    "startOffset": 137595,
                     "endColumn": 111,
-                    "endOffset": 137711
+                    "endOffset": 137702
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10140,9 +10140,9 @@
                 "to": {
                     "startLine": 1852,
                     "startColumn": 4,
-                    "startOffset": 137716,
+                    "startOffset": 137707,
                     "endColumn": 139,
-                    "endOffset": 137851
+                    "endOffset": 137842
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10159,10 +10159,10 @@
                 "to": {
                     "startLine": 1853,
                     "startColumn": 4,
-                    "startOffset": 137856,
+                    "startOffset": 137847,
                     "endLine": 1855,
                     "endColumn": 12,
-                    "endOffset": 138052
+                    "endOffset": 138043
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10180,9 +10180,9 @@
                 "to": {
                     "startLine": 1856,
                     "startColumn": 4,
-                    "startOffset": 138057,
+                    "startOffset": 138048,
                     "endColumn": 91,
-                    "endOffset": 138144
+                    "endOffset": 138135
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10199,10 +10199,10 @@
                 "to": {
                     "startLine": 1857,
                     "startColumn": 4,
-                    "startOffset": 138149,
+                    "startOffset": 138140,
                     "endLine": 1859,
                     "endColumn": 12,
-                    "endOffset": 138323
+                    "endOffset": 138314
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10220,10 +10220,10 @@
                 "to": {
                     "startLine": 1860,
                     "startColumn": 4,
-                    "startOffset": 138328,
+                    "startOffset": 138319,
                     "endLine": 1862,
                     "endColumn": 12,
-                    "endOffset": 138491
+                    "endOffset": 138482
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10241,10 +10241,10 @@
                 "to": {
                     "startLine": 1863,
                     "startColumn": 4,
-                    "startOffset": 138496,
+                    "startOffset": 138487,
                     "endLine": 1865,
                     "endColumn": 12,
-                    "endOffset": 138666
+                    "endOffset": 138657
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10262,10 +10262,10 @@
                 "to": {
                     "startLine": 1866,
                     "startColumn": 4,
-                    "startOffset": 138671,
+                    "startOffset": 138662,
                     "endLine": 1869,
                     "endColumn": 12,
-                    "endOffset": 138919
+                    "endOffset": 138910
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10283,10 +10283,10 @@
                 "to": {
                     "startLine": 1870,
                     "startColumn": 4,
-                    "startOffset": 138924,
+                    "startOffset": 138915,
                     "endLine": 1874,
                     "endColumn": 12,
-                    "endOffset": 139210
+                    "endOffset": 139201
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10304,9 +10304,9 @@
                 "to": {
                     "startLine": 1875,
                     "startColumn": 4,
-                    "startOffset": 139215,
+                    "startOffset": 139206,
                     "endColumn": 67,
-                    "endOffset": 139278
+                    "endOffset": 139269
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10323,9 +10323,9 @@
                 "to": {
                     "startLine": 1876,
                     "startColumn": 4,
-                    "startOffset": 139283,
+                    "startOffset": 139274,
                     "endColumn": 72,
-                    "endOffset": 139351
+                    "endOffset": 139342
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10342,9 +10342,9 @@
                 "to": {
                     "startLine": 1877,
                     "startColumn": 4,
-                    "startOffset": 139356,
+                    "startOffset": 139347,
                     "endColumn": 73,
-                    "endOffset": 139425
+                    "endOffset": 139416
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10361,9 +10361,9 @@
                 "to": {
                     "startLine": 1878,
                     "startColumn": 4,
-                    "startOffset": 139430,
+                    "startOffset": 139421,
                     "endColumn": 72,
-                    "endOffset": 139498
+                    "endOffset": 139489
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10380,9 +10380,9 @@
                 "to": {
                     "startLine": 1879,
                     "startColumn": 4,
-                    "startOffset": 139503,
+                    "startOffset": 139494,
                     "endColumn": 73,
-                    "endOffset": 139572
+                    "endOffset": 139563
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10399,10 +10399,10 @@
                 "to": {
                     "startLine": 1880,
                     "startColumn": 4,
-                    "startOffset": 139577,
+                    "startOffset": 139568,
                     "endLine": 1881,
                     "endColumn": 12,
-                    "endOffset": 139718
+                    "endOffset": 139709
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10420,10 +10420,10 @@
                 "to": {
                     "startLine": 1882,
                     "startColumn": 4,
-                    "startOffset": 139723,
+                    "startOffset": 139714,
                     "endLine": 1883,
                     "endColumn": 12,
-                    "endOffset": 139862
+                    "endOffset": 139853
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10441,10 +10441,10 @@
                 "to": {
                     "startLine": 1884,
                     "startColumn": 4,
-                    "startOffset": 139867,
+                    "startOffset": 139858,
                     "endLine": 1885,
                     "endColumn": 12,
-                    "endOffset": 140000
+                    "endOffset": 139991
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10462,9 +10462,9 @@
                 "to": {
                     "startLine": 1886,
                     "startColumn": 4,
-                    "startOffset": 140005,
+                    "startOffset": 139996,
                     "endColumn": 65,
-                    "endOffset": 140066
+                    "endOffset": 140057
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10481,9 +10481,9 @@
                 "to": {
                     "startLine": 1887,
                     "startColumn": 4,
-                    "startOffset": 140071,
+                    "startOffset": 140062,
                     "endColumn": 89,
-                    "endOffset": 140156
+                    "endOffset": 140147
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10500,9 +10500,9 @@
                 "to": {
                     "startLine": 1888,
                     "startColumn": 4,
-                    "startOffset": 140161,
+                    "startOffset": 140152,
                     "endColumn": 75,
-                    "endOffset": 140232
+                    "endOffset": 140223
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10519,9 +10519,9 @@
                 "to": {
                     "startLine": 1889,
                     "startColumn": 4,
-                    "startOffset": 140237,
+                    "startOffset": 140228,
                     "endColumn": 103,
-                    "endOffset": 140336
+                    "endOffset": 140327
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10538,9 +10538,9 @@
                 "to": {
                     "startLine": 1890,
                     "startColumn": 4,
-                    "startOffset": 140341,
+                    "startOffset": 140332,
                     "endColumn": 89,
-                    "endOffset": 140426
+                    "endOffset": 140417
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10557,9 +10557,9 @@
                 "to": {
                     "startLine": 1891,
                     "startColumn": 4,
-                    "startOffset": 140431,
+                    "startOffset": 140422,
                     "endColumn": 101,
-                    "endOffset": 140528
+                    "endOffset": 140519
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10576,9 +10576,9 @@
                 "to": {
                     "startLine": 1892,
                     "startColumn": 4,
-                    "startOffset": 140533,
+                    "startOffset": 140524,
                     "endColumn": 107,
-                    "endOffset": 140636
+                    "endOffset": 140627
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10595,9 +10595,9 @@
                 "to": {
                     "startLine": 1893,
                     "startColumn": 4,
-                    "startOffset": 140641,
+                    "startOffset": 140632,
                     "endColumn": 107,
-                    "endOffset": 140744
+                    "endOffset": 140735
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10614,9 +10614,9 @@
                 "to": {
                     "startLine": 1894,
                     "startColumn": 4,
-                    "startOffset": 140749,
+                    "startOffset": 140740,
                     "endColumn": 99,
-                    "endOffset": 140844
+                    "endOffset": 140835
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10633,9 +10633,9 @@
                 "to": {
                     "startLine": 1895,
                     "startColumn": 4,
-                    "startOffset": 140849,
+                    "startOffset": 140840,
                     "endColumn": 79,
-                    "endOffset": 140924
+                    "endOffset": 140915
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10652,9 +10652,9 @@
                 "to": {
                     "startLine": 1896,
                     "startColumn": 4,
-                    "startOffset": 140929,
+                    "startOffset": 140920,
                     "endColumn": 91,
-                    "endOffset": 141016
+                    "endOffset": 141007
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10671,9 +10671,9 @@
                 "to": {
                     "startLine": 1897,
                     "startColumn": 4,
-                    "startOffset": 141021,
+                    "startOffset": 141012,
                     "endColumn": 97,
-                    "endOffset": 141114
+                    "endOffset": 141105
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10690,10 +10690,10 @@
                 "to": {
                     "startLine": 1898,
                     "startColumn": 4,
-                    "startOffset": 141119,
+                    "startOffset": 141110,
                     "endLine": 1899,
                     "endColumn": 12,
-                    "endOffset": 141224
+                    "endOffset": 141215
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10711,9 +10711,9 @@
                 "to": {
                     "startLine": 1900,
                     "startColumn": 4,
-                    "startOffset": 141229,
+                    "startOffset": 141220,
                     "endColumn": 77,
-                    "endOffset": 141302
+                    "endOffset": 141293
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10730,9 +10730,9 @@
                 "to": {
                     "startLine": 1901,
                     "startColumn": 4,
-                    "startOffset": 141307,
+                    "startOffset": 141298,
                     "endColumn": 105,
-                    "endOffset": 141408
+                    "endOffset": 141399
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10749,9 +10749,9 @@
                 "to": {
                     "startLine": 1902,
                     "startColumn": 4,
-                    "startOffset": 141413,
+                    "startOffset": 141404,
                     "endColumn": 91,
-                    "endOffset": 141500
+                    "endOffset": 141491
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10768,9 +10768,9 @@
                 "to": {
                     "startLine": 1903,
                     "startColumn": 4,
-                    "startOffset": 141505,
+                    "startOffset": 141496,
                     "endColumn": 103,
-                    "endOffset": 141604
+                    "endOffset": 141595
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10787,9 +10787,9 @@
                 "to": {
                     "startLine": 1904,
                     "startColumn": 4,
-                    "startOffset": 141609,
+                    "startOffset": 141600,
                     "endColumn": 109,
-                    "endOffset": 141714
+                    "endOffset": 141705
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10806,10 +10806,10 @@
                 "to": {
                     "startLine": 1905,
                     "startColumn": 4,
-                    "startOffset": 141719,
+                    "startOffset": 141710,
                     "endLine": 1906,
                     "endColumn": 12,
-                    "endOffset": 141836
+                    "endOffset": 141827
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10827,10 +10827,10 @@
                 "to": {
                     "startLine": 1907,
                     "startColumn": 4,
-                    "startOffset": 141841,
+                    "startOffset": 141832,
                     "endLine": 1910,
                     "endColumn": 12,
-                    "endOffset": 141999
+                    "endOffset": 141990
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10848,10 +10848,10 @@
                 "to": {
                     "startLine": 1911,
                     "startColumn": 4,
-                    "startOffset": 142004,
+                    "startOffset": 141995,
                     "endLine": 1914,
                     "endColumn": 12,
-                    "endOffset": 142156
+                    "endOffset": 142147
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -10869,10 +10869,10 @@
                 "to": {
                     "startLine": 1915,
                     "startColumn": 4,
-                    "startOffset": 142161,
+                    "startOffset": 142152,
                     "endLine": 1917,
                     "endColumn": 12,
-                    "endOffset": 142310
+                    "endOffset": 142301
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10890,10 +10890,10 @@
                 "to": {
                     "startLine": 1918,
                     "startColumn": 4,
-                    "startOffset": 142315,
+                    "startOffset": 142306,
                     "endLine": 1922,
                     "endColumn": 12,
-                    "endOffset": 142668
+                    "endOffset": 142659
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10911,10 +10911,10 @@
                 "to": {
                     "startLine": 1923,
                     "startColumn": 4,
-                    "startOffset": 142673,
+                    "startOffset": 142664,
                     "endLine": 1925,
                     "endColumn": 12,
-                    "endOffset": 142835
+                    "endOffset": 142826
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10932,10 +10932,10 @@
                 "to": {
                     "startLine": 1926,
                     "startColumn": 4,
-                    "startOffset": 142840,
+                    "startOffset": 142831,
                     "endLine": 1930,
                     "endColumn": 12,
-                    "endOffset": 143205
+                    "endOffset": 143196
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10953,10 +10953,10 @@
                 "to": {
                     "startLine": 1931,
                     "startColumn": 4,
-                    "startOffset": 143210,
+                    "startOffset": 143201,
                     "endLine": 1934,
                     "endColumn": 12,
-                    "endOffset": 143365
+                    "endOffset": 143356
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10974,10 +10974,10 @@
                 "to": {
                     "startLine": 1935,
                     "startColumn": 4,
-                    "startOffset": 143370,
+                    "startOffset": 143361,
                     "endLine": 1938,
                     "endColumn": 12,
-                    "endOffset": 143519
+                    "endOffset": 143510
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -10995,9 +10995,9 @@
                 "to": {
                     "startLine": 1939,
                     "startColumn": 4,
-                    "startOffset": 143524,
+                    "startOffset": 143515,
                     "endColumn": 79,
-                    "endOffset": 143599
+                    "endOffset": 143590
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11014,9 +11014,9 @@
                 "to": {
                     "startLine": 1940,
                     "startColumn": 4,
-                    "startOffset": 143604,
+                    "startOffset": 143595,
                     "endColumn": 99,
-                    "endOffset": 143699
+                    "endOffset": 143690
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11033,9 +11033,9 @@
                 "to": {
                     "startLine": 1941,
                     "startColumn": 4,
-                    "startOffset": 143704,
+                    "startOffset": 143695,
                     "endColumn": 89,
-                    "endOffset": 143789
+                    "endOffset": 143780
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11052,9 +11052,9 @@
                 "to": {
                     "startLine": 1942,
                     "startColumn": 4,
-                    "startOffset": 143794,
+                    "startOffset": 143785,
                     "endColumn": 109,
-                    "endOffset": 143899
+                    "endOffset": 143890
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11071,9 +11071,9 @@
                 "to": {
                     "startLine": 1943,
                     "startColumn": 4,
-                    "startOffset": 143904,
+                    "startOffset": 143895,
                     "endColumn": 93,
-                    "endOffset": 143993
+                    "endOffset": 143984
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11090,9 +11090,9 @@
                 "to": {
                     "startLine": 1944,
                     "startColumn": 4,
-                    "startOffset": 143998,
+                    "startOffset": 143989,
                     "endColumn": 105,
-                    "endOffset": 144099
+                    "endOffset": 144090
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11109,9 +11109,9 @@
                 "to": {
                     "startLine": 1945,
                     "startColumn": 4,
-                    "startOffset": 144104,
+                    "startOffset": 144095,
                     "endColumn": 91,
-                    "endOffset": 144191
+                    "endOffset": 144182
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11128,10 +11128,10 @@
                 "to": {
                     "startLine": 1946,
                     "startColumn": 4,
-                    "startOffset": 144196,
+                    "startOffset": 144187,
                     "endLine": 1947,
                     "endColumn": 12,
-                    "endOffset": 144291
+                    "endOffset": 144282
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11149,10 +11149,10 @@
                 "to": {
                     "startLine": 1948,
                     "startColumn": 4,
-                    "startOffset": 144296,
+                    "startOffset": 144287,
                     "endLine": 1949,
                     "endColumn": 12,
-                    "endOffset": 144403
+                    "endOffset": 144394
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11170,10 +11170,10 @@
                 "to": {
                     "startLine": 1950,
                     "startColumn": 4,
-                    "startOffset": 144408,
+                    "startOffset": 144399,
                     "endLine": 1951,
                     "endColumn": 12,
-                    "endOffset": 144517
+                    "endOffset": 144508
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11191,10 +11191,10 @@
                 "to": {
                     "startLine": 1952,
                     "startColumn": 4,
-                    "startOffset": 144522,
+                    "startOffset": 144513,
                     "endLine": 1953,
                     "endColumn": 12,
-                    "endOffset": 144633
+                    "endOffset": 144624
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11212,10 +11212,10 @@
                 "to": {
                     "startLine": 1954,
                     "startColumn": 4,
-                    "startOffset": 144638,
+                    "startOffset": 144629,
                     "endLine": 1955,
                     "endColumn": 12,
-                    "endOffset": 144749
+                    "endOffset": 144740
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11233,9 +11233,9 @@
                 "to": {
                     "startLine": 1956,
                     "startColumn": 4,
-                    "startOffset": 144754,
+                    "startOffset": 144745,
                     "endColumn": 93,
-                    "endOffset": 144843
+                    "endOffset": 144834
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11252,9 +11252,9 @@
                 "to": {
                     "startLine": 1957,
                     "startColumn": 4,
-                    "startOffset": 144848,
+                    "startOffset": 144839,
                     "endColumn": 113,
-                    "endOffset": 144957
+                    "endOffset": 144948
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11271,9 +11271,9 @@
                 "to": {
                     "startLine": 1958,
                     "startColumn": 4,
-                    "startOffset": 144962,
+                    "startOffset": 144953,
                     "endColumn": 111,
-                    "endOffset": 145069
+                    "endOffset": 145060
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11290,10 +11290,10 @@
                 "to": {
                     "startLine": 1959,
                     "startColumn": 4,
-                    "startOffset": 145074,
+                    "startOffset": 145065,
                     "endLine": 1960,
                     "endColumn": 12,
-                    "endOffset": 145171
+                    "endOffset": 145162
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11311,10 +11311,10 @@
                 "to": {
                     "startLine": 1961,
                     "startColumn": 4,
-                    "startOffset": 145176,
+                    "startOffset": 145167,
                     "endLine": 1962,
                     "endColumn": 12,
-                    "endOffset": 145291
+                    "endOffset": 145282
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11332,10 +11332,10 @@
                 "to": {
                     "startLine": 1963,
                     "startColumn": 4,
-                    "startOffset": 145296,
+                    "startOffset": 145287,
                     "endLine": 1964,
                     "endColumn": 12,
-                    "endOffset": 145413
+                    "endOffset": 145404
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11353,9 +11353,9 @@
                 "to": {
                     "startLine": 1965,
                     "startColumn": 4,
-                    "startOffset": 145418,
+                    "startOffset": 145409,
                     "endColumn": 81,
-                    "endOffset": 145495
+                    "endOffset": 145486
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11372,9 +11372,9 @@
                 "to": {
                     "startLine": 1966,
                     "startColumn": 4,
-                    "startOffset": 145500,
+                    "startOffset": 145491,
                     "endColumn": 103,
-                    "endOffset": 145599
+                    "endOffset": 145590
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11391,9 +11391,9 @@
                 "to": {
                     "startLine": 1967,
                     "startColumn": 4,
-                    "startOffset": 145604,
+                    "startOffset": 145595,
                     "endColumn": 119,
-                    "endOffset": 145719
+                    "endOffset": 145710
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11410,9 +11410,9 @@
                 "to": {
                     "startLine": 1968,
                     "startColumn": 4,
-                    "startOffset": 145724,
+                    "startOffset": 145715,
                     "endColumn": 125,
-                    "endOffset": 145845
+                    "endOffset": 145836
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11429,9 +11429,9 @@
                 "to": {
                     "startLine": 1969,
                     "startColumn": 4,
-                    "startOffset": 145850,
+                    "startOffset": 145841,
                     "endColumn": 97,
-                    "endOffset": 145943
+                    "endOffset": 145934
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11448,9 +11448,9 @@
                 "to": {
                     "startLine": 1970,
                     "startColumn": 4,
-                    "startOffset": 145948,
+                    "startOffset": 145939,
                     "endColumn": 93,
-                    "endOffset": 146037
+                    "endOffset": 146028
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11467,9 +11467,9 @@
                 "to": {
                     "startLine": 1971,
                     "startColumn": 4,
-                    "startOffset": 146042,
+                    "startOffset": 146033,
                     "endColumn": 87,
-                    "endOffset": 146125
+                    "endOffset": 146116
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11486,9 +11486,9 @@
                 "to": {
                     "startLine": 1972,
                     "startColumn": 4,
-                    "startOffset": 146130,
+                    "startOffset": 146121,
                     "endColumn": 111,
-                    "endOffset": 146237
+                    "endOffset": 146228
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11505,9 +11505,9 @@
                 "to": {
                     "startLine": 1973,
                     "startColumn": 4,
-                    "startOffset": 146242,
+                    "startOffset": 146233,
                     "endColumn": 115,
-                    "endOffset": 146353
+                    "endOffset": 146344
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11524,9 +11524,9 @@
                 "to": {
                     "startLine": 1974,
                     "startColumn": 4,
-                    "startOffset": 146358,
+                    "startOffset": 146349,
                     "endColumn": 121,
-                    "endOffset": 146475
+                    "endOffset": 146466
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11543,9 +11543,9 @@
                 "to": {
                     "startLine": 1975,
                     "startColumn": 4,
-                    "startOffset": 146480,
+                    "startOffset": 146471,
                     "endColumn": 111,
-                    "endOffset": 146587
+                    "endOffset": 146578
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11562,10 +11562,10 @@
                 "to": {
                     "startLine": 1976,
                     "startColumn": 4,
-                    "startOffset": 146592,
+                    "startOffset": 146583,
                     "endLine": 1978,
                     "endColumn": 12,
-                    "endOffset": 146762
+                    "endOffset": 146753
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11583,9 +11583,9 @@
                 "to": {
                     "startLine": 1979,
                     "startColumn": 4,
-                    "startOffset": 146767,
+                    "startOffset": 146758,
                     "endColumn": 115,
-                    "endOffset": 146878
+                    "endOffset": 146869
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11602,9 +11602,9 @@
                 "to": {
                     "startLine": 1980,
                     "startColumn": 4,
-                    "startOffset": 146883,
+                    "startOffset": 146874,
                     "endColumn": 85,
-                    "endOffset": 146964
+                    "endOffset": 146955
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11621,9 +11621,9 @@
                 "to": {
                     "startLine": 1981,
                     "startColumn": 4,
-                    "startOffset": 146969,
+                    "startOffset": 146960,
                     "endColumn": 91,
-                    "endOffset": 147056
+                    "endOffset": 147047
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11640,10 +11640,10 @@
                 "to": {
                     "startLine": 1982,
                     "startColumn": 4,
-                    "startOffset": 147061,
+                    "startOffset": 147052,
                     "endLine": 1983,
                     "endColumn": 12,
-                    "endOffset": 147168
+                    "endOffset": 147159
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11661,10 +11661,10 @@
                 "to": {
                     "startLine": 1984,
                     "startColumn": 4,
-                    "startOffset": 147173,
+                    "startOffset": 147164,
                     "endLine": 1985,
                     "endColumn": 12,
-                    "endOffset": 147292
+                    "endOffset": 147283
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11682,9 +11682,9 @@
                 "to": {
                     "startLine": 1986,
                     "startColumn": 4,
-                    "startOffset": 147297,
+                    "startOffset": 147288,
                     "endColumn": 66,
-                    "endOffset": 147359
+                    "endOffset": 147350
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11701,10 +11701,10 @@
                 "to": {
                     "startLine": 1987,
                     "startColumn": 4,
-                    "startOffset": 147364,
+                    "startOffset": 147355,
                     "endLine": 1988,
                     "endColumn": 12,
-                    "endOffset": 147485
+                    "endOffset": 147476
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11722,9 +11722,9 @@
                 "to": {
                     "startLine": 1989,
                     "startColumn": 4,
-                    "startOffset": 147490,
+                    "startOffset": 147481,
                     "endColumn": 67,
-                    "endOffset": 147553
+                    "endOffset": 147544
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11741,10 +11741,10 @@
                 "to": {
                     "startLine": 1990,
                     "startColumn": 4,
-                    "startOffset": 147558,
+                    "startOffset": 147549,
                     "endLine": 1991,
                     "endColumn": 12,
-                    "endOffset": 147681
+                    "endOffset": 147672
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11762,10 +11762,10 @@
                 "to": {
                     "startLine": 1992,
                     "startColumn": 4,
-                    "startOffset": 147686,
+                    "startOffset": 147677,
                     "endLine": 1993,
                     "endColumn": 12,
-                    "endOffset": 147825
+                    "endOffset": 147816
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11783,10 +11783,10 @@
                 "to": {
                     "startLine": 1994,
                     "startColumn": 4,
-                    "startOffset": 147830,
+                    "startOffset": 147821,
                     "endLine": 1995,
                     "endColumn": 12,
-                    "endOffset": 147953
+                    "endOffset": 147944
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11804,9 +11804,9 @@
                 "to": {
                     "startLine": 1996,
                     "startColumn": 4,
-                    "startOffset": 147958,
+                    "startOffset": 147949,
                     "endColumn": 68,
-                    "endOffset": 148022
+                    "endOffset": 148013
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11823,9 +11823,9 @@
                 "to": {
                     "startLine": 1997,
                     "startColumn": 4,
-                    "startOffset": 148027,
+                    "startOffset": 148018,
                     "endColumn": 94,
-                    "endOffset": 148117
+                    "endOffset": 148108
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11842,9 +11842,9 @@
                 "to": {
                     "startLine": 1998,
                     "startColumn": 4,
-                    "startOffset": 148122,
+                    "startOffset": 148113,
                     "endColumn": 114,
-                    "endOffset": 148232
+                    "endOffset": 148223
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11861,9 +11861,9 @@
                 "to": {
                     "startLine": 1999,
                     "startColumn": 4,
-                    "startOffset": 148237,
+                    "startOffset": 148228,
                     "endColumn": 112,
-                    "endOffset": 148345
+                    "endOffset": 148336
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11880,9 +11880,9 @@
                 "to": {
                     "startLine": 2000,
                     "startColumn": 4,
-                    "startOffset": 148350,
+                    "startOffset": 148341,
                     "endColumn": 98,
-                    "endOffset": 148444
+                    "endOffset": 148435
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11899,9 +11899,9 @@
                 "to": {
                     "startLine": 2001,
                     "startColumn": 4,
-                    "startOffset": 148449,
+                    "startOffset": 148440,
                     "endColumn": 108,
-                    "endOffset": 148553
+                    "endOffset": 148544
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11918,9 +11918,9 @@
                 "to": {
                     "startLine": 2002,
                     "startColumn": 4,
-                    "startOffset": 148558,
+                    "startOffset": 148549,
                     "endColumn": 110,
-                    "endOffset": 148664
+                    "endOffset": 148655
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11937,9 +11937,9 @@
                 "to": {
                     "startLine": 2003,
                     "startColumn": 4,
-                    "startOffset": 148669,
+                    "startOffset": 148660,
                     "endColumn": 110,
-                    "endOffset": 148775
+                    "endOffset": 148766
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11956,9 +11956,9 @@
                 "to": {
                     "startLine": 2004,
                     "startColumn": 4,
-                    "startOffset": 148780,
+                    "startOffset": 148771,
                     "endColumn": 100,
-                    "endOffset": 148876
+                    "endOffset": 148867
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11975,9 +11975,9 @@
                 "to": {
                     "startLine": 2005,
                     "startColumn": 4,
-                    "startOffset": 148881,
+                    "startOffset": 148872,
                     "endColumn": 104,
-                    "endOffset": 148981
+                    "endOffset": 148972
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -11994,9 +11994,9 @@
                 "to": {
                     "startLine": 2006,
                     "startColumn": 4,
-                    "startOffset": 148986,
+                    "startOffset": 148977,
                     "endColumn": 99,
-                    "endOffset": 149081
+                    "endOffset": 149072
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12013,10 +12013,10 @@
                 "to": {
                     "startLine": 2007,
                     "startColumn": 4,
-                    "startOffset": 149086,
+                    "startOffset": 149077,
                     "endLine": 2008,
                     "endColumn": 12,
-                    "endOffset": 149211
+                    "endOffset": 149202
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12034,9 +12034,9 @@
                 "to": {
                     "startLine": 2009,
                     "startColumn": 4,
-                    "startOffset": 149216,
+                    "startOffset": 149207,
                     "endColumn": 90,
-                    "endOffset": 149302
+                    "endOffset": 149293
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12053,9 +12053,9 @@
                 "to": {
                     "startLine": 2010,
                     "startColumn": 4,
-                    "startOffset": 149307,
+                    "startOffset": 149298,
                     "endColumn": 122,
-                    "endOffset": 149425
+                    "endOffset": 149416
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12072,9 +12072,9 @@
                 "to": {
                     "startLine": 2011,
                     "startColumn": 4,
-                    "startOffset": 149430,
+                    "startOffset": 149421,
                     "endColumn": 93,
-                    "endOffset": 149519
+                    "endOffset": 149510
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12091,10 +12091,10 @@
                 "to": {
                     "startLine": 2012,
                     "startColumn": 4,
-                    "startOffset": 149524,
+                    "startOffset": 149515,
                     "endLine": 2013,
                     "endColumn": 12,
-                    "endOffset": 149631
+                    "endOffset": 149622
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12112,9 +12112,9 @@
                 "to": {
                     "startLine": 2014,
                     "startColumn": 4,
-                    "startOffset": 149636,
+                    "startOffset": 149627,
                     "endColumn": 85,
-                    "endOffset": 149717
+                    "endOffset": 149708
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12131,9 +12131,9 @@
                 "to": {
                     "startLine": 2015,
                     "startColumn": 4,
-                    "startOffset": 149722,
+                    "startOffset": 149713,
                     "endColumn": 103,
-                    "endOffset": 149821
+                    "endOffset": 149812
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12150,9 +12150,9 @@
                 "to": {
                     "startLine": 2016,
                     "startColumn": 4,
-                    "startOffset": 149826,
+                    "startOffset": 149817,
                     "endColumn": 95,
-                    "endOffset": 149917
+                    "endOffset": 149908
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12169,9 +12169,9 @@
                 "to": {
                     "startLine": 2017,
                     "startColumn": 4,
-                    "startOffset": 149922,
+                    "startOffset": 149913,
                     "endColumn": 87,
-                    "endOffset": 150005
+                    "endOffset": 149996
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12188,10 +12188,10 @@
                 "to": {
                     "startLine": 2018,
                     "startColumn": 4,
-                    "startOffset": 150010,
+                    "startOffset": 150001,
                     "endLine": 2019,
                     "endColumn": 12,
-                    "endOffset": 150123
+                    "endOffset": 150114
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12209,10 +12209,10 @@
                 "to": {
                     "startLine": 2020,
                     "startColumn": 4,
-                    "startOffset": 150128,
+                    "startOffset": 150119,
                     "endLine": 2021,
                     "endColumn": 12,
-                    "endOffset": 150227
+                    "endOffset": 150218
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12230,10 +12230,10 @@
                 "to": {
                     "startLine": 2022,
                     "startColumn": 4,
-                    "startOffset": 150232,
+                    "startOffset": 150223,
                     "endLine": 2023,
                     "endColumn": 12,
-                    "endOffset": 150331
+                    "endOffset": 150322
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12251,10 +12251,10 @@
                 "to": {
                     "startLine": 2024,
                     "startColumn": 4,
-                    "startOffset": 150336,
+                    "startOffset": 150327,
                     "endLine": 2025,
                     "endColumn": 12,
-                    "endOffset": 150457
+                    "endOffset": 150448
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12272,9 +12272,9 @@
                 "to": {
                     "startLine": 2026,
                     "startColumn": 4,
-                    "startOffset": 150462,
+                    "startOffset": 150453,
                     "endColumn": 87,
-                    "endOffset": 150545
+                    "endOffset": 150536
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12291,9 +12291,9 @@
                 "to": {
                     "startLine": 2027,
                     "startColumn": 4,
-                    "startOffset": 150550,
+                    "startOffset": 150541,
                     "endColumn": 107,
-                    "endOffset": 150653
+                    "endOffset": 150644
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12310,9 +12310,9 @@
                 "to": {
                     "startLine": 2028,
                     "startColumn": 4,
-                    "startOffset": 150658,
+                    "startOffset": 150649,
                     "endColumn": 99,
-                    "endOffset": 150753
+                    "endOffset": 150744
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12329,9 +12329,9 @@
                 "to": {
                     "startLine": 2029,
                     "startColumn": 4,
-                    "startOffset": 150758,
+                    "startOffset": 150749,
                     "endColumn": 89,
-                    "endOffset": 150843
+                    "endOffset": 150834
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12348,9 +12348,9 @@
                 "to": {
                     "startLine": 2030,
                     "startColumn": 4,
-                    "startOffset": 150848,
+                    "startOffset": 150839,
                     "endColumn": 109,
-                    "endOffset": 150953
+                    "endOffset": 150944
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12367,9 +12367,9 @@
                 "to": {
                     "startLine": 2031,
                     "startColumn": 4,
-                    "startOffset": 150958,
+                    "startOffset": 150949,
                     "endColumn": 83,
-                    "endOffset": 151037
+                    "endOffset": 151028
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12386,9 +12386,9 @@
                 "to": {
                     "startLine": 2032,
                     "startColumn": 4,
-                    "startOffset": 151042,
+                    "startOffset": 151033,
                     "endColumn": 101,
-                    "endOffset": 151139
+                    "endOffset": 151130
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12405,9 +12405,9 @@
                 "to": {
                     "startLine": 2033,
                     "startColumn": 4,
-                    "startOffset": 151144,
+                    "startOffset": 151135,
                     "endColumn": 83,
-                    "endOffset": 151223
+                    "endOffset": 151214
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12424,9 +12424,9 @@
                 "to": {
                     "startLine": 2034,
                     "startColumn": 4,
-                    "startOffset": 151228,
+                    "startOffset": 151219,
                     "endColumn": 53,
-                    "endOffset": 151277
+                    "endOffset": 151268
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12443,9 +12443,9 @@
                 "to": {
                     "startLine": 2035,
                     "startColumn": 4,
-                    "startOffset": 151282,
+                    "startOffset": 151273,
                     "endColumn": 63,
-                    "endOffset": 151341
+                    "endOffset": 151332
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12462,9 +12462,9 @@
                 "to": {
                     "startLine": 2036,
                     "startColumn": 4,
-                    "startOffset": 151346,
+                    "startOffset": 151337,
                     "endColumn": 105,
-                    "endOffset": 151447
+                    "endOffset": 151438
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12481,9 +12481,9 @@
                 "to": {
                     "startLine": 2037,
                     "startColumn": 4,
-                    "startOffset": 151452,
+                    "startOffset": 151443,
                     "endColumn": 109,
-                    "endOffset": 151557
+                    "endOffset": 151548
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12500,9 +12500,9 @@
                 "to": {
                     "startLine": 2038,
                     "startColumn": 4,
-                    "startOffset": 151562,
+                    "startOffset": 151553,
                     "endColumn": 83,
-                    "endOffset": 151641
+                    "endOffset": 151632
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12519,9 +12519,9 @@
                 "to": {
                     "startLine": 2039,
                     "startColumn": 4,
-                    "startOffset": 151646,
+                    "startOffset": 151637,
                     "endColumn": 119,
-                    "endOffset": 151761
+                    "endOffset": 151752
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values\\values.xml",
@@ -12538,10 +12538,10 @@
                 "to": {
                     "startLine": 2040,
                     "startColumn": 4,
-                    "startOffset": 151766,
+                    "startOffset": 151757,
                     "endLine": 2041,
                     "endColumn": 12,
-                    "endOffset": 151861
+                    "endOffset": 151852
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -12559,10 +12559,10 @@
                 "to": {
                     "startLine": 2042,
                     "startColumn": 4,
-                    "startOffset": 151866,
+                    "startOffset": 151857,
                     "endLine": 2048,
                     "endColumn": 12,
-                    "endOffset": 152276
+                    "endOffset": 152267
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -12580,10 +12580,10 @@
                 "to": {
                     "startLine": 2049,
                     "startColumn": 4,
-                    "startOffset": 152281,
+                    "startOffset": 152272,
                     "endLine": 2052,
                     "endColumn": 12,
-                    "endOffset": 152483
+                    "endOffset": 152474
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -12601,10 +12601,10 @@
                 "to": {
                     "startLine": 2053,
                     "startColumn": 4,
-                    "startOffset": 152488,
+                    "startOffset": 152479,
                     "endLine": 2055,
                     "endColumn": 12,
-                    "endOffset": 152642
+                    "endOffset": 152633
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -12622,10 +12622,10 @@
                 "to": {
                     "startLine": 2056,
                     "startColumn": 4,
-                    "startOffset": 152647,
+                    "startOffset": 152638,
                     "endLine": 2064,
                     "endColumn": 12,
-                    "endOffset": 153207
+                    "endOffset": 153198
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -12643,10 +12643,10 @@
                 "to": {
                     "startLine": 2065,
                     "startColumn": 4,
-                    "startOffset": 153212,
+                    "startOffset": 153203,
                     "endLine": 2070,
                     "endColumn": 12,
-                    "endOffset": 153568
+                    "endOffset": 153559
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -12664,10 +12664,10 @@
                 "to": {
                     "startLine": 2071,
                     "startColumn": 4,
-                    "startOffset": 153573,
+                    "startOffset": 153564,
                     "endLine": 2073,
                     "endColumn": 12,
-                    "endOffset": 153697
+                    "endOffset": 153688
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -12685,10 +12685,10 @@
                 "to": {
                     "startLine": 2074,
                     "startColumn": 4,
-                    "startOffset": 153702,
+                    "startOffset": 153693,
                     "endLine": 2082,
                     "endColumn": 12,
-                    "endOffset": 154364
+                    "endOffset": 154355
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -12706,10 +12706,10 @@
                 "to": {
                     "startLine": 2083,
                     "startColumn": 4,
-                    "startOffset": 154369,
+                    "startOffset": 154360,
                     "endLine": 2086,
                     "endColumn": 12,
-                    "endOffset": 154544
+                    "endOffset": 154535
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",
@@ -12727,10 +12727,10 @@
                 "to": {
                     "startLine": 2087,
                     "startColumn": 4,
-                    "startOffset": 154549,
+                    "startOffset": 154540,
                     "endLine": 2094,
                     "endColumn": 12,
-                    "endOffset": 155149
+                    "endOffset": 155140
                 },
                 "from": {
                     "file": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\values\\values.xml",

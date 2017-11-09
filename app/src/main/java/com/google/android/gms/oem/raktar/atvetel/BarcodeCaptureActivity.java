@@ -92,6 +92,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
 
     public static Barcode barcode = null;
     public static String barcode3;
+    public boolean globaltourchMode;
 
     static int counter = 0;
     private static final int RC_BARCODE_CAPTURE = 9001;
@@ -151,8 +152,28 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         if (keyCode == android.view.KeyEvent.KEYCODE_VOLUME_DOWN) {
             if (mCameraSource.getFlashMode() == Camera.Parameters.FLASH_MODE_TORCH) {
                 mCameraSource.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+                globaltourchMode = false;
             } else {
                 mCameraSource.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+                globaltourchMode = true;
+            }
+
+
+
+//            mCameraSource.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+//                Toast.makeText(this, mCameraSource.getFlashMode(), Toast.LENGTH_SHORT)
+//                        .show();
+
+            return true;
+        }
+
+        if (keyCode == android.view.KeyEvent.KEYCODE_VOLUME_UP) {
+            if (mCameraSource.getFlashMode() == Camera.Parameters.FLASH_MODE_TORCH) {
+                mCameraSource.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+                globaltourchMode = false;
+            } else {
+                mCameraSource.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+                globaltourchMode = true;
             }
 
 
@@ -270,6 +291,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                     Log.w(TAG, barcode3);
                     Intent data = new Intent();
                     data.putExtra(BarcodeObject, barcode3);
+                    data.putExtra("globaltourchmode", globaltourchMode);
                     setResult(CommonStatusCodes.SUCCESS, data);
                     finish();
                 }
@@ -351,7 +373,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
 
-    @Override
+    @                   Override
     public void onStop() {
         super.onStop();
 

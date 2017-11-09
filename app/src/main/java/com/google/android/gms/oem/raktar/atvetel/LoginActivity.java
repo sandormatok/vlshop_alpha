@@ -1,24 +1,24 @@
 package com.google.android.gms.oem.raktar.atvetel;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.wifi.SupplicantState;
+import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -30,19 +30,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
-import java.net.InetAddress;
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
-
-import static android.R.attr.data;
-import static android.R.attr.password;
-import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.BarcodeObject;
-import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
-import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_AKCIO_URL;
 import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
-import static com.google.android.gms.oem.raktar.atvetel.Config.URL_FOR_LOGIN;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -53,8 +41,11 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnlogin;
     private static final String TAG = "LoginActivity";
     private String globalVevokod, globalPassword = "";
-    Boolean adminMode = false;
+    String globalSsid ="null";
+
+    Boolean adminMode, allowLogin = true;
     SharedPreferences mPrefs;
+    Boolean wifienable, wificonnect = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +53,14 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("VL-SCAN Raktár");
 
 //san
         loginInputVevokod = (EditText) findViewById(R.id.input_vevokod);
         loginInputVevokod.setInputType(InputType.TYPE_CLASS_NUMBER);
 
         loginInputPassword = (EditText) findViewById(R.id.input_password);
-        loginInputPassword.setInputType(InputType.TYPE_CLASS_NUMBER);
+        loginInputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
         btnlogin = (Button) findViewById(R.id.btn_login);
 
@@ -76,7 +68,95 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
 
-        //gombnyomás-kor loginuser fügvényt meghívja
+
+
+//WIFI Bekapcsolása, csatlakozás a VLEURO wifihez
+        final WifiConfiguration wifiConfig = new WifiConfiguration();
+        wifiConfig.SSID = String.format("\"%s\"", "VLEURO");
+        wifiConfig.preSharedKey = String.format("\"%s\"", "vleurokft");
+        WifiManager wifiManager=(WifiManager)getSystemService(WIFI_SERVICE);
+
+        WifiInfo wifiInfo;
+        wifiInfo = wifiManager.getConnectionInfo();
+        if (wifiInfo.getSupplicantState() == SupplicantState.COMPLETED) {
+            globalSsid = wifiInfo.getSSID();
+        }
+
+        //if(!globalSsid.equals("VLEURO")){
+        if(globalSsid.compareTo("\"VLEURO\"")==0) {
+            Toast toast= Toast.makeText(getApplicationContext(),globalSsid, Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER,0,0); toast.show();
+
+        } else {
+
+            allowLogin = false;
+            View view = View.inflate(this, R.layout.alert_dialog_net, null);
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("Csatlakozhatok a VL-Euro Kft. hálózatára? *");
+            // alert.setMessage("Message");
+            final WifiManager wifiManager3=(WifiManager)getSystemService(WIFI_SERVICE);
+
+            alert.setPositiveButton("Kilépés", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    finish();
+                    System.exit(0);
+                }
+            });
+
+            alert.setNegativeButton("Csatlakozás",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            wifiManager3.setWifiEnabled(true);
+
+                            int netId = wifiManager3.addNetwork(wifiConfig);
+                            wifiManager3.disconnect();
+                            wifiManager3.enableNetwork(netId, true);
+                            wifiManager3.reconnect();
+                            allowLogin = true;
+
+                        }
+                    });
+
+            alert.show();
+
+        }
+
+
+        if (!wifiManager.isWifiEnabled()){
+            allowLogin = false;
+            View view = View.inflate(this, R.layout.alert_dialog_net, null);
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("Csatlakozhatok a VL-Euro Kft. hálózatára?");
+            // alert.setMessage("Message");
+            final WifiManager wifiManager2=(WifiManager)getSystemService(WIFI_SERVICE);
+
+            alert.setPositiveButton("Kilépés", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    finish();
+                    System.exit(0);
+                }
+            });
+
+            alert.setNegativeButton("Csatlakozás",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            wifiManager2.setWifiEnabled(true);
+
+                            int netId = wifiManager2.addNetwork(wifiConfig);
+                            wifiManager2.disconnect();
+                            wifiManager2.enableNetwork(netId, true);
+                            wifiManager2.reconnect();
+                            allowLogin = true;
+                        }
+                    });
+
+            alert.show();
+
+        }
+
+
+
+
         btnlogin.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -90,13 +170,21 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void loginUser( final String vevokod, final String password) {
-        //progressDialog.setMessage("Bejelentkezés folyamatban...");
+        if(!allowLogin) {
+            finish();
+            System.exit(0);
 
+        }
+
+
+        progressDialog.setMessage("Bejelentkezés folyamatban...");
+        showDialog();
         globalVevokod = vevokod;
         globalPassword = password;
 
-        if (globalVevokod.equals("11111111")) {
-            if (globalPassword.equals("99999999")) {
+/*
+        if (vevokod.equals("11111")) {
+            if (password.equals("99999")) {
 
                 Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
                 mainIntent.putExtra("adminMode", true);
@@ -107,13 +195,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
 
-//        Intent data = new Intent();
-//        data.putExtra(BarcodeObject, barcode3);
+*/
 
-        if(!adminMode){
+
+//        if(!adminMode){
             getData2();
-        }
-
+  //      }
     }
 
 //
@@ -124,12 +211,9 @@ public class LoginActivity extends AppCompatActivity {
         String id = "5997076721852";
         String url = DATA_RAKTAR_KESZLET_URL + id + "&vkod=" + globalVevokod;
 
-//        String akcurl = Config.DATA_RAKTAR_AKCIO_URL
-
-/* toast
-        Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER,0,0); toast.show();
-*/
+        //String akcurl = Config.DATA_RAKTAR_AKCIO_URL
+        //Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
+        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -153,8 +237,8 @@ public class LoginActivity extends AppCompatActivity {
     //>>>JSON feldolgozása, adatok kiirasa
     private void showJSON(String response) {
 
-           String aroszt = "";
-                   String vevonev = "";
+        String aroszt = "";
+        String vevonev = "";
         String jujel = "";
 
 
@@ -168,12 +252,11 @@ public class LoginActivity extends AppCompatActivity {
             vevonev = termekData2.getString(Config.KEY_VEVONEV);
             aroszt = termekData2.getString(Config.KEY_AROSZT);
 
-            //hideDialog();
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        hideDialog();
 
         if (globalPassword.equals(jujel)){
         Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
@@ -181,6 +264,7 @@ public class LoginActivity extends AppCompatActivity {
 
             mainIntent.putExtra("intentvevonev", vevonev);
             mainIntent.putExtra("intentaroszt", aroszt);
+            mainIntent.putExtra("intentvevokod", globalVevokod);
 
             setResult(CommonStatusCodes.SUCCESS, mainIntent);
             startActivity(mainIntent);

@@ -1,51 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="armeabi-v7a,armeabi"
-    api-level="23"
+    api-level="18"
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="6978011285774"
+    timestamp="265103846936201"
     token="5787902044833624353"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="4042" />
+        duration="373" />
     <task
         name="instant-run-dex"
-        duration="1195" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="298" />
+        duration="40" />
     <task
         name="verifier"
-        duration="58" />
+        duration="13" />
 
     <artifact
-        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="6199248851212"
+        timestamp="265103846936201"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="6817235428904"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\builds\debug\6817235428904\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="6978011285774"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\san\AndroidStudioProjects\VL-SCAN11\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

@@ -3,27 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#b5b7b9"
     tools:context="com.google.android.gms.oem.raktar.atvetel.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/toptextView"
-
-        android:layout_height="wrap_content"
-        android:background="#1a1a1a"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
 
     <View android:id="@+id/fakeView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_marginBottom="1dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/toptextView"
+        android:layout_height="wrap_content"
+        android:background="#b5b7b9"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:padding="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="normal|bold"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <!--
+    <View android:id="@+id/fakeView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="#FF3F78C6"
+        android:layout_below="@+id/tableLayout1" />
+        -->
 
     <Button
         android:layout_width="wrap_content"
@@ -34,9 +47,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="@android:color/background_light"
         android:textStyle="normal|bold"
-        android:background="?attr/colorButtonNormal"
         android:layout_alignRight="@+id/fakeView"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="2dp"
@@ -48,9 +59,7 @@
         android:text="@string/enter_barcode"
         android:id="@+id/enter_barcode"
         android:textSize="20sp"
-        android:textColor="@android:color/background_light"
         android:textStyle="normal|bold"
-        android:background="?attr/colorButtonNormal"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -59,28 +68,299 @@
         android:layout_marginRight="4dp"
         android:layout_toEndOf="@+id/fakeView" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/use_flash"
-        android:id="@+id/use_flash"
-        android:checked="false"
-        android:layout_above="@+id/enter_barcode"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="22dp" />
+    <!--  -->
 
-<!--  -->
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/auto_focus"
-        android:id="@+id/auto_focus"
-        android:checked="false"
-        android:layout_above="@+id/read_barcode"
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:stretchColumns="1"
+        android:layout_below="@+id/toptextView"
         android:layout_alignParentLeft="true"
+
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="22dp" />
+        android:layout_above="@+id/read_barcode">
+
+
+        <TableRow
+            android:id="@+id/tableRow0"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table01"
+                android:layout_weight="0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#0c4593"
+                android:textColor="#ffffff"
+                android:text="EAN"
+                android:padding="8dip"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:padding="8dip"
+                android:background="#0c4593"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+
+                android:textStyle="normal|bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_weight="0"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#3f78c6"
+                android:textColor="#ffffff"
+                android:id="@+id/table11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:padding="8dip"
+                android:text="MÁRKA"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="8dip"
+                android:background="#3f78c6"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+
+                android:textStyle="normal|bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_weight="3"
+            android:gravity="center">
+
+            <TextView
+                android:layout_weight="0"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+
+                android:background="#0c4593"
+                android:textColor="#ffffff"
+                android:padding="8dip"
+                android:text="TERMÉK "
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#0c4593"
+                android:textColor="#ffffff"
+                android:padding="8dip"
+
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_weight="0"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table31"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+
+                android:background="#3f78c6"
+
+                android:textColor="#ffffff"
+                android:padding="8dip"
+                android:text="NETTÓ"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table32"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#3f78c6"
+                android:textColor="#ffffff"
+                android:padding="8dip"
+                android:textSize="18sp"
+
+                android:textStyle="normal|bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_weight="0"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table41"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+
+                android:background="#0c4593"
+                android:textColor="#ffffff"
+                android:padding="8dip"
+                android:text="BRUTTÓ"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table42"
+                android:background="#0c4593"
+                android:textColor="#ffffff"
+                android:padding="8dip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="18sp"
+
+                android:textStyle="normal|bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_weight="0"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table51"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+
+
+                android:padding="8dip"
+                android:text="KÉSZLET"
+                android:background="#3f78c6"
+                android:textColor="#ffffff"
+
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table52"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#3f78c6"
+                android:textColor="#ffffff"
+                android:padding="8dip"
+
+                android:textSize="18sp"
+
+                android:textStyle="normal|bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow61"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_weight="0"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/table61"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+
+                android:background="#0c4593"
+                android:textColor="#ffffff"
+                android:padding="8dip"
+                android:text="AKCIÓS"
+
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/table62"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#0c4593"
+                android:textColor="#ffffff"
+                android:padding="8dip"
+                android:layout_marginBottom="1dp"
+
+                android:textSize="18sp"
+
+                android:textStyle="normal|bold" />
+
+
+
+        </TableRow>
+
+
+
+
+    </TableLayout>
 
 
     <CheckBox
@@ -88,221 +368,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/switch1"
-        android:layout_above="@+id/auto_focus"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/read_barcode"
+        android:layout_alignLeft="@+id/tableLayout1"
+        android:layout_alignStart="@+id/tableLayout1" />
 
 
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toptextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textview_akcio"
-        android:minLines="3"
-        android:background="#d50000"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="10dp" />
-
-
-    <TableLayout
-        android:id="@+id/tableLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:stretchColumns="1"
-        android:layout_below="@+id/textview_akcio"
-        android:layout_alignLeft="@+id/read_barcode"
-        android:layout_alignStart="@+id/read_barcode">
-
-        <TableRow
-            android:id="@+id/tableRow0"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#212121"
-                android:text="EAN"
-                android:padding="8dip"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:textStyle="normal|bold" />
-
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table02"
-                android:background="#212121"
-                android:padding="8dip"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textStyle="normal|bold" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#212121"
-                android:padding="8dip"
-                android:text="MÁRKA"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:textStyle="normal|bold" />
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table12"
-                android:background="#212121"
-                android:padding="8dip"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textStyle="normal|bold" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table21"
-                android:minLines="3"
-                android:layout_width="match_parent"
-                android:layout_weight="0"
-                android:layout_height="match_parent"
-                android:background="#212121"
-
-                android:text=" \nTERMÉK\n "
-                android:textColor="@android:color/darker_gray"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:textStyle="normal|bold" />
-
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table22"
-                android:minLines="3"
-                android:background="#212121"
-
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif"
-                android:textSize="18sp"
-                android:textStyle="normal|bold"
-                android:textColor="@android:color/white" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#212121"
-                android:padding="8dip"
-                android:text="NETTÓ"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:textStyle="normal|bold" />
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table32"
-                android:background="#212121"
-                android:padding="8dip"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textStyle="normal|bold" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#212121"
-                android:padding="8dip"
-                android:text="BRUTTÓ"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:textStyle="normal|bold" />
-
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table42"
-                android:background="#212121"
-                android:padding="8dip"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textStyle="normal|bold" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table51"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#212121"
-                android:padding="8dip"
-                android:text="KÉSZLET"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:textStyle="normal|bold" />
-            <TextView
-                android:layout_margin="1dp"
-                android:id="@+id/table52"
-                android:background="#212121"
-                android:padding="8dip"
-
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textStyle="normal|bold" />
-
-        </TableRow>
-
-
-
-    </TableLayout>
 
 
 </RelativeLayout>

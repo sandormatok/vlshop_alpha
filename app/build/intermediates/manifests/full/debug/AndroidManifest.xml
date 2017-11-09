@@ -16,17 +16,11 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-    <!--
-     To auto-complete the email text field in the login form with the user's emails
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    -->
-
 
 <!--     WIFI HÁLÓZAT NEVÉNEK KIOLVASÁSÁHOZ -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -35,7 +29,7 @@
         android:icon="@drawable/icon"
         android:label="VL-SCAN Raktár"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar" >
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -45,15 +39,17 @@
 
         <activity
             android:name="com.google.android.gms.oem.raktar.atvetel.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
             android:name="com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity"
-            android:label="Válassz ki egy vonalkódot..." />
+            android:label="Válassz ki egy vonalkódot..."
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name="com.google.android.gms.oem.raktar.atvetel.LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

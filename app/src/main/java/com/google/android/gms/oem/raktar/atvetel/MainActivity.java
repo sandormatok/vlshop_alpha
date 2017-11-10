@@ -92,11 +92,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView barcodeInfo;
     private TextView toptextView;
 
-    private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
+    private TextView akcioValue,tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
 
 
     String barcode = "barcode";
-    String bruttoRound,nettoRound;
+    String bruttoRound,nettoRound,akcbruttoRound,akcnettoRound;;
     String globalAroszt;
     String globalvevoKod = "";
 
@@ -138,6 +138,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tableRow52 = (TextView) findViewById(R.id.table52);
         tableRow61 = (TextView) findViewById(R.id.table61);
         tableRow62 = (TextView) findViewById(R.id.table62);
+        akcioValue = (TextView) findViewById(R.id.akcioValue);
+
 
 
         tableRow22.setText("TIPP" +"\nHasználja telefonja hangerő fel/le gombjait a vakku bekapcsolásához beolvasás közben!");
@@ -158,7 +160,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String vevonev = getIntent().getExtras().getString("intentvevonev");
             globalAroszt = getIntent().getExtras().getString("intentaroszt");
             globalvevoKod = getIntent().getExtras().getString("intentvevokod");
-            toptextView.setText("Vevő: " + vevonev);
+            //toptextView.setText("Vevő: " + vevonev);
+            toptextView.setText(vevonev);
         }
 /*
         if(intent.hasExtra("globaltourchmode")) {
@@ -194,31 +197,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @param v The view that was clicked.
      */
 
-    /* átkerült a BarcodeCaptureActivity-be!
-// VOLUME BUTTON TEST !!!
-
-
-    static int counter = 0;
-
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
-            toptextView.setText("Counter : " + String.valueOf(++counter));
-            Toast.makeText(this, "Volume Down Pressed", Toast.LENGTH_SHORT)
-                    .show();
-            return true;
-        }
-        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
-            toptextView.setText("Counter : " + String.valueOf(--counter));
-            Toast.makeText(this, "Volume Up Pressed", Toast.LENGTH_SHORT)
-                    .show();
-            return true;
-        }
-
-        else {
-            return super.onKeyDown(keyCode, event);
-        }
-    }
-*/
 
     //>>>Gombok megnomására más más view
     @Override
@@ -306,7 +284,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //statusMessage.setText(barcode2.displayValue);
                     //statusMessage.setText(barcode3);
                     getData();
-                    getakcioData();
+                    //getakcioData();
                     Log.d(TAG, "Vonalkód (MainActivity) " + barcode3);
                 } else {
                     tableRow22.setText(R.string.barcode_failure);
@@ -452,8 +430,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
-
-
     }
 
 
@@ -488,8 +464,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String marka1 = "";
         String termek = "";
         String termek1 = "";
-        String akcar = "";
-        String akcar1 = "";
+        Double akcar = 0.00;
+        Double akcar1 = 0.00;
 //JSONArray resultArray;
 
         /* String kinalo = "";
@@ -505,52 +481,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             JSONObject termekData1 = result.getJSONObject(0);
             marka = termekData1.getString(Config.KEY_MARKA);
             termek = termekData1.getString(Config.KEY_TERMEK);
-            akcar = termekData1.getString(Config.KEY_AKCAR);
+            akcar = termekData1.getDouble(Config.KEY_AKCAR);
 
             JSONObject termekData2 = result.getJSONObject(1);
             marka1 = termekData2.getString(Config.KEY_MARKA);
             termek1 = termekData2.getString(Config.KEY_TERMEK);
-            akcar1 = termekData2.getString(Config.KEY_AKCAR);
+            akcar1 = termekData2.getDouble(Config.KEY_AKCAR);
 
-
-
-
-
-
-            //JSONObject jsonObject = new JSONObject(response);
-            //JSONArray resultArray = jsonObject.getJSONArray("marka");
-            //JSONArray marka = jsonObject.getJSONArray(Config.JSON_ARRAY);
-
-
-            //JSONArray jsonObject = new JSONArray(response);
-            //resultArray = jsonObject.getJSONArray(0);
-            //JSONArray resultArray = jsonObject.getJSONArray("marka");
-            //JSONObject resultObject0 = result.getJSONObject(0);
-
-            //JSONArray itemArray = jsonObject.getJSONArray("items")
-
-
-            //marka = resultObject0.getString("marka");
-            //marka1 = resultObject0.getString("result");
-            //JSONArray markaArray = jsonObject.getJSONArray("marka");
-            //JSONObject termekArray = result.getJSONObject("termek");
-            //JSONObject akcarArray = result.getJSONObject(2);
-
-            //marka = markaArray.getString(0);
-            //marka2 = markaArray.getString();
-            //termek = termekArray.getString("termek");
-            //akcar = akcarArray.getString("akcar");
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
 
-        Toast toast= Toast.makeText(getApplicationContext(),marka + "; " + termek + "; " + akcar + "; " + marka1 + "; " + termek1 + "; " + akcar1, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER,0,0); toast.show();
-
-        //Toast toast= Toast.makeText(getApplicationContext(),marka + "; " + termek + "; " + akcar + "; " + marka2, Toast.LENGTH_LONG);
-
+        //Toast toast= Toast.makeText(getApplicationContext(),marka + "; " + termek + "; " + akcar + "; " + marka1 + "; " + termek1 + "; " + akcar1, Toast.LENGTH_LONG);
+        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         //toptextView.setText(marka + ", " + marka2);
         //tableRow22.setText(termek);
@@ -558,6 +503,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //tableRow42.setText(marka);
         //tableRow52.setText(marka2);
 
+        Double afa = 1.27;
+
+        Double brutto = 0.00;
+
+        brutto = akcar1 * (afa + 100) / 100;
+        //barcodeValue.setTextColor(0xFF00DDFF);
+
+
+        akcbruttoRound = String.format("%.2f", brutto);
+        akcnettoRound = String.format("%.2f", akcar1);
+
+
+
+        akcioValue.setText(marka + " / " + termek + "\n" + akcnettoRound + " Ft (Nettó) / " + akcbruttoRound + " Ft (Bruttó)");
+        akcioValue.setSelected(true);
     }
 
     /**

@@ -327,6 +327,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(mainIntent);
             finish();
         } else {
+            hideDialog();
             Toast toast= Toast.makeText(getApplicationContext(),"Hibás vevőkód, vagy jelszó!", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
         }
@@ -335,7 +336,6 @@ public class LoginActivity extends AppCompatActivity {
         //textViewResult.setText(getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek+ getString(R.string.results_ar)+ ar);
         //barcodeInfo.setText(getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek+ getString(R.string.results_ar)+ ar);
     }
-
 
 
     private void showDialog() {

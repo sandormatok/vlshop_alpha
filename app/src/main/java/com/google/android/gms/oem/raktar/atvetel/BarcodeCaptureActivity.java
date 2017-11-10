@@ -63,6 +63,7 @@ import java.io.IOException;
 import static android.hardware.Camera.Parameters.FLASH_MODE_ON;
 import static com.google.android.gms.oem.raktar.atvetel.R.id.toptextView;
 
+
 /**
  * Activity for the multi-tracker app.  This app detects barcodes and displays the value with the
  * rear facing camera. During detection overlay graphics are drawn to indicate the position,

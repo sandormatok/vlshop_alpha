@@ -1,6 +1,7 @@
 package com.google.android.gms.oem.raktar.atvetel;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,7 +17,9 @@ import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -43,9 +46,22 @@ public class LoginActivity extends AppCompatActivity {
     private String globalVevokod, globalPassword = "";
     String globalSsid ="null";
 
-    Boolean adminMode, allowLogin = true;
-    SharedPreferences mPrefs;
+    private CompoundButton maradjonbeBox;
+
+    Boolean allowLogin = true;
+    Boolean adminMode = true;
     Boolean wifienable, wificonnect = false;
+
+    public static final String MY_PREFS_NAME = "loginPrefs";
+
+
+    //SharedPreferences sharedPref = LoginActivity().getPreferences(Context.MODE_PRIVATE);
+    //SharedPreferences.Editor editor = sharedPref.edit();
+    //editor.
+
+    //SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+    //pref.edit().putBoolean("check",true).commit();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,19 +70,33 @@ public class LoginActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("VL-SCAN Raktár");
-
 //san
         loginInputVevokod = (EditText) findViewById(R.id.input_vevokod);
         loginInputVevokod.setInputType(InputType.TYPE_CLASS_NUMBER);
-
         loginInputPassword = (EditText) findViewById(R.id.input_password);
         loginInputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-
         btnlogin = (Button) findViewById(R.id.btn_login);
 
         // Progress dialog
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
+
+        maradjonbeBox = (CompoundButton) findViewById(R.id.maradjonBe);
+
+//////////
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        String  prefsText = prefs.getString("text", null);
+        //if (prefsText != null) {
+            String prefsVevokod = prefs.getString("vevokod", "");
+            String prefsVevojelszo = prefs.getString("vevojelszo", "");
+            Boolean prefsMaradjonbe = prefs.getBoolean("maradjon", false);
+            if(prefsMaradjonbe) maradjonbeBox.setChecked(true);
+        loginInputVevokod.setText(prefsVevokod, TextView.BufferType.EDITABLE);
+        loginInputPassword.setText(prefsVevojelszo, TextView.BufferType.EDITABLE);
+
+       // }
+
+
 
 
 
@@ -84,15 +114,15 @@ public class LoginActivity extends AppCompatActivity {
 
         //if(!globalSsid.equals("VLEURO")){
         if(globalSsid.compareTo("\"VLEURO\"")==0) {
-            Toast toast= Toast.makeText(getApplicationContext(),globalSsid, Toast.LENGTH_LONG);
-            toast.setGravity(Gravity.CENTER,0,0); toast.show();
+            //Toast toast= Toast.makeText(getApplicationContext(),globalSsid, Toast.LENGTH_LONG);
+            //toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         } else {
 
             allowLogin = false;
             View view = View.inflate(this, R.layout.alert_dialog_net, null);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            alert.setTitle("Csatlakozhatok a VL-Euro Kft. hálózatára? *");
+            alert.setTitle("Csatlakozhatok a VL-Euro Kft. hálózatára?");
             // alert.setMessage("Message");
             final WifiManager wifiManager3=(WifiManager)getSystemService(WIFI_SERVICE);
 
@@ -116,12 +146,10 @@ public class LoginActivity extends AppCompatActivity {
 
                         }
                     });
-
             alert.show();
-
         }
 
-
+/*
         if (!wifiManager.isWifiEnabled()){
             allowLogin = false;
             View view = View.inflate(this, R.layout.alert_dialog_net, null);
@@ -153,8 +181,7 @@ public class LoginActivity extends AppCompatActivity {
             alert.show();
 
         }
-
-
+*/
 
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
@@ -170,22 +197,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void loginUser( final String vevokod, final String password) {
-        if(!allowLogin) {
-            finish();
-            System.exit(0);
 
-        }
+        adminMode = false;
 
-
-        progressDialog.setMessage("Bejelentkezés folyamatban...");
-        showDialog();
-        globalVevokod = vevokod;
-        globalPassword = password;
-
-/*
         if (vevokod.equals("11111")) {
             if (password.equals("99999")) {
-
                 Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
                 mainIntent.putExtra("adminMode", true);
                 adminMode = true;
@@ -195,12 +211,26 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
 
+
+/*        if(!allowLogin) {
+            finish();
+            System.exit(0);
+        }
 */
+        progressDialog.setMessage("Bejelentkezés folyamatban...");
+        showDialog();
+        globalVevokod = vevokod;
+        globalPassword = password;
 
 
-//        if(!adminMode){
+
+
+
+
+
+        if(!adminMode){
             getData2();
-  //      }
+        }
     }
 
 //
@@ -256,25 +286,50 @@ public class LoginActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        hideDialog();
+
 
         if (globalPassword.equals(jujel)){
         Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
 
 
+//Write to shared preferences
+            if (maradjonbeBox.isChecked()) {
+                SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                editor.putString("vevokod", globalVevokod);
+                editor.putString("vevojelszo", globalPassword);
+                editor.putBoolean("maradjon", true);
+                editor.apply();
+            } else {
+                SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                editor.clear();
+                editor.apply();
+            }
+
+/*
+            SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+            String  prefsText = prefs.getString("text", null);
+            //if (prefsText != null) {
+            String prefsVevokod = prefs.getString("vevokod", "");
+            String prefsVevojelszo = prefs.getString("vevojelszo", "");
+            Boolean prefsMaradjonbe = prefs.getBoolean("maradjon", false);
+            if(prefsMaradjonbe) maradjonbeBox.setChecked(true);
+
+            // }
+*/
+
+            hideDialog();
+
+
             mainIntent.putExtra("intentvevonev", vevonev);
             mainIntent.putExtra("intentaroszt", aroszt);
             mainIntent.putExtra("intentvevokod", globalVevokod);
-
             setResult(CommonStatusCodes.SUCCESS, mainIntent);
             startActivity(mainIntent);
             finish();
         } else {
             Toast toast= Toast.makeText(getApplicationContext(),"Hibás vevőkód, vagy jelszó!", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
-
         }
-
         //getSupportActionBar().setTitle(ar+"db ("+termek+")");
         //sleepAwhile();
         //textViewResult.setText(getString(R.string.results_marka)+marka+getString(R.string.results_termek) +termek+ getString(R.string.results_ar)+ ar);
@@ -291,13 +346,6 @@ public class LoginActivity extends AppCompatActivity {
         if (progressDialog.isShowing())
             progressDialog.dismiss();
     }
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\icon2.png",
+        "source": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\src\\main\\res\\drawable-mdpi\\icon2.png"
+    },
+    {
         "merged": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_delete.png",
         "source": "C:\\Users\\san\\AndroidStudioProjects\\VL-SCAN11\\app\\src\\main\\res\\drawable-mdpi\\ic_action_delete.png"
     }

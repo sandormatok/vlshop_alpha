@@ -230,7 +230,7 @@
                 android:background="#3f78c6"
                 android:textColor="#ffffff"
                 android:padding="8dip"
-                android:textSize="18sp"
+                android:textSize="24sp"
 
                 android:textStyle="normal|bold" />
 
@@ -268,7 +268,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textSize="18sp"
+                android:textSize="24sp"
 
                 android:textStyle="normal|bold" />
 
@@ -308,7 +308,7 @@
                 android:textColor="#ffffff"
                 android:padding="8dip"
 
-                android:textSize="18sp"
+                android:textSize="24sp"
 
                 android:textStyle="normal|bold" />
 

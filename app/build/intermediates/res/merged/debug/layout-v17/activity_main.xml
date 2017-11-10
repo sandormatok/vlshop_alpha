@@ -128,7 +128,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-
                 android:padding="8dip"
                 android:background="#0c4593"
                 android:textColor="#ffffff"
@@ -153,7 +152,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-
                 android:padding="8dip"
                 android:text="MÁRKA"
                 android:textSize="18dp"
@@ -171,7 +169,6 @@
                 android:background="#3f78c6"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
-
                 android:textStyle="normal|bold" />
 
     </TableRow>
@@ -189,7 +186,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-
                 android:background="#0c4593"
                 android:textColor="#ffffff"
                 android:padding="8dip"
@@ -208,7 +204,6 @@
                 android:background="#0c4593"
                 android:textColor="#ffffff"
                 android:padding="8dip"
-
                 android:fontFamily="sans-serif"
                 android:textSize="18sp"
                 android:textStyle="normal|bold" />
@@ -226,9 +221,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-
                 android:background="#3f78c6"
-
                 android:textColor="#ffffff"
                 android:padding="8dip"
                 android:text="NETTÓ"
@@ -247,9 +240,7 @@
                 android:textColor="#ffffff"
                 android:padding="8dip"
                 android:textSize="24sp"
-
                 android:textStyle="normal|bold" />
-
         </TableRow>
 
         <TableRow
@@ -265,7 +256,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-
                 android:background="#0c4593"
                 android:textColor="#ffffff"
                 android:padding="8dip"
@@ -285,7 +275,6 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textSize="24sp"
-
                 android:textStyle="normal|bold" />
 
         </TableRow>
@@ -302,13 +291,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-
-
                 android:padding="8dip"
                 android:text="KÉSZLET"
                 android:background="#3f78c6"
                 android:textColor="#ffffff"
-
                 android:textSize="18dp"
                 android:textAlignment="center"
                 android:textStyle="normal|bold" />
@@ -323,11 +309,8 @@
                 android:background="#3f78c6"
                 android:textColor="#ffffff"
                 android:padding="8dip"
-
-                android:textSize="18sp"
-
+                android:textSize="24sp"
                 android:textStyle="normal|bold" />
-
         </TableRow>
 
         <TableRow
@@ -345,15 +328,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-
                 android:background="#0c4593"
                 android:textColor="#ffffff"
                 android:padding="8dip"
                 android:text="AKCIÓS"
-
                 android:textSize="18dp"
                 android:textAlignment="center"
                 android:textStyle="normal|bold" />
+
             <TextView
                 android:layout_weight="1"
                 android:id="@+id/table62"
@@ -364,13 +346,8 @@
                 android:textColor="#ffffff"
                 android:padding="8dip"
                 android:layout_marginBottom="1dp"
-
                 android:textSize="18sp"
-
                 android:textStyle="normal|bold" />
-
-
-
         </TableRow>
 
 

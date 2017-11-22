@@ -9,7 +9,6 @@ public class Config {
 
     //
     public static final String DATA_RAKTAR_KESZLET_URL = "http://webserver.vleuro.hu/raktar_keszlet_san.php?id=";
-
     public static final String DATA_RAKTAR_KESZLET_REMOTE_URL = "http://109.74.54.14:11011/raktar_keszlet_san.php?id=";
 
     //
@@ -26,9 +25,7 @@ public class Config {
     public static final String KEY_JUJEL = "jujel";
     public static final String KEY_VEVONEV = "vevonev";
     public static final String KEY_AKCAR = "akcar";
-
     public static final String KEY_AROSZT = "aroszt";
-
     public static final String KEY_AFA = "afa";
     public static final String KEY_AKCIO = "akcios";
     public static final String URL_FOR_LOGIN = "http://webserver.vleuro.hu/raktar_keszlet.php?";

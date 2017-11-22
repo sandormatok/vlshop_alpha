@@ -9,22 +9,7 @@
 
 
 
-    <TextView
-        android:id="@+id/vevoTitle"
-        android:layout_below="@+id/akcioValue"
-        android:text="VEVŐ:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:background="#062550"
-        android:textColor="#ffffff"
-        android:textStyle="normal|bold"
-        android:textSize="14sp"
-        android:padding="2dip"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+
 
     <!--akcios container
     <TextView
@@ -45,42 +30,25 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" /> -->
 
+
     <TextView
-        android:id="@+id/toptextView"
-        android:layout_below="@+id/vevoTitle"
         android:layout_width="wrap_content"
+        android:id="@+id/toptextView"
+        android:textAllCaps="true"
         android:layout_height="wrap_content"
-        android:background="#3f78c6"
-        android:textColor="#ffffff"
+        android:background="#b5b7b9"
         android:textAlignment="center"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:padding="4dp"
         android:textStyle="normal|bold"
-
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-
-
-    <TextView
-        android:id="@+id/termekTitle"
-        android:layout_below="@+id/toptextView"
-        android:text="BEOLVASOTT TERMÉK ADATAI:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
-        android:textAlignment="center"
-        android:background="#062550"
-        android:textColor="#ffffff"
-        android:textStyle="normal|bold"
-        android:textSize="14sp"
-        android:padding="2dip"
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+
 
     <View android:id="@+id/fakeView"
         android:layout_width="0dp"
@@ -150,7 +118,7 @@
 
     <TableLayout
         android:id="@+id/tableLayout1"
-        android:layout_below="@+id/termekTitle"
+        android:layout_below="@+id/toptextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -221,6 +189,7 @@
             <TextView
                 android:layout_weight="1"
                 android:layout_marginBottom="1dp"
+                android:textAllCaps="true"
                 android:id="@+id/table12"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -257,6 +226,7 @@
             <TextView
                 android:layout_weight="1"
                 android:layout_marginBottom="1dp"
+                android:textAllCaps="true"
                 android:id="@+id/table22"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

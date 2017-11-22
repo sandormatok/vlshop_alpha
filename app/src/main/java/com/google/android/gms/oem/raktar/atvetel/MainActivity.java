@@ -24,6 +24,10 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.net.wifi.SupplicantState;
+import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -63,7 +67,9 @@ import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZL
 import static com.google.android.gms.oem.raktar.atvetel.Config.KEY_VEVONEV;
 
 
+import static com.google.android.gms.oem.raktar.atvetel.R.id.tableRow2;
 import static com.google.android.gms.oem.raktar.atvetel.R.id.tableRow61;
+import static com.google.android.gms.vision.barcode.Barcode.WIFI;
 import static java.util.logging.Logger.global;
 
 
@@ -138,9 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tableRow52 = (TextView) findViewById(R.id.table52);
         tableRow61 = (TextView) findViewById(R.id.table61);
         tableRow62 = (TextView) findViewById(R.id.table62);
-        akcioValue = (TextView) findViewById(R.id.akcioValue);
-
-
+//        akcioValue = (TextView) findViewById(R.id.akcioValue);
 
         tableRow22.setText("TIPP" +"\nHasználja telefonja hangerő fel/le gombjait a vakku bekapcsolásához beolvasás közben!");
 
@@ -301,6 +305,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
  //>>>URL Request, kólön RAKTÁR és TÁVOLI URL-el
     private void getData() {
+
+
+        String ssid = "";
+        //WIFI Bekapcsolása, csatlakozás a VLEURO wifihez
+
+        WifiManager wifiManager=(WifiManager)getSystemService(WIFI_SERVICE);
+
+        WifiInfo wifiInfo;
+        wifiInfo = wifiManager.getConnectionInfo();
+        if (wifiInfo.getSupplicantState() == SupplicantState.COMPLETED) {
+            ssid = wifiInfo.getSSID();
+
+        } else {
+            ssid = "NON";
+                    }
+
+        //Toast toast= Toast.makeText(getApplicationContext(),ssid, Toast.LENGTH_SHORT);
+        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
+
+        //if(ssid.compareTo("\"VLEURO\"")==0) {
+        if(!ssid.equals("\"VLEURO\"")) {
+
+            tableRow22.setText("NEM CSATLAKOZIK A \"VLEURO\" WIFI HÁLÓZATHOZ!");
+            tableRow22.setBackgroundColor(Color.RED);
+            tableRow12.setText("");
+            tableRow32.setText("");
+            tableRow42.setText("");
+            tableRow52.setText("");
+            return;
+        }
+
+
+
         //final TextView barcodeInfo = (TextView) findViewById(R.id.code_info);
         final TextView barcodeInfo = (TextView) findViewById(R.id.status_message);
 
@@ -399,8 +436,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (marka.equals("null")) {
             //barcodeValue.setTextColor(0xFFFF033A);
             tableRow22.setText("A VONALKÓD NINCS A RAKTÁRI RENDSZERBEN");
+            tableRow22.setBackgroundColor(Color.RED);
+            tableRow12.setText("");
+            tableRow32.setText("");
+            tableRow42.setText("");
+            tableRow52.setText("");
 
         } else {
+            tableRow22.setBackgroundColor(0xFF0C4593);
             Double brutto = 0.00;
 
             brutto = netto * (afa + 100) / 100;
@@ -413,7 +456,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          //   barcodeValue.setText(marka + "\n" + termek);
             //barcodeValue.setText(boltnev);
          //   barcodeValue2.setText("Nettó: " + netto + " Ft" + "\nBruttó: " + bruttoRound + " Ft" + "\nRaktáron: " + menny);
-            tableRow12.setText(marka);
+                        tableRow12.setText(marka);
             tableRow22.setText(termek);
             tableRow32.setText(nettoRound + " Ft");
             tableRow42.setText(bruttoRound + " Ft");

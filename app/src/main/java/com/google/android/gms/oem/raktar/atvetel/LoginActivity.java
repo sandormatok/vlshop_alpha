@@ -112,12 +112,13 @@ public class LoginActivity extends AppCompatActivity {
             globalSsid = wifiInfo.getSSID();
         }
 
-        //if(!globalSsid.equals("VLEURO")){
-        if(globalSsid.compareTo("\"VLEURO\"")==0) {
+
+        //if(globalSsid.compareTo("\"VLEURO\"")==0) {
+        if(!globalSsid.equals("\"VLEURO\"")) {
             //Toast toast= Toast.makeText(getApplicationContext(),globalSsid, Toast.LENGTH_LONG);
             //toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
-        } else {
+        //} else {
 
             allowLogin = false;
             View view = View.inflate(this, R.layout.alert_dialog_net, null);

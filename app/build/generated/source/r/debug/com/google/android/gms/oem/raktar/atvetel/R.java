@@ -3075,22 +3075,20 @@ public final class R {
     public static final int googleg_disabled_color_18=0x7f070074;
     public static final int googleg_standard_color_18=0x7f070075;
     public static final int ic_action_delete=0x7f070076;
-    public static final int icon=0x7f070077;
-    public static final int icon2=0x7f070078;
-    public static final int logo=0x7f070079;
-    public static final int navigation_empty_icon=0x7f07007a;
-    public static final int notification_action_background=0x7f07007b;
-    public static final int notification_bg=0x7f07007c;
-    public static final int notification_bg_low=0x7f07007d;
-    public static final int notification_bg_low_normal=0x7f07007e;
-    public static final int notification_bg_low_pressed=0x7f07007f;
-    public static final int notification_bg_normal=0x7f070080;
-    public static final int notification_bg_normal_pressed=0x7f070081;
-    public static final int notification_icon_background=0x7f070082;
-    public static final int notification_template_icon_bg=0x7f070083;
-    public static final int notification_template_icon_low_bg=0x7f070084;
-    public static final int notification_tile_bg=0x7f070085;
-    public static final int notify_panel_notification_icon_bg=0x7f070086;
+    public static final int icon3=0x7f070077;
+    public static final int navigation_empty_icon=0x7f070078;
+    public static final int notification_action_background=0x7f070079;
+    public static final int notification_bg=0x7f07007a;
+    public static final int notification_bg_low=0x7f07007b;
+    public static final int notification_bg_low_normal=0x7f07007c;
+    public static final int notification_bg_low_pressed=0x7f07007d;
+    public static final int notification_bg_normal=0x7f07007e;
+    public static final int notification_bg_normal_pressed=0x7f07007f;
+    public static final int notification_icon_background=0x7f070080;
+    public static final int notification_template_icon_bg=0x7f070081;
+    public static final int notification_template_icon_low_bg=0x7f070082;
+    public static final int notification_tile_bg=0x7f070083;
+    public static final int notify_panel_notification_icon_bg=0x7f070084;
   }
   public static final class id {
     public static final int action0=0x7f080000;
@@ -3404,9 +3402,7 @@ public final class R {
     public static final int ic_launcher=0x7f0b0000;
   }
   public static final class raw {
-    public static final int sound=0x7f0c0000;
-    public static final int sound2=0x7f0c0001;
-    public static final int sound3=0x7f0c0002;
+    public static final int sound3=0x7f0c0000;
   }
   public static final class string {
     public static final int abc_action_bar_home_description=0x7f0d0000;

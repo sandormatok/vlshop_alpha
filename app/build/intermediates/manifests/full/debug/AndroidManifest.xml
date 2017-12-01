@@ -31,7 +31,7 @@
         android:debuggable="true"
         android:fullBackupContent="false"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/icon2"
+        android:icon="@drawable/icon3"
         android:label="VL-SCAN Raktár"
         android:supportsRtl="true"
         android:testOnly="true"

@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.google.android.gms.oem.raktar.atvetel;
+package com.google.android.gms.oem.raktar.vlscan;
 
 public final class R {
   public static final class anim {

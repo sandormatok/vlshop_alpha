@@ -1,7 +1,6 @@
-package com.google.android.gms.oem.raktar.atvetel;
+package com.google.android.gms.oem.raktar.vlscan;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -33,7 +32,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
+import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL;
 
 public class LoginActivity extends AppCompatActivity {
 

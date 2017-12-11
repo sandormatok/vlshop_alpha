@@ -1,7 +1,7 @@
 /**
  * Automatically generated file. DO NOT MODIFY
  */
-package com.google.android.gms.oem.raktar.atvetel;
+package com.google.android.gms.oem.raktar.vlscan;
 
 public final class BuildConfig {
   public static final boolean DEBUG = Boolean.parseBoolean("true");

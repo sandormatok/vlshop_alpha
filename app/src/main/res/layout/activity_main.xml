@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#b5b7b9"
-    tools:context="com.google.android.gms.oem.raktar.atvetel.MainActivity">
+    tools:context="com.google.android.gms.oem.raktar.vlscan.MainActivity">
 
 
     <View android:id="@+id/fakeView"

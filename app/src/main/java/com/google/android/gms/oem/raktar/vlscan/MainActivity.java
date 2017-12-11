@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.android.gms.oem.raktar.atvetel;
+package com.google.android.gms.oem.raktar.vlscan;
 
 import android.app.AlertDialog;
-import android.app.Application;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -25,20 +24,16 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.net.wifi.SupplicantState;
-import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
-import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,22 +53,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-
-import static android.R.attr.id;
-import static com.google.android.gms.oem.raktar.atvetel.BarcodeCaptureActivity.barcode3;
-import static com.google.android.gms.oem.raktar.atvetel.Config.DATA_RAKTAR_KESZLET_URL;
-import static com.google.android.gms.oem.raktar.atvetel.Config.KEY_VEVONEV;
-
-
-import static com.google.android.gms.oem.raktar.atvetel.R.id.tableRow2;
-import static com.google.android.gms.oem.raktar.atvetel.R.id.tableRow61;
-import static com.google.android.gms.vision.barcode.Barcode.WIFI;
-import static java.util.logging.Logger.global;
-
-
-import android.view.KeyEvent;
+import static com.google.android.gms.oem.raktar.vlscan.BarcodeCaptureActivity.barcode3;
 
 
 /**

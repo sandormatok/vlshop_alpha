@@ -8,16 +8,16 @@
     android:layout_height="wrap_content"
     android:keepScreenOn="true">
 
-  <com.google.android.gms.oem.raktar.atvetel.ui.camera.CameraSourcePreview
+  <com.google.android.gms.oem.raktar.vlscan.ui.camera.CameraSourcePreview
       android:id="@+id/preview"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content">
 
-    <com.google.android.gms.oem.raktar.atvetel.ui.camera.GraphicOverlay
+    <com.google.android.gms.oem.raktar.vlscan.ui.camera.GraphicOverlay
         android:id="@+id/graphicOverlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-  </com.google.android.gms.oem.raktar.atvetel.ui.camera.CameraSourcePreview>
+  </com.google.android.gms.oem.raktar.vlscan.ui.camera.CameraSourcePreview>
 
 </LinearLayout>

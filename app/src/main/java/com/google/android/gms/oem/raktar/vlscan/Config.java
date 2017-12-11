@@ -1,4 +1,4 @@
-package com.google.android.gms.oem.raktar.atvetel;
+package com.google.android.gms.oem.raktar.vlscan;
 
 
 public class Config {

@@ -128,6 +128,10 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         gestureDetector = new GestureDetector(this, new CaptureGestureListener());
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
+        Snackbar.make(mGraphicOverlay, "Irányítsa a kamerát a vonalkódra! Vakku bekapcsolása a hangerő gombokkal",
+                Snackbar.LENGTH_LONG)
+                .show();
+
 
         //Snackbar.make(mGraphicOverlay, "Érintsd meg a vonalkódot a kiválasztáshoz,\"\\n\" Két ujjal pedig kicsinyíthetsz/nagyíthatsz!",
         //       Snackbar.LENGTH_LONG)

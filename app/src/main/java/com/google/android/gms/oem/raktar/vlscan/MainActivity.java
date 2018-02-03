@@ -67,10 +67,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private CompoundButton useFlash;
     private CompoundButton remoteDB;
 
-
     Boolean globaladminMode = false;
     Boolean globaltorchMode = false;
-
 
     private TextView statusMessage;
     private TextView barcodeValue;
@@ -79,7 +77,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView toptextView;
 
     private TextView akcioValue,tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
-
 
     String barcode = "barcode";
     String bruttoRound,nettoRound,akcbruttoRound,akcnettoRound;;
@@ -126,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tableRow62 = (TextView) findViewById(R.id.table62);
 //        akcioValue = (TextView) findViewById(R.id.akcioValue);
 
-        tableRow22.setText("TIPP" +"\nHasználja telefonja hangerő fel/le gombjait a vakku bekapcsolásához beolvasás közben!");
+//san        tableRow22.setText("Használja telefonja hangerő fel/le gombjait a vakku bekapcsolásához beolvasás közben!");
 
 
         //autoFocus = (CompoundButton) findViewById(R.id.auto_focus);

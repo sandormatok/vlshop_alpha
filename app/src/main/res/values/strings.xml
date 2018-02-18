@@ -21,4 +21,6 @@
     <string name="spinner_prompt">Válassz ki egy üzletet!</string>
     <string name="multiprocessor">Gyors mód</string>
     <string name="title_activity_login">VL-Scan Raktár</string>
+    <string name="action_settings">Beállítások</string>
+
 </resources>

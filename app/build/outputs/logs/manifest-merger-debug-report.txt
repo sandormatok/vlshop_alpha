@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-65:12
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-61:12
 MERGED from [com.android.support:design:25.4.0] /Users/san/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/c121d154e8f2151a9a972f73b88f59cb/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:25.4.0] /Users/san/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/e47a2493112bc8fbff8459371b974c2e/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:transition:25.4.0] /Users/san/.gradle/caches/transforms-1/files-1.1/transition-25.4.0.aar/3a729b4163481c20e1b38d08da734499/AndroidManifest.xml:17:1-28:12
@@ -31,55 +31,55 @@ MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] /User
 MERGED from [com.google.android.gms:play-services-vision-common-license:11.6.2] /Users/san/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-11.6.2.aar/301423947087e36b62542b903b0319ec/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-common-license:11.6.2] /Users/san/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.6.2.aar/a1e90cb2012666b568f9e6077aee529a/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /Users/san/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.6.2.aar/e6b842f90ad5bdee85043592188aa108/AndroidManifest.xml:2:1-6:12
-INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-65:12
+INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-61:12
 	package
 		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:3:5-55
 		INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-65:12
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-61:12
 		INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-65:12
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:1-61:12
 		INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:2:11-69
 	android:installLocation
 		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:4:5-35
 uses-feature#android.hardware.camera
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:6:5-60
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:5:5-60
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:6:19-57
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:5:19-57
 uses-permission#android.permission.CAMERA
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:8:5-65
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:6:5-65
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:8:22-62
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:6:22-62
 uses-permission#android.permission.INTERNET
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:9:5-67
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:9:22-64
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:7:22-64
 uses-feature#android.hardware.camera.autofocus
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:11:5-70
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:8:5-70
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:11:19-67
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:8:19-67
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:16:5-76
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:12:5-76
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:16:22-73
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:12:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:17:5-79
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:13:5-79
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:17:22-76
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:13:22-76
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:18:5-76
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:14:5-76
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:18:22-73
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:14:22-73
 application
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:25:5-63:19
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:21:5-59:19
 MERGED from [com.android.support:design:25.4.0] /Users/san/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/c121d154e8f2151a9a972f73b88f59cb/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:25.4.0] /Users/san/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/c121d154e8f2151a9a972f73b88f59cb/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:25.4.0] /Users/san/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/e47a2493112bc8fbff8459371b974c2e/AndroidManifest.xml:25:5-29:19
@@ -135,71 +135,71 @@ MERGED from [com.google.firebase:firebase-common-license:11.6.2] /Users/san/.gra
 MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /Users/san/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.6.2.aar/e6b842f90ad5bdee85043592188aa108/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /Users/san/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.6.2.aar/e6b842f90ad5bdee85043592188aa108/AndroidManifest.xml:5:5-20
 	android:supportsRtl
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:31:9-35
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:27:9-35
 	android:label
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:30:9-39
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:26:9-39
 	android:hardwareAccelerated
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:28:9-43
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:24:9-43
 	android:fullBackupContent
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:27:9-42
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:23:9-42
 	android:icon
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:29:9-39
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:25:9-39
 	android:allowBackup
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:26:9-35
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:22:9-35
 	android:theme
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:32:9-65
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:28:9-65
 meta-data#com.google.android.gms.version
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:33:9-35:69
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:29:9-31:69
 MERGED from [com.google.android.gms:play-services-basement:11.6.2] /Users/san/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/0133297d2c1567908fc447ba05955698/AndroidManifest.xml:20:9-121
 MERGED from [com.google.android.gms:play-services-basement:11.6.2] /Users/san/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/0133297d2c1567908fc447ba05955698/AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:35:13-66
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:31:13-66
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:34:13-58
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:30:13-58
 meta-data#com.google.android.gms.vision.DEPENDENCIES
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:36:9-38:39
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:32:9-34:39
 	android:value
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:38:13-36
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:34:13-36
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:37:13-70
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:33:13-70
 activity#com.google.android.gms.oem.raktar.vlscan.MainActivity
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:40:10-45:20
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:36:10-41:20
 	android:screenOrientation
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:42:13-49
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:38:13-49
 	android:label
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:44:13-56
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:40:13-56
 	android:theme
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:41:13-69
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:37:13-69
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:43:13-81
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:39:13-81
 activity#com.google.android.gms.oem.raktar.vlscan.BarcodeCaptureActivity
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:47:9-50:60
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:43:9-46:60
+	android:label
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:46:13-57
+	android:theme
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:44:13-63
+	android:name
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:45:13-91
+activity#com.google.android.gms.oem.raktar.vlscan.LoginActivity
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:48:9-58:20
+	android:screenOrientation
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:51:13-49
 	android:label
 		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:50:13-57
 	android:theme
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:48:13-63
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:52:13-69
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:49:13-91
-activity#com.google.android.gms.oem.raktar.vlscan.LoginActivity
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:52:9-62:20
-	android:screenOrientation
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:55:13-49
-	android:label
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:54:13-57
-	android:theme
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:56:13-69
-	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:53:13-82
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:49:13-82
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:57:13-60:29
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:53:13-56:29
 action#android.intent.action.MAIN
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:58:17-69
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:54:17-69
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:58:25-66
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:54:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:59:17-77
+ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:55:17-77
 	android:name
-		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:59:27-74
+		ADDED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml:55:27-74
 uses-sdk
 INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/san/StudioProjects/VL-SCAN11/app/src/main/AndroidManifest.xml

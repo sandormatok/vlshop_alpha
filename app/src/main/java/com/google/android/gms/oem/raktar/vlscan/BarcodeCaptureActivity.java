@@ -118,7 +118,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         mGraphicOverlay = (GraphicOverlay<BarcodeGraphic>) findViewById(R.id.graphicOverlay);
 
         // read parameters from the intent used to launch the activity.
-        boolean autoFocus = getIntent().getBooleanExtra(AutoFocus, false);
+        boolean autoFocus = getIntent().getBooleanExtra(AutoFocus, true);
         boolean useFlash = getIntent().getBooleanExtra(UseFlash, false);
 
 
@@ -277,13 +277,15 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                         data.putExtra("barcode3", barcode3);
                         setResult(CommonStatusCodes.SUCCESS, data);
                         finish();
+                    } else {
+                        Intent data = new Intent();
+                        data.putExtra("barcode3", barcode3);
+                        data.putExtra("globaltourchmode", globaltourchMode);
+                        setResult(CommonStatusCodes.SUCCESS, data);
+                        finish();
                     }
 
-                    Intent data = new Intent();
-                    data.putExtra("barcode3", barcode3);
-                    data.putExtra("globaltourchmode", globaltourchMode);
-                    setResult(CommonStatusCodes.SUCCESS, data);
-                    //finish();
+
                 }
             }
 
@@ -416,9 +418,9 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         if (grantResults.length != 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             Log.d(TAG, "Kamera jogok megszerezve! - Kamera indítása!");
             // we have permission, so create the camerasource
-            boolean autoFocus = getIntent().getBooleanExtra(AutoFocus,false);
+            boolean autoFocus = getIntent().getBooleanExtra(AutoFocus,true);
             boolean useFlash = getIntent().getBooleanExtra(UseFlash, false);
-            createCameraSource(autoFocus, useFlash);
+            createCameraSource(true, useFlash);
             return;
         }
 

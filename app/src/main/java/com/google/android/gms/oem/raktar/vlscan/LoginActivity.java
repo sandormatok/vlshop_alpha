@@ -9,12 +9,15 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -38,7 +41,7 @@ import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLE
 public class LoginActivity extends AppCompatActivity {
 
     //*** LOGIN - GLOBÁLIS VÁLTOZÓK ***
-    private String globalVevokod, globalPassword = "";
+    private String globalVevokod, globalPassword, globalVevonev = "";
     private EditText loginInputVevokod, loginInputPassword;
     String globalSsid ="null";
     String barcode3, barcode4 = "";
@@ -49,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int RC_QRCODE_LOGIN = 9001;
     private TextView vevonevLogin;
+    int tippCount = 1;
 
     //*** LOGIN ONCREATE ***
     @Override
@@ -66,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
         loginInputVevokod.setInputType(InputType.TYPE_CLASS_NUMBER);
         loginInputPassword = (EditText) findViewById(R.id.input_password);
         loginInputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        vevonevLogin = (TextView) findViewById(R.id.loginVevonev);
         Button btnlogin = (Button) findViewById(R.id.btn_login);
         Button btnQRCode = (Button) findViewById(R.id.btn_qrcode);
         maradjonbeBox = (CompoundButton) findViewById(R.id.maradjonBe);
@@ -74,6 +79,9 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         String prefsVevokod = prefs.getString("vevokod", "");
         String prefsVevojelszo = prefs.getString("vevojelszo", "");
+        String prefsVevonev = prefs.getString("vevonev", "");
+
+        vevonevLogin.setText(prefsVevonev);
         Boolean prefsMaradjonbe = prefs.getBoolean("maradjon", false);
         if(prefsMaradjonbe) maradjonbeBox.setChecked(true);
         loginInputVevokod.setText(prefsVevokod, TextView.BufferType.EDITABLE);
@@ -139,6 +147,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent qrcodeReader = new Intent(LoginActivity.this, BarcodeCaptureActivity.class);
                 qrcodeReader.putExtra("qrcodeLogin", true);
+
+                SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                editor.putInt("tippCount", tippCount);
+
+                editor.apply();
+
+
+
                 startActivityForResult(qrcodeReader, RC_QRCODE_LOGIN);
                 //
             }
@@ -157,14 +173,29 @@ public class LoginActivity extends AppCompatActivity {
 
                     //QRCODE FELDOLGOZÁSA
                     String[] separated = barcode3.split(":");
-                    globalVevokod = separated[1];
-                    globalPassword = separated[2];
 
-                    Toast toast= Toast.makeText(getApplicationContext(),globalVevokod + ",,,," + globalPassword, Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
+                    String qrcodeString1 = "qrcode";
+                    String qrcodeString2 = separated[0];
 
-                    loginInputVevokod.setText(globalVevokod, TextView.BufferType.EDITABLE);
-                    loginInputPassword.setText(globalPassword, TextView.BufferType.EDITABLE);
+                //    if (qrcode == "qrcode") {
+
+                    if (qrcodeString2.equals("qrcode")) {
+                        globalVevokod = separated[1];
+                        globalPassword = separated[2];
+
+                        Snackbar.make(findViewById(R.id.logincoordinatorLayout), "Sikeres bejelentkezés QR Kóddal!",
+                                Snackbar.LENGTH_SHORT)
+                                .show();
+
+                        loginInputVevokod.setText(globalVevokod, TextView.BufferType.EDITABLE);
+                        loginInputPassword.setText(globalPassword, TextView.BufferType.EDITABLE);
+                    } else {
+
+
+                        Toast toast = Toast.makeText(getApplicationContext(), "Hibás QR KÓD! ," + qrcodeString1 + ", " + qrcodeString2, Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.BOTTOM, 0, 20);
+                        toast.show();
+                    }
 
                     Log.d(TAG, "Vonalkód (LoginAvtivity) " + barcode3);
                 } else {
@@ -187,6 +218,7 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             globalVevokod = vevokod;
             globalPassword = password;
+
             getData2();
         }
 
@@ -223,7 +255,7 @@ public class LoginActivity extends AppCompatActivity {
         String vevonev = "";
         String jujel = "";
 
-//Válasz adatok tárolása
+        //VÁLASZ ADATOK TÁROLÁSA
         try {
             JSONObject jsonObject2 = new JSONObject(response);
             JSONArray result2 = jsonObject2.getJSONArray(Config.JSON_ARRAY);
@@ -232,16 +264,17 @@ public class LoginActivity extends AppCompatActivity {
             vevonev = termekData2.getString(Config.KEY_VEVONEV);
             aroszt = termekData2.getString(Config.KEY_AROSZT);
 
+            globalVevonev = vevonev;
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         if (globalPassword.equals(jujel)){
-            //Write to shared preferences
+            //SAVE TO SHARED PREFERENCES
             if (maradjonbeBox.isChecked()) {
                 SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
                 editor.putString("vevokod", globalVevokod);
-                editor.putString("vevonev", vevonev);
+                editor.putString("vevonev", globalVevonev);
                 editor.putString("vevojelszo", globalPassword);
                 editor.putBoolean("maradjon", true);
                 editor.apply();
@@ -251,6 +284,7 @@ public class LoginActivity extends AppCompatActivity {
                 editor.apply();
             }
 
+            //START MAIN ACTIVITY
             Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
             mainIntent.putExtra("intentvevonev", vevonev);
             mainIntent.putExtra("intentaroszt", aroszt);
@@ -263,5 +297,35 @@ public class LoginActivity extends AppCompatActivity {
             toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
         }
     }
+
+    //*** OPTIONS MENU ***
+    // todo: kijelentkezés, gyors mód,
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+
+
 
 }

@@ -29,7 +29,10 @@
         <TextView
             android:id="@+id/loginVevonev"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="center"
+            android:textAllCaps="true" />
 
         <ImageView
             android:id="@+id/imageView"

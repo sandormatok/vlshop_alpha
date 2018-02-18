@@ -30,6 +30,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.CompoundButton;
@@ -101,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tableRow52 = (TextView) findViewById(R.id.table52);
         tableRow61 = (TextView) findViewById(R.id.table61);
         tableRow62 = (TextView) findViewById(R.id.table62);
+
 
         //todo: nem hiszem, hogy átjön a vevőnév!
         Intent intent = getIntent();
@@ -200,6 +203,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (data != null) {
                     final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound3);
                     mp.start();
+
                     barcode3 = data.getStringExtra("barcode3");
                     getData();
                     Log.d(TAG, "Vonalkód (MainActivity) " + barcode3);
@@ -367,5 +371,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onStop() {
         super.onStop();
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

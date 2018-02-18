@@ -92,9 +92,12 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
     public static Barcode barcode = null;
     public static String barcode3;
     public boolean globaltourchMode;
+    public boolean qrcodeLogin = false;
 
     static int counter = 0;
     private static final int RC_BARCODE_CAPTURE = 9001;
+    private static final int RC_QRCODE_LOGIN = 9001;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -102,8 +105,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
     private GoogleApiClient client;
 
     public static final String MY_PREFS_NAME = "loginPrefs";
-
-
 
     /**
      * Initializes the UI and creates the detector pipeline.
@@ -135,6 +136,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         if(intent.hasExtra("qrcodeLogin")) {
+            qrcodeLogin = true;
                Snackbar.make(mGraphicOverlay, "*** QRCode Login ***",
                 Snackbar.LENGTH_LONG)
                 .show();
@@ -194,36 +196,9 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
             return true;
         }
 
-
-
-            //  toptextView.setText("Counter : " + String.valueOf(++counter));
-/*
-        )            Toast.makeText(this, "Vaku Kikapcsolva!", Toast.LENGTH_SHORT)
-                    .show();
-            Intent intent = new Intent(this, BarcodeCaptureActivity.class);
-            intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
-            intent.putExtra(BarcodeCaptureActivity.UseFlash, false);
-            startActivityForResult(intent, RC_BARCODE_CAPTURE);
-            return true;
-        }
-        if (keyCode == android.view.KeyEvent.KEYCODE_VOLUME_UP) {
-            //  toptextView.setText("Counter : " + String.valueOf(--counter));
-            Toast.makeText(this, "Vaku Bekapcsolva!", Toast.LENGTH_SHORT)
-                    .show();
-
-            Intent intent = new Intent(this, BarcodeCaptureActivity.class);
-            intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
-            intent.putExtra(BarcodeCaptureActivity.UseFlash, true);
-            startActivityForResult(intent, RC_BARCODE_CAPTURE);
-            return true;
-
-            return true;
-        }
-        */
         else {
             return super.onKeyDown(keyCode, event);
         }
-
     }
 
     private void requestCameraPermission() {
@@ -252,7 +227,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                 .setAction(R.string.ok, listener)
                 .show();
     }
-
     @Override
     public boolean onTouchEvent(MotionEvent e) {
         boolean b = scaleGestureDetector.onTouchEvent(e);
@@ -296,14 +270,20 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
             public void receiveDetections(Detector.Detections<Barcode> detections) {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
                 if (barcodes.size() != 0) {
-
                     barcode3 = barcodes.valueAt(0).displayValue;
                     Log.w(TAG, barcode3);
+                    if (qrcodeLogin) {
+                        Intent data = new Intent();
+                        data.putExtra("barcode3", barcode3);
+                        setResult(CommonStatusCodes.SUCCESS, data);
+                        finish();
+                    }
+
                     Intent data = new Intent();
-                    data.putExtra(BarcodeObject, barcode3);
+                    data.putExtra("barcode3", barcode3);
                     data.putExtra("globaltourchmode", globaltourchMode);
                     setResult(CommonStatusCodes.SUCCESS, data);
-                    finish();
+                    //finish();
                 }
             }
 
@@ -337,7 +317,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         // to other detection examples to enable the barcode detector to detect small barcodes
         // at long distances.
 
-// TODO: Felbontással kellene még foglalkozni
+// TODO: Felbontással kellene még foglalkozni (settings)
 
         CameraSource.Builder builder = new CameraSource.Builder(getApplicationContext(), barcodeDetector)
                 .setFacing(CameraSource.CAMERA_FACING_BACK)
@@ -357,39 +337,20 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                 .build();
 
     }
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("BarcodeCapture Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
-    }
+
 
     @Override
     public void onStart() {
         super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+
     }
 
     @                   Override
     public void onStop() {
         super.onStop();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+
         client.disconnect();
     }
 
@@ -530,6 +491,9 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                 if(intent.hasExtra("qrcodeLogin")) {
                     Intent qrcodetoLogin = new Intent(BarcodeCaptureActivity.this, LoginActivity.class);
                     qrcodetoLogin.putExtra("qrcodetoLogin", true);
+                    qrcodetoLogin.putExtra(BarcodeObject, barcode);
+                    //todo: QRCode értelmezés!!!
+
 
 
                     /*
@@ -540,12 +504,12 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                     editor.apply();
                     */
 
-                 //   Toast toast= Toast.makeText(getApplicationContext(),barcode, Toast.LENGTH_LONG);
-                 //   toast.setGravity(Gravity.CENTER,0,0); toast.show();
+                    Toast toast= Toast.makeText(getApplicationContext(),"÷*÷ QRCode Login: " + barcode3 + " ÷*÷", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
 
-                    qrcodetoLogin.putExtra(BarcodeObject, barcode);
-                    startActivity(qrcodetoLogin);
+                    //qrcodetoLogin.putExtra(BarcodeObject, barcode);
+                    //startActivity(qrcodetoLogin);
 
 
                 }
@@ -553,7 +517,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                 Intent data = new Intent();
                 data.putExtra(BarcodeObject, barcode);
                 setResult(CommonStatusCodes.SUCCESS, data);
-                finish();
+                //finish();
             }
             else {
                 Log.d(TAG, "barcode data is null");

@@ -114,16 +114,16 @@ public final class R {
         public static final int omnibox_url_section = 0x7f08007b;
         public static final int plain = 0x7f08007f;
         public static final int radio = 0x7f080083;
-        public static final int rfc822 = 0x7f080086;
-        public static final int standard = 0x7f0800a8;
-        public static final int text = 0x7f0800c6;
-        public static final int text1 = 0x7f0800c7;
-        public static final int text2 = 0x7f0800c8;
-        public static final int thing_proto = 0x7f0800ce;
-        public static final int toolbar = 0x7f0800d3;
-        public static final int url = 0x7f0800dc;
-        public static final int wide = 0x7f0800e1;
-        public static final int wrap_content = 0x7f0800e3;
+        public static final int rfc822 = 0x7f080085;
+        public static final int standard = 0x7f0800a7;
+        public static final int text = 0x7f0800c4;
+        public static final int text1 = 0x7f0800c5;
+        public static final int text2 = 0x7f0800c6;
+        public static final int thing_proto = 0x7f0800cc;
+        public static final int toolbar = 0x7f0800d1;
+        public static final int url = 0x7f0800da;
+        public static final int wide = 0x7f0800df;
+        public static final int wrap_content = 0x7f0800e1;
     }
     public static final class integer {
         public static final int google_play_services_version = 0x7f090006;

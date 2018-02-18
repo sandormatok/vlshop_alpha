@@ -58,58 +58,39 @@ import static com.google.android.gms.oem.raktar.vlscan.BarcodeCaptureActivity.ba
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    // use a compound button so either checkbox or switch widgets work.
-    private CompoundButton autoFocus;
-    private CompoundButton useFlash;
-    private CompoundButton remoteDB;
+    //*** MAIN UI ELEMEK ***
 
-    Boolean globaladminMode = false;
-    Boolean globaltorchMode = false;
+    private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
 
-    private TextView statusMessage;
-    private TextView barcodeValue;
-    private TextView barcodeValue2;
-    private TextView barcodeInfo;
-    private TextView toptextView;
-
-
-
-    private TextView akcioValue,tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
-
-    String barcode = "barcode";
-    String bruttoRound,nettoRound,akcbruttoRound,akcnettoRound;;
-    String globalAroszt;
+    //GLOBÁLIS VÁLTOZÓK
+    String bruttoRound,nettoRound;
+    String globalAroszt,url;
     String globalvevoKod = "";
-
     private static final int RC_BARCODE_CAPTURE = 9001;
-    private static final String TAG = "BarcodeMain";
-    String url, boltnev2;
-    //String boltnev = "Raktár";
 
+    private static final String TAG = "BarcodeMain";
     private String m_Text = "";
     private String manualInput = "NO";
-
     boolean devMode = true;
+
      /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
 
+    //todo: visszaírás mysql-be (php, direkt, ...?)
 
+    //*** MAIN ONCREATE ***
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//notitle
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_main);
         //getSupportActionBar().setTitle("Raktári Készletellenörző");
-        //statusMessage = (TextView) findViewById(R.id.status_message);
-        //barcodeValue = (TextView) findViewById(R.id.barcode_value);
-        //barcodeValue2 = (TextView) findViewById(R.id.barcode_value2);
-        toptextView = (TextView) findViewById(R.id.toptextView);
-        //barcodeInfo = (TextView) findViewById(R.id.status_message);
+
+        setContentView(R.layout.activity_main);
+          TextView toptextView = (TextView) findViewById(R.id.toptextView);
 
         //tablerows
         tableRow02 = (TextView) findViewById(R.id.table02);
@@ -120,47 +101,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tableRow52 = (TextView) findViewById(R.id.table52);
         tableRow61 = (TextView) findViewById(R.id.table61);
         tableRow62 = (TextView) findViewById(R.id.table62);
-//        akcioValue = (TextView) findViewById(R.id.akcioValue);
 
-//san        tableRow22.setText("Használja telefonja hangerő fel/le gombjait a vakku bekapcsolásához beolvasás közben!");
-
-
-        //autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
-        //useFlash = (CompoundButton) findViewById(R.id.use_flash);
-        //remoteDB = (CompoundButton) findViewById(R.id.remote_db);
-
-        //autoFocus.setChecked(true);
-        //autoFocus.setVisibility(View.GONE);
-        //remoteDB.setVisibility(View.GONE);
-        //useFlash.setVisibility(View.GONE);
-
+        //todo: nem hiszem, hogy átjön a vevőnév!
         Intent intent = getIntent();
-
         if(intent.hasExtra("intentvevonev")) {
             String vevonev = getIntent().getExtras().getString("intentvevonev");
             globalAroszt = getIntent().getExtras().getString("intentaroszt");
             globalvevoKod = getIntent().getExtras().getString("intentvevokod");
-            //toptextView.setText("Vevő: " + vevonev);
             toptextView.setText(vevonev);
         }
-/*
-        if(intent.hasExtra("globaltourchmode")) {
-            globaltorchMode = getIntent().getExtras().getBoolean("globaltourchmode");
-        }
-*/
-        if(intent.hasExtra("adminMode")) {
-            Boolean adminMode = getIntent().getExtras().getBoolean("adminMode");
-                if(adminMode) {
-                    globalvevoKod = "0045801";
-                            //                    remoteDB.setVisibility(View.VISIBLE);
-//                    remoteDB.setChecked(true);
-                    globaladminMode = true;
-                    toptextView.setText("ONLINE MÓD (4-es ár)");
-            }
-        }
 
-//>>>Itt adom meg, hogy melyik gombra melyig view jelenjen meg... (layout.xml)
-
+        //*** MAIN ONCLICK LISTENERS ***
         findViewById(R.id.read_barcode).setOnClickListener(this);
         findViewById(R.id.enter_barcode).setOnClickListener(this);
 
@@ -169,8 +120,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-//>>>Ez jó leket hogy hova kattint...     de inkább feljebb kell több view-et definiálni
-
     /**
      * Called when a view has been clicked.
      *
@@ -178,37 +127,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
 
 
-    //>>>Gombok megnomására más más view
+    //*** MAIN ON CLICK ***
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.read_barcode) {
-            // launch barcode activity.
+            //BrcodeCaptureActivity INDÍTÁSA
             Intent intent = new Intent(this, BarcodeCaptureActivity.class);
-
-            /*
-            intent.putExtra(BarcodeCaptureActivity.AutoFocus, autoFocus.isChecked());
-            intent.putExtra(BarcodeCaptureActivity.UseFlash, useFlash.isChecked());
-*/
             intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
             intent.putExtra(BarcodeCaptureActivity.UseFlash, false);
-
             startActivityForResult(intent, RC_BARCODE_CAPTURE);
         }
-// manualinput
+        //MANUALINPUT
         if (v.getId() == R.id.enter_barcode) {
-            //Toast toast= Toast.makeText(getApplicationContext(),"ANYÁDAT NYOMKODD!", Toast.LENGTH_SHORT);
-            //toast.setGravity(Gravity.CENTER,0,0); toast.show();
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+          AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Írd be a vonalkódot!");
 
-// Set up the input
+            // Set up the input
             final EditText input = new EditText(this);
             // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
             input.setInputType(InputType.TYPE_CLASS_NUMBER);
             builder.setView(input);
 
-// Set up the buttons
+            // Set up the buttons
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -251,6 +191,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @see #createPendingResult
      * @see #setResult(int)
      */
+
+    //*** ON ACTIVITY RESULT: RC_BARCODE_CAPTURE ***
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RC_BARCODE_CAPTURE) {
@@ -258,13 +200,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (data != null) {
                     final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound3);
                     mp.start();
-
-                    String barcode3 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
-                    //Barcode barcode2 = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
-                    //statusMessage.setText(barcode2.displayValue);
-                    //statusMessage.setText(barcode3);
+                    barcode3 = data.getStringExtra("barcode3");
                     getData();
-                    //getakcioData();
                     Log.d(TAG, "Vonalkód (MainActivity) " + barcode3);
                 } else {
                     tableRow22.setText(R.string.barcode_failure);
@@ -279,10 +216,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
- //>>>URL Request, kólön RAKTÁR és TÁVOLI URL-el
+    //*** MAIN GETDATA ***
     private void getData() {
-
-
         String ssid = "";
         //WIFI Bekapcsolása, csatlakozás a VLEURO wifihez
 
@@ -292,17 +227,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         wifiInfo = wifiManager.getConnectionInfo();
         if (wifiInfo.getSupplicantState() == SupplicantState.COMPLETED) {
             ssid = wifiInfo.getSSID();
-
         } else {
             ssid = "NON";
-                    }
-
-        //Toast toast= Toast.makeText(getApplicationContext(),ssid, Toast.LENGTH_SHORT);
-        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
-
-        //if(ssid.compareTo("\"VLEURO\"")==0) {
-
-
+        }
 
             if (!ssid.equals("\"VLEURO\"")) {
 
@@ -320,36 +247,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
         }
 
-        //final TextView barcodeInfo = (TextView) findViewById(R.id.code_info);
-        final TextView barcodeInfo = (TextView) findViewById(R.id.status_message);
-
         String id = barcode3;
-
         if (manualInput.equals("YES")) {
             id = m_Text;
+            barcode3 = m_Text;
             manualInput = "NO";
         }
 
-  /*      try {
-            String encodedString = URLEncoder.encode(boltnev, "UTF-8");
-            boltnev2 = encodedString;
-            Log.d("TEST", encodedString);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } */
-
-
-        if (globaladminMode) {
-            url = Config.DATA_RAKTAR_KESZLET_REMOTE_URL + id + "&vkod="+globalvevoKod;
-        } else {
-
             url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
-        }
-
-        //url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
-
-//        Toast toast= Toast.makeText(getApplicationContext(),url, Toast.LENGTH_LONG);
-//        toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -366,17 +271,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
-// VONALKOD!!!
+        //VONALKOD
         tableRow02.setText(id);
     }
 
 
-//>>>JSON feldolgozása, adatok kiirasa
+    //*** MAIN SHOW JSON ***
     private void showJSON(String response) {
 
-        //final TextView barcodeInfo = (TextView) findViewById(R.id.code_info);
-        final TextView barcodeInfo = (TextView) findViewById(R.id.status_message);
-        final TextView code_results = (TextView) findViewById(R.id.read_barcode);
         String marka = "";
         String termek = "";
         String ar = "";
@@ -386,7 +288,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Double afa = 0.00;
         Boolean akcios = false;
 
-//Válasz adatok tárolása
+        //Válasz adatok tárolása
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONArray result = jsonObject.getJSONArray(Config.JSON_ARRAY);
@@ -411,10 +313,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              akciosstring = "nem";
         }
 
-        //Toast toast= Toast.makeText(getApplicationContext(),akciosstring, Toast.LENGTH_LONG);
-        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
-
-
         if (marka.equals("null")) {
             //barcodeValue.setTextColor(0xFFFF033A);
             tableRow22.setText("A VONALKÓD NINCS A RAKTÁRI RENDSZERBEN");
@@ -427,18 +325,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             tableRow22.setBackgroundColor(0xFF0C4593);
             Double brutto = 0.00;
-
             brutto = netto * (afa + 100) / 100;
-            //barcodeValue.setTextColor(0xFF00DDFF);
-
-
             bruttoRound = String.format("%.2f", brutto);
             nettoRound = String.format("%.2f", netto);
-
-         //   barcodeValue.setText(marka + "\n" + termek);
-            //barcodeValue.setText(boltnev);
-         //   barcodeValue2.setText("Nettó: " + netto + " Ft" + "\nBruttó: " + bruttoRound + " Ft" + "\nRaktáron: " + menny);
-                        tableRow12.setText(marka);
+            tableRow12.setText(marka);
             tableRow22.setText(termek);
             tableRow32.setText(nettoRound + " Ft");
             tableRow42.setText(bruttoRound + " Ft");
@@ -452,54 +342,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tableRow62.setBackgroundColor(0xFF0C4593);
                 tableRow61.setBackgroundColor(0xFF0C4593);
             }
-
         }
-
     }
-
-
-
-
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("Main Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
-    }
 
 
-    @Override
+    @Override //onBackPressed
     public void onBackPressed() {
         finish();
         super.onBackPressed();
     }
 
-    @Override
+    @Override //index
     public void onStart() {
         super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+
     }
 
-    @Override
+    @Override //index
     public void onStop() {
         super.onStop();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
     }
 }

@@ -26,12 +26,18 @@
         android:layout_marginRight="12dp"
         android:layout_marginEnd="12dp">
 
-        <ImageView android:src="@drawable/icon3"
+        <TextView
+            android:id="@+id/loginVevonev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
-            android:layout_marginBottom="12dp"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/imageView" />
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/icon3" />
 
         <!-- vevokod Label -->
         <android.support.design.widget.TextInputLayout

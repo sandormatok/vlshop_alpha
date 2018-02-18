@@ -3,7 +3,7 @@
     <string name="ok">OK</string>
     <string name="permission_camera_rationale">A kamera nem elérhető!</string>
     <string name="no_camera_permission">Ez az app nem tud elindulni ezen a készüléken. Kamera jogosultságra van szükség!</string>
-    <string name="low_storage_error">Az arcfelismerő nem tölthető le, mert kevés a hely!</string>
+    <string name="low_storage_error">A vonalkód felismerő nem tölthető le, mert kevés a hely!</string>
     <string name="title_activity_main">VL-SCAN Raktár</string>
     <string name="barcode_header"></string>
     <string name="read_barcode">BEOLVASÁS</string>

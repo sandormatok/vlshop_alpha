@@ -40,10 +40,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText loginInputVevokod, loginInputPassword;
     ProgressDialog progressDialog;
-    private Button btnlogin;
+    private Button btnlogin,btnQRCode;
     private static final String TAG = "LoginActivity";
     private String globalVevokod, globalPassword = "";
     String globalSsid ="null";
+    String barcode3 = "";
 
     private CompoundButton maradjonbeBox;
 
@@ -75,12 +76,29 @@ public class LoginActivity extends AppCompatActivity {
         loginInputPassword = (EditText) findViewById(R.id.input_password);
         loginInputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         btnlogin = (Button) findViewById(R.id.btn_login);
+        btnQRCode = (Button) findViewById(R.id.btn_qrcode);
 
         // Progress dialog
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
 
         maradjonbeBox = (CompoundButton) findViewById(R.id.maradjonBe);
+
+
+        //*** vissza a qrcode reading utén ***
+//todo: helyette inkább shared prefs! már a barcode read után le kell tárolni és az új adatokkal tölt be a login... :D:D 
+
+
+        Intent intent = getIntent();
+        if(intent.hasExtra("qrcodetoLogin")) {
+            barcode3 = intent.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
+            Toast toast= Toast.makeText(getApplicationContext(),barcode3, Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER,0,0); toast.show();
+
+
+        }
+
+
 
 //////////
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
@@ -193,7 +211,20 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         });
+
+        btnQRCode.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent qrcodeReader = new Intent(LoginActivity.this, BarcodeCaptureActivity.class);
+                qrcodeReader.putExtra("qrcodeLogin", true);
+                startActivity(qrcodeReader);
+                //
+            }
+
+        });
     }
+
 
 
     private void loginUser( final String vevokod, final String password) {

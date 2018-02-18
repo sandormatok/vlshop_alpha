@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.net.Uri;
@@ -36,6 +37,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.GestureDetector;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
@@ -99,6 +101,9 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
      */
     private GoogleApiClient client;
 
+    public static final String MY_PREFS_NAME = "loginPrefs";
+
+
 
     /**
      * Initializes the UI and creates the detector pipeline.
@@ -128,9 +133,26 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         gestureDetector = new GestureDetector(this, new CaptureGestureListener());
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
-        Snackbar.make(mGraphicOverlay, "Irányítsa a kamerát a vonalkódra! Vakku bekapcsolása a hangerő gombokkal",
+        Intent intent = getIntent();
+        if(intent.hasExtra("qrcodeLogin")) {
+               Snackbar.make(mGraphicOverlay, "*** QRCode Login ***",
                 Snackbar.LENGTH_LONG)
                 .show();
+
+
+
+
+        }
+
+
+        /*Snackbar.make(mGraphicOverlay, "Irányítsa a kamerát a vonalkódra! Vakku bekapcsolása a hangerő gombokkal",
+                Snackbar.LENGTH_LONG)
+                .show();
+        */
+
+
+        //todo: tesztelni, ér-e ez valamit:
+        //mCameraSource.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
 
 
         //Snackbar.make(mGraphicOverlay, "Érintsd meg a vonalkódot a kiválasztáshoz,\"\\n\" Két ujjal pedig kicsinyíthetsz/nagyíthatsz!",
@@ -148,7 +170,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
      * sending the request.
      */
 
-// TODO: Vakuval nem vewszi az első vonalkódot
+// TODO: Vakuval nem vewszi az első vonalkódot - még mindíg nem??
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == android.view.KeyEvent.KEYCODE_VOLUME_DOWN) {
             if (mCameraSource.getFlashMode() == Camera.Parameters.FLASH_MODE_TORCH) {
@@ -158,13 +180,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                 mCameraSource.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
                 globaltourchMode = true;
             }
-
-
-
-//            mCameraSource.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
-//                Toast.makeText(this, mCameraSource.getFlashMode(), Toast.LENGTH_SHORT)
-//                        .show();
-
             return true;
         }
 
@@ -176,12 +191,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                 mCameraSource.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
                 globaltourchMode = true;
             }
-
-
-//            mCameraSource.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
-//                Toast.makeText(this, mCameraSource.getFlashMode(), Toast.LENGTH_SHORT)
-//                        .show();
-
             return true;
         }
 
@@ -515,6 +524,32 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         if (graphic != null) {
             barcode = graphic.getBarcode();
             if (barcode != null) {
+
+                Intent intent = getIntent();
+
+                if(intent.hasExtra("qrcodeLogin")) {
+                    Intent qrcodetoLogin = new Intent(BarcodeCaptureActivity.this, LoginActivity.class);
+                    qrcodetoLogin.putExtra("qrcodetoLogin", true);
+
+
+                    /*
+                    SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                    editor.putString("vevokod", globalVevokod);
+                    editor.putString("vevojelszo", globalPassword);
+                    editor.putBoolean("maradjon", true);
+                    editor.apply();
+                    */
+
+                 //   Toast toast= Toast.makeText(getApplicationContext(),barcode, Toast.LENGTH_LONG);
+                 //   toast.setGravity(Gravity.CENTER,0,0); toast.show();
+
+
+                    qrcodetoLogin.putExtra(BarcodeObject, barcode);
+                    startActivity(qrcodetoLogin);
+
+
+                }
+
                 Intent data = new Intent();
                 data.putExtra(BarcodeObject, barcode);
                 setResult(CommonStatusCodes.SUCCESS, data);

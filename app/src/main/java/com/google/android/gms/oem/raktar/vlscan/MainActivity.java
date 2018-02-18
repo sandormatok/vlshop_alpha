@@ -56,10 +56,6 @@ import org.json.JSONObject;
 import static com.google.android.gms.oem.raktar.vlscan.BarcodeCaptureActivity.barcode3;
 
 
-/**
- * Main activity demonstrating how to pass extra parameters to an activity that
- * reads barcodes.
- */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     // use a compound button so either checkbox or switch widgets work.
@@ -76,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView barcodeInfo;
     private TextView toptextView;
 
+
+
     private TextView akcioValue,tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
 
     String barcode = "barcode";
@@ -91,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String m_Text = "";
     private String manualInput = "NO";
 
+    boolean devMode = true;
      /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -302,18 +301,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         //if(ssid.compareTo("\"VLEURO\"")==0) {
-        if(!ssid.equals("\"VLEURO\"")) {
 
-            tableRow22.setText("NEM CSATLAKOZIK A \"VLEURO\" WIFI HÁLÓZATHOZ!");
-            tableRow22.setBackgroundColor(Color.RED);
-            tableRow12.setText("");
-            tableRow32.setText("");
-            tableRow42.setText("");
-            tableRow52.setText("");
-            return;
+
+
+            if (!ssid.equals("\"VLEURO\"")) {
+
+                if (devMode) {
+                } else {
+
+                    tableRow22.setText("NEM CSATLAKOZIK A \"VLEURO\" WIFI HÁLÓZATHOZ!");
+                    tableRow22.setBackgroundColor(Color.RED);
+                    tableRow12.setText("");
+                    tableRow32.setText("");
+                    tableRow42.setText("");
+                    tableRow52.setText("");
+                    return;
+
+                }
         }
-
-
 
         //final TextView barcodeInfo = (TextView) findViewById(R.id.code_info);
         final TextView barcodeInfo = (TextView) findViewById(R.id.status_message);
@@ -454,91 +459,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    private void getakcioData() {
-        String id = globalAroszt;
-         url = Config.DATA_RAKTAR_AKCIO_URL + id + "&arkat=" + globalAroszt;
-
-        StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                //        loading.dismiss();
-                showJSON2
-                        (response);
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
-                    }
-                });
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-    }
-
-
-
-    private void showJSON2(String response) {
-
-        String marka = "";
-        String marka1 = "";
-        String termek = "";
-        String termek1 = "";
-        Double akcar = 0.00;
-        Double akcar1 = 0.00;
-//JSONArray resultArray;
-
-        /* String kinalo = "";
-        String karton = "";
-        String raklap = ""; */
-
-//Válasz adatok tárolása
-        try {
-
-            JSONObject jsonObject = new JSONObject(response);
-            JSONArray result = jsonObject.getJSONArray(Config.JSON_ARRAY);
-
-            JSONObject termekData1 = result.getJSONObject(0);
-            marka = termekData1.getString(Config.KEY_MARKA);
-            termek = termekData1.getString(Config.KEY_TERMEK);
-            akcar = termekData1.getDouble(Config.KEY_AKCAR);
-
-            JSONObject termekData2 = result.getJSONObject(1);
-            marka1 = termekData2.getString(Config.KEY_MARKA);
-            termek1 = termekData2.getString(Config.KEY_TERMEK);
-            akcar1 = termekData2.getDouble(Config.KEY_AKCAR);
-
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-
-        //Toast toast= Toast.makeText(getApplicationContext(),marka + "; " + termek + "; " + akcar + "; " + marka1 + "; " + termek1 + "; " + akcar1, Toast.LENGTH_LONG);
-        //toast.setGravity(Gravity.CENTER,0,0); toast.show();
-
-        //toptextView.setText(marka + ", " + marka2);
-        //tableRow22.setText(termek);
-        //tableRow32.setText(akcar);
-        //tableRow42.setText(marka);
-        //tableRow52.setText(marka2);
-
-        Double afa = 1.27;
-
-        Double brutto = 0.00;
-
-        brutto = akcar1 * (afa + 100) / 100;
-        //barcodeValue.setTextColor(0xFF00DDFF);
-
-
-        akcbruttoRound = String.format("%.2f", brutto);
-        akcnettoRound = String.format("%.2f", akcar1);
-
-
-
-        akcioValue.setText(marka + " / " + termek + "\n" + akcnettoRound + " Ft (Nettó) / " + akcbruttoRound + " Ft (Bruttó)");
-        akcioValue.setSelected(true);
-    }
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.

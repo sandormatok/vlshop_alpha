@@ -98,13 +98,16 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
     private static final int RC_BARCODE_CAPTURE = 9001;
     private static final int RC_QRCODE_LOGIN = 9001;
 
+    public static final String MY_PREFS_NAME = "loginPrefs";
+    int tippCount = 1;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
 
-    public static final String MY_PREFS_NAME = "loginPrefs";
+
 
     /**
      * Initializes the UI and creates the detector pipeline.
@@ -137,21 +140,17 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if(intent.hasExtra("qrcodeLogin")) {
             qrcodeLogin = true;
-               Snackbar.make(mGraphicOverlay, "*** QRCode Login ***",
+               Snackbar.make(mGraphicOverlay, "Írányítsa a kamerát egy QR Kódra!",
                 Snackbar.LENGTH_LONG)
                 .show();
 
+        } else {
 
-
+            Snackbar.make(mGraphicOverlay, "Irányítsa a telefon kameráját egy vonalkódra!",
+                    Snackbar.LENGTH_LONG)
+                    .show();
 
         }
-
-
-        /*Snackbar.make(mGraphicOverlay, "Irányítsa a kamerát a vonalkódra! Vakku bekapcsolása a hangerő gombokkal",
-                Snackbar.LENGTH_LONG)
-                .show();
-        */
-
 
         //todo: tesztelni, ér-e ez valamit:
         //mCameraSource.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);

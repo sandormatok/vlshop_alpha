@@ -19,6 +19,7 @@ package com.google.android.gms.oem.raktar.vlscan;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -73,9 +74,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TAG = "BarcodeMain";
     private String m_Text = "";
     private String manualInput = "NO";
-    boolean devMode = true;
+    boolean devMode = false;
 
-     /**
+    /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
@@ -140,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra(BarcodeCaptureActivity.UseFlash, false);
             startActivityForResult(intent, RC_BARCODE_CAPTURE);
         }
-        //MANUALINPUT
+        //MANUAL INPUT
         if (v.getId() == R.id.enter_barcode) {
           AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Írd be a vonalkódot!");

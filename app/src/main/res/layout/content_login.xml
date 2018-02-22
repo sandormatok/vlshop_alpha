@@ -17,7 +17,6 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="12dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
         android:layout_alignParentTop="true"
@@ -39,15 +38,15 @@
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="6dp"
             android:src="@drawable/icon3" />
 
         <!-- vevokod Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
             <EditText android:id="@+id/input_vevokod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,8 +60,8 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
             app:passwordToggleEnabled="true">
 
             <EditText android:id="@+id/input_password"
@@ -84,10 +83,12 @@
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:padding="12dp"
-            android:text="Bejelentkezés"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:text="Belépés"
             android:textSize="18sp" />
 
         <Button

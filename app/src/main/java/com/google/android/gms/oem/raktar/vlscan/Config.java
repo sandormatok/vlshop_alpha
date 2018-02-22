@@ -8,8 +8,7 @@ public class Config {
 
     // URL, vagy IP !!!
     //public static final String DATA_RAKTAR_KESZLET_URL = "http://webserver.vleuro.hu/raktar_keszlet_san.php?id=";
-    public static final String DATA_RAKTAR_KESZLET_URL = "http://192.168.1.108/raktar_keszlet_san.php?id=";
-
+    public static final String DATA_RAKTAR_KESZLET_URL = "http://192.168.0.19/raktar_keszlet_san.php?id=";
 
     //nem működik most...
     public static final String DATA_RAKTAR_KESZLET_REMOTE_URL = "http://109.74.54.14:11011/raktar_keszlet_san.php?id=";

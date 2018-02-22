@@ -52,7 +52,6 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int RC_QRCODE_LOGIN = 9001;
     private TextView vevonevLogin;
-    int tippCount = 1;
 
     //*** LOGIN ONCREATE ***
     @Override
@@ -80,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
         String prefsVevokod = prefs.getString("vevokod", "");
         String prefsVevojelszo = prefs.getString("vevojelszo", "");
         String prefsVevonev = prefs.getString("vevonev", "");
+
 
         vevonevLogin.setText(prefsVevonev);
         Boolean prefsMaradjonbe = prefs.getBoolean("maradjon", false);
@@ -148,12 +148,6 @@ public class LoginActivity extends AppCompatActivity {
                 Intent qrcodeReader = new Intent(LoginActivity.this, BarcodeCaptureActivity.class);
                 qrcodeReader.putExtra("qrcodeLogin", true);
 
-                SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
-                editor.putInt("tippCount", tippCount);
-
-                editor.apply();
-
-
 
                 startActivityForResult(qrcodeReader, RC_QRCODE_LOGIN);
                 //
@@ -170,6 +164,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (data != null) {
                     barcode3 = data.getStringExtra("barcode3");
                     qrcodeLogin = true;
+                    maradjonbeBox.setChecked(true);
 
                     //QRCODE FELDOLGOZÁSA
                     String[] separated = barcode3.split(":");
@@ -276,6 +271,7 @@ public class LoginActivity extends AppCompatActivity {
                 editor.putString("vevokod", globalVevokod);
                 editor.putString("vevonev", globalVevonev);
                 editor.putString("vevojelszo", globalPassword);
+                editor.putInt("tippCount", 1);
                 editor.putBoolean("maradjon", true);
                 editor.apply();
             } else {
@@ -297,6 +293,7 @@ public class LoginActivity extends AppCompatActivity {
             toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
         }
     }
+
 
     //*** OPTIONS MENU ***
     // todo: kijelentkezés, gyors mód,

@@ -25,6 +25,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -44,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     private String globalVevokod, globalPassword, globalVevonev = "";
     private EditText loginInputVevokod, loginInputPassword;
     String globalSsid ="null";
+    String wifissid, wifipass = "";
     String barcode3, barcode4 = "";
     private CompoundButton maradjonbeBox;
     Boolean allowLogin = true;
@@ -91,9 +93,15 @@ public class LoginActivity extends AppCompatActivity {
         loginInputPassword.setText(prefsVevojelszo, TextView.BufferType.EDITABLE);
 
         //WIFI KONFIGURÁCIÓ
+//san suriel
+        wifissid = "asterisk";
+        wifipass = "\"Genius911$\"";
+
         final WifiConfiguration wifiConfig = new WifiConfiguration();
-        wifiConfig.SSID = String.format("\"%s\"", "VLEURO");
-        wifiConfig.preSharedKey = String.format("\"%s\"", "vleurokft");
+
+//san suriel
+        wifiConfig.SSID = String.format("\"%s\"", wifissid);
+        wifiConfig.preSharedKey = String.format("\"%s\"", wifipass);
         WifiManager wifiManager=(WifiManager)getSystemService(WIFI_SERVICE);
 
         WifiInfo wifiInfo;
@@ -102,10 +110,18 @@ public class LoginActivity extends AppCompatActivity {
             globalSsid = wifiInfo.getSSID();
         }
 
-        //WIFI ELLENŐRZÉS
-        if(!globalSsid.equals("\"VLEURO\"")) {
+        Toast toast= Toast.makeText(getApplicationContext(),globalSsid, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
+//eddigok
 
+
+        //WIFI ELLENŐRZÉS
 // san.suriel
+        if(!globalSsid.equals("\"VLEURO\"")) {
+//        if(!globalSsid.equals(wifissid);
+
+
+
 // LOGIN INFO CHECK OVERRIDE allowLogin = false;
             allowLogin = true;
             View view = View.inflate(this, R.layout.alert_dialog_net, null);
@@ -241,9 +257,11 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     //Todo: meg kell nezni, hogy van-e error message mielott tostringet hivsz ra....
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(LoginActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+//suriel                        Toast.makeText(LoginActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, "aaa", Toast.LENGTH_LONG).show();
                     }
                 });
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
         //barcodeInfo.setText(id);

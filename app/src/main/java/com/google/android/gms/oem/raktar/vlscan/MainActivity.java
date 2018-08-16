@@ -31,6 +31,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -56,7 +57,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static com.google.android.gms.oem.raktar.vlscan.BarcodeCaptureActivity.barcode3;
+//import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL;
+//import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -68,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //GLOBÁLIS VÁLTOZÓK
     String bruttoRound,nettoRound;
     String globalAroszt,url;
+    public static String barcode3;
     String globalvevoKod = "";
     private static final int RC_BARCODE_CAPTURE = 9001;
 
@@ -223,6 +226,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //*** MAIN GETDATA ***
     private void getData() {
+        tableRow02.setText("");
         String ssid = "";
         //WIFI Bekapcsolása, csatlakozás a VLEURO wifihez
 
@@ -236,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ssid = "NON";
         }
 
-            if (!ssid.equals("\"VLEURO\"")) {
+  /*          if (!ssid.equals("\"VLEURO\"")) {
 
                 if (devMode) {
                 } else {
@@ -250,9 +254,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return;
 
                 }
-        }
+        }*/
 
         String id = barcode3;
+        Toast.makeText(MainActivity.this, barcode3, Toast.LENGTH_LONG).show();
         if (manualInput.equals("YES")) {
             id = m_Text;
             barcode3 = m_Text;
@@ -260,6 +265,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
             url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
+
+
+        Toast toast= Toast.makeText(getApplicationContext(),id +", " + globalvevoKod, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -271,11 +280,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "aaa", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(MainActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+
+
                     }
                 });
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+
         //VONALKOD
         tableRow02.setText(id);
     }
@@ -283,7 +296,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //*** MAIN SHOW JSON ***
     private void showJSON(String response) {
-
+        Toast.makeText(MainActivity.this, "I'm in showJSON !!!", Toast.LENGTH_LONG).show();
         String marka = "";
         String termek = "";
         String ar = "";

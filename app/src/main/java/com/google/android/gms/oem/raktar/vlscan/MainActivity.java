@@ -287,6 +287,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 });
         RequestQueue requestQueue = Volley.newRequestQueue(this);
+//san itt tartok
+        stringRequest.setShouldCache(false);
         requestQueue.add(stringRequest);
 
         //VONALKOD

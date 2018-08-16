@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     private String globalVevokod, globalPassword, globalVevonev = "";
     private EditText loginInputVevokod, loginInputPassword;
     String globalSsid ="null";
-    String wifissid, wifipass = "";
+    String wifissid, wifipass, wifissiddev, wifipassdev = "";
     String barcode3, barcode4 = "";
     private CompoundButton maradjonbeBox;
     Boolean allowLogin = true;
@@ -63,21 +63,21 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         //TOOLBAR
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("VL-SCAN Raktár");
 
         //UI ELEMEK
-        loginInputVevokod = (EditText) findViewById(R.id.input_vevokod);
+        loginInputVevokod = findViewById(R.id.input_vevokod);
         loginInputVevokod.setInputType(InputType.TYPE_CLASS_NUMBER);
-        loginInputPassword = (EditText) findViewById(R.id.input_password);
+        loginInputPassword = findViewById(R.id.input_password);
 
 //san.suriel loginInputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         loginInputPassword.setInputType(InputType.TYPE_CLASS_NUMBER);
-        vevonevLogin = (TextView) findViewById(R.id.loginVevonev);
-        Button btnlogin = (Button) findViewById(R.id.btn_login);
-        Button btnQRCode = (Button) findViewById(R.id.btn_qrcode);
-        maradjonbeBox = (CompoundButton) findViewById(R.id.maradjonBe);
+        vevonevLogin = findViewById(R.id.loginVevonev);
+        Button btnlogin = findViewById(R.id.btn_login);
+        Button btnQRCode = findViewById(R.id.btn_qrcode);
+        maradjonbeBox = findViewById(R.id.maradjonBe);
 
         //SHARED PREFERENCES
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
@@ -94,8 +94,11 @@ public class LoginActivity extends AppCompatActivity {
 
         //WIFI KONFIGURÁCIÓ
 //san suriel
-        wifissid = "asterisk";
-        wifipass = "\"Genius911$\"";
+        wifissid = "VLEURO";
+        wifissiddev = "asterisk";
+
+        wifipass = "\"vleurokft\"";
+        wifipassdev = "\"Genius911$\"";
 
         final WifiConfiguration wifiConfig = new WifiConfiguration();
 
@@ -106,71 +109,70 @@ public class LoginActivity extends AppCompatActivity {
 
         WifiInfo wifiInfo;
         wifiInfo = wifiManager.getConnectionInfo();
+
         if (wifiInfo.getSupplicantState() == SupplicantState.COMPLETED) {
             globalSsid = wifiInfo.getSSID();
         }
 
-        Toast toast= Toast.makeText(getApplicationContext(),globalSsid, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
-//eddigok
+        //Toast toast= Toast.makeText(getApplicationContext(),globalSsid, Toast.LENGTH_LONG);
+        // toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
 
 
-        //WIFI ELLENŐRZÉS
-// san.suriel
-        if(!globalSsid.equals("\"VLEURO\"")) {
-//        if(!globalSsid.equals(wifissid);
-
-
+//WIFI ELLENŐRZÉS
+// san.suriel       if(!globalSsid.equals(wifissid);
+        if (!globalSsid.equals("\"VLEURO\"") ||
+            !globalSsid.equals("\"asterisk\"")) {
 
 // LOGIN INFO CHECK OVERRIDE allowLogin = false;
-            allowLogin = true;
-            View view = View.inflate(this, R.layout.alert_dialog_net, null);
+                allowLogin = true;
+                View view = View.inflate(this, R.layout.alert_dialog_net, null);
 
-            //CSATLAKOZÁS A VLEURO WIFI-HEZ
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            alert.setTitle("Csatlakozhatok a VL-Euro Kft. hálózatára?");
-            final WifiManager wifiManager3=(WifiManager)getSystemService(WIFI_SERVICE);
-            alert.setPositiveButton("Kilépés", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                    finish();
-                    System.exit(0);
-                }
-            });
-            alert.setNegativeButton("Csatlakozás",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            wifiManager3.setWifiEnabled(true);
+                //CSATLAKOZÁS A VLEURO WIFI-HEZ
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.setTitle("Csatlakozhatok a VL-Euro Kft. hálózatára?");
+                final WifiManager wifiManager3 = (WifiManager) getSystemService(WIFI_SERVICE);
+                alert.setPositiveButton("Kilépés", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        finish();
+                        System.exit(0);
+                    }
+                });
+                alert.setNegativeButton("Csatlakozás",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                wifiManager3.setWifiEnabled(true);
 
-                            int netId = wifiManager3.addNetwork(wifiConfig);
-                            wifiManager3.disconnect();
-                            wifiManager3.enableNetwork(netId, true);
-                            wifiManager3.reconnect();
-                            allowLogin = true;
-                        }
-                    });
-            alert.show();
-        }
+                                int netId = wifiManager3.addNetwork(wifiConfig);
+                                wifiManager3.disconnect();
+                                wifiManager3.enableNetwork(netId, true);
+                                wifiManager3.reconnect();
+                                allowLogin = true;
+                            }
+                        });
+
+                alert.show();
+            }
+
 
         //BEJELENTKEZÉS GOMB
         btnlogin.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
-                loginUser(loginInputVevokod.getText().toString(),
-                        loginInputPassword.getText().toString());
-                            }
-
+                if (allowLogin) {
+                    loginUser(loginInputVevokod.getText().toString(),
+                            loginInputPassword.getText().toString());
+                } else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Nem csatlakozik a \"VLEURO\" Wi-Fi Hálózathoz!" , Toast.LENGTH_LONG);
+                }
+            }
         });
 
         //BEJELENTKEZÉS QRKÓDDAL
         btnQRCode.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent qrcodeReader = new Intent(LoginActivity.this, BarcodeCaptureActivity.class);
                 qrcodeReader.putExtra("qrcodeLogin", true);
-
-
                 startActivityForResult(qrcodeReader, RC_QRCODE_LOGIN);
                 //
             }
@@ -266,8 +268,8 @@ public class LoginActivity extends AppCompatActivity {
 
 // StringRequest Timeout, empty cache
         stringRequest.setRetryPolicy(new DefaultRetryPolicy(
-                5000,
-                0,
+                3000,
+                1,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         stringRequest.setShouldCache(false);
 
@@ -324,6 +326,7 @@ public class LoginActivity extends AppCompatActivity {
             toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
         }
     }
+
 
 
     //*** OPTIONS MENU ***

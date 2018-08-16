@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tableRow62 = (TextView) findViewById(R.id.table62);
 
 
-        //todo: nem hiszem, hogy átjön a vevőnév!
+        //todo: nem hiszem, hogy átjön a vevőnév! ???
         Intent intent = getIntent();
         if(intent.hasExtra("intentvevonev")) {
             String vevonev = getIntent().getExtras().getString("intentvevonev");
@@ -283,8 +283,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(MainActivity.this, "aaa", Toast.LENGTH_LONG).show();
                         //Toast.makeText(MainActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
-
-
                     }
                 });
         RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -296,13 +294,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 0,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             stringRequest.setShouldCache(false);
-
         requestQueue.add(stringRequest);
-
         //VONALKOD
         tableRow02.setText(id);
     }
-
 
     //*** MAIN SHOW JSON ***
     private void showJSON(String response) {

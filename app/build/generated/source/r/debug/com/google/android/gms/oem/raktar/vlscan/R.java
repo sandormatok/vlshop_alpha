@@ -4260,15 +4260,15 @@ public final class R {
      * @see #ActionBar_titleTextStyle
      */
     public static final int[] ActionBar={
-        0x7f030032, 0x7f030033, 0x7f030034, 0x7f030065, 
-        0x7f030066, 0x7f030067, 0x7f030068, 0x7f030069, 
-        0x7f03006a, 0x7f030075, 0x7f03007c, 0x7f03007d, 
-        0x7f030089, 0x7f0300ab, 0x7f0300ac, 0x7f0300b0, 
-        0x7f0300b1, 0x7f0300b2, 0x7f0300b9, 0x7f0300c1, 
-        0x7f0300dc, 0x7f0300e5, 0x7f0300f9, 0x7f0300fd, 
-        0x7f0300fe, 0x7f030130, 0x7f030133, 0x7f03015f, 
-        0x7f030169
-      };
+      0x7f030032, 0x7f030033, 0x7f030034, 0x7f030065, 
+      0x7f030066, 0x7f030067, 0x7f030068, 0x7f030069, 
+      0x7f03006a, 0x7f030075, 0x7f03007c, 0x7f03007d, 
+      0x7f030089, 0x7f0300ab, 0x7f0300ac, 0x7f0300b0, 
+      0x7f0300b1, 0x7f0300b2, 0x7f0300b9, 0x7f0300c1, 
+      0x7f0300dc, 0x7f0300e5, 0x7f0300f9, 0x7f0300fd, 
+      0x7f0300fe, 0x7f030130, 0x7f030133, 0x7f03015f, 
+      0x7f030169
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#background}
      * attribute's value can be found in the {@link #ActionBar} array.
@@ -4655,8 +4655,8 @@ public final class R {
      * @see #ActionBarLayout_android_layout_gravity
      */
     public static final int[] ActionBarLayout={
-        0x010100b3
-      };
+      0x010100b3
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
      * attribute's value can be found in the {@link #ActionBarLayout} array.
@@ -4698,8 +4698,8 @@ public final class R {
      * @see #ActionMenuItemView_android_minWidth
      */
     public static final int[] ActionMenuItemView={
-        0x0101013f
-      };
+      0x0101013f
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#minWidth}
      * attribute's value can be found in the {@link #ActionMenuItemView} array.
@@ -4714,7 +4714,7 @@ public final class R {
      */
     public static final int ActionMenuItemView_android_minWidth=0;
     public static final int[] ActionMenuView={
-      };
+    };
     /**
      * Attributes that can be used with a ActionMode.
      * <p>Includes the following attributes:</p>
@@ -4737,9 +4737,9 @@ public final class R {
      * @see #ActionMode_titleTextStyle
      */
     public static final int[] ActionMode={
-        0x7f030032, 0x7f030033, 0x7f030052, 0x7f0300ab, 
-        0x7f030133, 0x7f030169
-      };
+      0x7f030032, 0x7f030033, 0x7f030052, 0x7f0300ab, 
+      0x7f030133, 0x7f030169
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#background}
      * attribute's value can be found in the {@link #ActionMode} array.
@@ -4830,8 +4830,8 @@ public final class R {
      * @see #ActivityChooserView_initialActivityCount
      */
     public static final int[] ActivityChooserView={
-        0x7f03008c, 0x7f0300bb
-      };
+      0x7f03008c, 0x7f0300bb
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#expandActivityOverflowButtonDrawable}
      * attribute's value can be found in the {@link #ActivityChooserView} array.
@@ -4880,9 +4880,9 @@ public final class R {
      * @see #AlertDialog_singleChoiceItemLayout
      */
     public static final int[] AlertDialog={
-        0x010100f2, 0x7f030047, 0x7f030048, 0x7f0300d3, 
-        0x7f0300d4, 0x7f0300e2, 0x7f03011e, 0x7f03011f
-      };
+      0x010100f2, 0x7f030047, 0x7f030048, 0x7f0300d3, 
+      0x7f0300d4, 0x7f0300e2, 0x7f03011e, 0x7f03011f
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout}
      * attribute's value can be found in the {@link #AlertDialog} array.
@@ -4998,9 +4998,9 @@ public final class R {
      * @see #AppBarLayout_expanded
      */
     public static final int[] AppBarLayout={
-        0x010100d4, 0x0101048f, 0x01010540, 0x7f030089, 
-        0x7f03008d
-      };
+      0x010100d4, 0x0101048f, 0x01010540, 0x7f030089, 
+      0x7f03008d
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#background}
      * attribute's value can be found in the {@link #AppBarLayout} array.
@@ -5073,8 +5073,8 @@ public final class R {
      * @see #AppBarLayoutStates_state_collapsible
      */
     public static final int[] AppBarLayoutStates={
-        0x7f030129, 0x7f03012a
-      };
+      0x7f030129, 0x7f03012a
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#state_collapsed}
      * attribute's value can be found in the {@link #AppBarLayoutStates} array.
@@ -5109,8 +5109,8 @@ public final class R {
      * @see #AppBarLayout_Layout_layout_scrollInterpolator
      */
     public static final int[] AppBarLayout_Layout={
-        0x7f0300cf, 0x7f0300d0
-      };
+      0x7f0300cf, 0x7f0300d0
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#layout_scrollFlags}
      * attribute's value can be found in the {@link #AppBarLayout_Layout} array.
@@ -5161,8 +5161,8 @@ public final class R {
      * @see #AppCompatImageView_tintMode
      */
     public static final int[] AppCompatImageView={
-        0x01010119, 0x7f030126, 0x7f03015d, 0x7f03015e
-      };
+      0x01010119, 0x7f030126, 0x7f03015d, 0x7f03015e
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#src}
      * attribute's value can be found in the {@link #AppCompatImageView} array.
@@ -5240,8 +5240,8 @@ public final class R {
      * @see #AppCompatSeekBar_tickMarkTintMode
      */
     public static final int[] AppCompatSeekBar={
-        0x01010142, 0x7f03015a, 0x7f03015b, 0x7f03015c
-      };
+      0x01010142, 0x7f03015a, 0x7f03015b, 0x7f03015c
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#thumb}
      * attribute's value can be found in the {@link #AppCompatSeekBar} array.
@@ -5322,9 +5322,9 @@ public final class R {
      * @see #AppCompatTextHelper_android_drawableEnd
      */
     public static final int[] AppCompatTextHelper={
-        0x01010034, 0x0101016d, 0x0101016e, 0x0101016f, 
-        0x01010170, 0x01010392, 0x01010393
-      };
+      0x01010034, 0x0101016d, 0x0101016e, 0x0101016f, 
+      0x01010170, 0x01010392, 0x01010393
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
      * attribute's value can be found in the {@link #AppCompatTextHelper} array.
@@ -5453,9 +5453,9 @@ public final class R {
      * @see #AppCompatTextView_textAllCaps
      */
     public static final int[] AppCompatTextView={
-        0x01010034, 0x7f03002d, 0x7f03002e, 0x7f03002f, 
-        0x7f030030, 0x7f030031, 0x7f03009e, 0x7f030149
-      };
+      0x01010034, 0x7f03002d, 0x7f03002e, 0x7f03002f, 
+      0x7f030030, 0x7f030031, 0x7f03009e, 0x7f030149
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
      * attribute's value can be found in the {@link #AppCompatTextView} array.
@@ -5810,37 +5810,37 @@ public final class R {
      * @see #AppCompatTheme_windowNoTitle
      */
     public static final int[] AppCompatTheme={
-        0x01010057, 0x010100ae, 0x7f030000, 0x7f030001, 
-        0x7f030002, 0x7f030003, 0x7f030004, 0x7f030005, 
-        0x7f030006, 0x7f030007, 0x7f030008, 0x7f030009, 
-        0x7f03000a, 0x7f03000b, 0x7f03000c, 0x7f03000e, 
-        0x7f03000f, 0x7f030010, 0x7f030011, 0x7f030012, 
-        0x7f030013, 0x7f030014, 0x7f030015, 0x7f030016, 
-        0x7f030017, 0x7f030018, 0x7f030019, 0x7f03001a, 
-        0x7f03001b, 0x7f03001c, 0x7f03001d, 0x7f03001e, 
-        0x7f030021, 0x7f030022, 0x7f030023, 0x7f030024, 
-        0x7f030025, 0x7f03002c, 0x7f03003e, 0x7f030041, 
-        0x7f030042, 0x7f030043, 0x7f030044, 0x7f030045, 
-        0x7f03004a, 0x7f03004b, 0x7f03004e, 0x7f03004f, 
-        0x7f030058, 0x7f030059, 0x7f03005a, 0x7f03005b, 
-        0x7f03005c, 0x7f03005d, 0x7f03005e, 0x7f03005f, 
-        0x7f030060, 0x7f030062, 0x7f03006d, 0x7f03007a, 
-        0x7f03007b, 0x7f03007e, 0x7f030080, 0x7f030084, 
-        0x7f030085, 0x7f030086, 0x7f030087, 0x7f030088, 
-        0x7f0300b0, 0x7f0300b8, 0x7f0300d1, 0x7f0300d2, 
-        0x7f0300d5, 0x7f0300d6, 0x7f0300d7, 0x7f0300d8, 
-        0x7f0300d9, 0x7f0300da, 0x7f0300db, 0x7f0300ed, 
-        0x7f0300ee, 0x7f0300ef, 0x7f0300f8, 0x7f0300fa, 
-        0x7f030101, 0x7f030102, 0x7f030103, 0x7f030104, 
-        0x7f030110, 0x7f030116, 0x7f030117, 0x7f030118, 
-        0x7f030123, 0x7f030124, 0x7f030137, 0x7f03014a, 
-        0x7f03014b, 0x7f03014c, 0x7f03014d, 0x7f03014e, 
-        0x7f03014f, 0x7f030150, 0x7f030151, 0x7f030152, 
-        0x7f030154, 0x7f03016c, 0x7f03016d, 0x7f03016e, 
-        0x7f03016f, 0x7f030179, 0x7f03017b, 0x7f03017c, 
-        0x7f03017d, 0x7f03017e, 0x7f03017f, 0x7f030180, 
-        0x7f030181, 0x7f030182, 0x7f030183, 0x7f030184
-      };
+      0x01010057, 0x010100ae, 0x7f030000, 0x7f030001, 
+      0x7f030002, 0x7f030003, 0x7f030004, 0x7f030005, 
+      0x7f030006, 0x7f030007, 0x7f030008, 0x7f030009, 
+      0x7f03000a, 0x7f03000b, 0x7f03000c, 0x7f03000e, 
+      0x7f03000f, 0x7f030010, 0x7f030011, 0x7f030012, 
+      0x7f030013, 0x7f030014, 0x7f030015, 0x7f030016, 
+      0x7f030017, 0x7f030018, 0x7f030019, 0x7f03001a, 
+      0x7f03001b, 0x7f03001c, 0x7f03001d, 0x7f03001e, 
+      0x7f030021, 0x7f030022, 0x7f030023, 0x7f030024, 
+      0x7f030025, 0x7f03002c, 0x7f03003e, 0x7f030041, 
+      0x7f030042, 0x7f030043, 0x7f030044, 0x7f030045, 
+      0x7f03004a, 0x7f03004b, 0x7f03004e, 0x7f03004f, 
+      0x7f030058, 0x7f030059, 0x7f03005a, 0x7f03005b, 
+      0x7f03005c, 0x7f03005d, 0x7f03005e, 0x7f03005f, 
+      0x7f030060, 0x7f030062, 0x7f03006d, 0x7f03007a, 
+      0x7f03007b, 0x7f03007e, 0x7f030080, 0x7f030084, 
+      0x7f030085, 0x7f030086, 0x7f030087, 0x7f030088, 
+      0x7f0300b0, 0x7f0300b8, 0x7f0300d1, 0x7f0300d2, 
+      0x7f0300d5, 0x7f0300d6, 0x7f0300d7, 0x7f0300d8, 
+      0x7f0300d9, 0x7f0300da, 0x7f0300db, 0x7f0300ed, 
+      0x7f0300ee, 0x7f0300ef, 0x7f0300f8, 0x7f0300fa, 
+      0x7f030101, 0x7f030102, 0x7f030103, 0x7f030104, 
+      0x7f030110, 0x7f030116, 0x7f030117, 0x7f030118, 
+      0x7f030123, 0x7f030124, 0x7f030137, 0x7f03014a, 
+      0x7f03014b, 0x7f03014c, 0x7f03014d, 0x7f03014e, 
+      0x7f03014f, 0x7f030150, 0x7f030151, 0x7f030152, 
+      0x7f030154, 0x7f03016c, 0x7f03016d, 0x7f03016e, 
+      0x7f03016f, 0x7f030179, 0x7f03017b, 0x7f03017c, 
+      0x7f03017d, 0x7f03017e, 0x7f03017f, 0x7f030180, 
+      0x7f030181, 0x7f030182, 0x7f030183, 0x7f030184
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
@@ -7324,7 +7324,7 @@ public final class R {
      */
     public static final int AppCompatTheme_windowNoTitle=119;
     public static final int[] AppDataSearch={
-      };
+    };
     /**
      * Attributes that can be used with a BottomNavigationView.
      * <p>Includes the following attributes:</p>
@@ -7345,9 +7345,9 @@ public final class R {
      * @see #BottomNavigationView_menu
      */
     public static final int[] BottomNavigationView={
-        0x7f030089, 0x7f0300bf, 0x7f0300c0, 0x7f0300c3, 
-        0x7f0300e1
-      };
+      0x7f030089, 0x7f0300bf, 0x7f0300c0, 0x7f0300c3, 
+      0x7f0300e1
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#elevation}
      * attribute's value can be found in the {@link #BottomNavigationView} array.
@@ -7423,8 +7423,8 @@ public final class R {
      * @see #BottomSheetBehavior_Layout_behavior_skipCollapsed
      */
     public static final int[] BottomSheetBehavior_Layout={
-        0x7f030039, 0x7f03003b, 0x7f03003c
-      };
+      0x7f030039, 0x7f03003b, 0x7f03003c
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#behavior_hideable}
      * attribute's value can be found in the {@link #BottomSheetBehavior_Layout} array.
@@ -7478,8 +7478,8 @@ public final class R {
      * @see #ButtonBarLayout_allowStacking
      */
     public static final int[] ButtonBarLayout={
-        0x7f030027
-      };
+      0x7f030027
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#allowStacking}
      * attribute's value can be found in the {@link #ButtonBarLayout} array.
@@ -7532,11 +7532,11 @@ public final class R {
      * @see #CollapsingToolbarLayout_toolbarId
      */
     public static final int[] CollapsingToolbarLayout={
-        0x7f030055, 0x7f030056, 0x7f03006c, 0x7f03008e, 
-        0x7f03008f, 0x7f030090, 0x7f030091, 0x7f030092, 
-        0x7f030093, 0x7f030094, 0x7f03010a, 0x7f03010b, 
-        0x7f03012c, 0x7f03015f, 0x7f030160, 0x7f03016b
-      };
+      0x7f030055, 0x7f030056, 0x7f03006c, 0x7f03008e, 
+      0x7f03008f, 0x7f030090, 0x7f030091, 0x7f030092, 
+      0x7f030093, 0x7f030094, 0x7f03010a, 0x7f03010b, 
+      0x7f03012c, 0x7f03015f, 0x7f030160, 0x7f03016b
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#collapsedTitleGravity}
      * attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
@@ -7766,8 +7766,8 @@ public final class R {
      * @see #CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier
      */
     public static final int[] CollapsingToolbarLayout_Layout={
-        0x7f0300ca, 0x7f0300cb
-      };
+      0x7f0300ca, 0x7f0300cb
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#layout_collapseMode}
      * attribute's value can be found in the {@link #CollapsingToolbarLayout_Layout} array.
@@ -7811,8 +7811,8 @@ public final class R {
      * @see #ColorStateListItem_alpha
      */
     public static final int[] ColorStateListItem={
-        0x010101a5, 0x0101031f, 0x7f030028
-      };
+      0x010101a5, 0x0101031f, 0x7f030028
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#color}
      * attribute's value can be found in the {@link #ColorStateListItem} array.
@@ -7858,8 +7858,8 @@ public final class R {
      * @see #CompoundButton_buttonTintMode
      */
     public static final int[] CompoundButton={
-        0x01010107, 0x7f03004c, 0x7f03004d
-      };
+      0x01010107, 0x7f03004c, 0x7f03004d
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#button}
      * attribute's value can be found in the {@link #CompoundButton} array.
@@ -7918,8 +7918,8 @@ public final class R {
      * @see #CoordinatorLayout_statusBarBackground
      */
     public static final int[] CoordinatorLayout={
-        0x7f0300c4, 0x7f03012b
-      };
+      0x7f0300c4, 0x7f03012b
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#keylines}
      * attribute's value can be found in the {@link #CoordinatorLayout} array.
@@ -7971,9 +7971,9 @@ public final class R {
      * @see #CoordinatorLayout_Layout_layout_keyline
      */
     public static final int[] CoordinatorLayout_Layout={
-        0x010100b3, 0x7f0300c7, 0x7f0300c8, 0x7f0300c9, 
-        0x7f0300cc, 0x7f0300cd, 0x7f0300ce
-      };
+      0x010100b3, 0x7f0300c7, 0x7f0300c8, 0x7f0300c9, 
+      0x7f0300cc, 0x7f0300cd, 0x7f0300ce
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
      * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
@@ -8134,9 +8134,9 @@ public final class R {
      * @see #Corpus_trimmable
      */
     public static final int[] Corpus={
-        0x7f03006b, 0x7f03006f, 0x7f030070, 0x7f030081, 
-        0x7f0300f7, 0x7f030108, 0x7f030119, 0x7f030174
-      };
+      0x7f03006b, 0x7f03006f, 0x7f030070, 0x7f030081, 
+      0x7f0300f7, 0x7f030108, 0x7f030119, 0x7f030174
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#contentProviderUri}
      * attribute's value can be found in the {@link #Corpus} array.
@@ -8232,8 +8232,8 @@ public final class R {
      * @see #DesignTheme_textColorError
      */
     public static final int[] DesignTheme={
-        0x7f03003f, 0x7f030040, 0x7f030153
-      };
+      0x7f03003f, 0x7f030040, 0x7f030153
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#bottomSheetDialogTheme}
      * attribute's value can be found in the {@link #DesignTheme} array.
@@ -8299,9 +8299,9 @@ public final class R {
      * @see #DrawerArrowToggle_thickness
      */
     public static final int[] DrawerArrowToggle={
-        0x7f03002a, 0x7f03002b, 0x7f030037, 0x7f030057, 
-        0x7f030082, 0x7f0300a8, 0x7f030122, 0x7f030156
-      };
+      0x7f03002a, 0x7f03002b, 0x7f030037, 0x7f030057, 
+      0x7f030082, 0x7f0300a8, 0x7f030122, 0x7f030156
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#arrowHeadLength}
      * attribute's value can be found in the {@link #DrawerArrowToggle} array.
@@ -8415,8 +8415,8 @@ public final class R {
      * @see #FeatureParam_paramValue
      */
     public static final int[] FeatureParam={
-        0x7f0300f0, 0x7f0300f1
-      };
+      0x7f0300f0, 0x7f0300f1
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#paramName}
      * attribute's value can be found in the {@link #FeatureParam} array.
@@ -8465,10 +8465,10 @@ public final class R {
      * @see #FloatingActionButton_useCompatPadding
      */
     public static final int[] FloatingActionButton={
-        0x7f030035, 0x7f030036, 0x7f03003d, 0x7f030089, 
-        0x7f030095, 0x7f030096, 0x7f0300fc, 0x7f030106, 
-        0x7f030175
-      };
+      0x7f030035, 0x7f030036, 0x7f03003d, 0x7f030089, 
+      0x7f030095, 0x7f030096, 0x7f0300fc, 0x7f030106, 
+      0x7f030175
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#backgroundTint}
      * attribute's value can be found in the {@link #FloatingActionButton} array.
@@ -8604,8 +8604,8 @@ public final class R {
      * @see #FloatingActionButton_Behavior_Layout_behavior_autoHide
      */
     public static final int[] FloatingActionButton_Behavior_Layout={
-        0x7f030038
-      };
+      0x7f030038
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#behavior_autoHide}
      * attribute's value can be found in the {@link #FloatingActionButton_Behavior_Layout} array.
@@ -8638,9 +8638,9 @@ public final class R {
      * @see #FontFamily_fontProviderQuery
      */
     public static final int[] FontFamily={
-        0x7f03009f, 0x7f0300a0, 0x7f0300a1, 0x7f0300a2, 
-        0x7f0300a3, 0x7f0300a4
-      };
+      0x7f03009f, 0x7f0300a0, 0x7f0300a1, 0x7f0300a2, 
+      0x7f0300a3, 0x7f0300a4
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#fontProviderAuthority}
      * attribute's value can be found in the {@link #FontFamily} array.
@@ -8739,9 +8739,9 @@ public final class R {
      * @see #FontFamilyFont_fontWeight
      */
     public static final int[] FontFamilyFont={
-        0x01010532, 0x01010533, 0x0101053f, 0x7f03009d, 
-        0x7f0300a5, 0x7f0300a6
-      };
+      0x01010532, 0x01010533, 0x0101053f, 0x7f03009d, 
+      0x7f0300a5, 0x7f0300a6
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
@@ -8834,8 +8834,8 @@ public final class R {
      * @see #ForegroundLinearLayout_foregroundInsidePadding
      */
     public static final int[] ForegroundLinearLayout={
-        0x01010109, 0x01010200, 0x7f0300a7
-      };
+      0x01010109, 0x01010200, 0x7f0300a7
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#foreground}
      * attribute's value can be found in the {@link #ForegroundLinearLayout} array.
@@ -8910,9 +8910,9 @@ public final class R {
      * @see #GlobalSearch_settingsDescription
      */
     public static final int[] GlobalSearch={
-        0x7f030076, 0x7f030077, 0x7f030078, 0x7f03010c, 
-        0x7f03010f, 0x7f03011a
-      };
+      0x7f030076, 0x7f030077, 0x7f030078, 0x7f03010c, 
+      0x7f03010f, 0x7f03011a
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#defaultIntentAction}
      * attribute's value can be found in the {@link #GlobalSearch} array.
@@ -8985,8 +8985,8 @@ public final class R {
      * @see #GlobalSearchCorpus_allowShortcuts
      */
     public static final int[] GlobalSearchCorpus={
-        0x7f030026
-      };
+      0x7f030026
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#allowShortcuts}
      * attribute's value can be found in the {@link #GlobalSearchCorpus} array.
@@ -9011,8 +9011,8 @@ public final class R {
      * @see #GlobalSearchSection_sectionType
      */
     public static final int[] GlobalSearchSection={
-        0x7f030111, 0x7f030114
-      };
+      0x7f030111, 0x7f030114
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#sectionContent}
      * attribute's value can be found in the {@link #GlobalSearchSection} array.
@@ -9070,9 +9070,9 @@ public final class R {
      * @see #IMECorpus_userInputValue
      */
     public static final int[] IMECorpus={
-        0x7f0300bc, 0x7f030120, 0x7f03016a, 0x7f030176, 
-        0x7f030177, 0x7f030178
-      };
+      0x7f0300bc, 0x7f030120, 0x7f03016a, 0x7f030176, 
+      0x7f030177, 0x7f030178
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#inputEnabled}
      * attribute's value can be found in the {@link #IMECorpus} array.
@@ -9169,10 +9169,10 @@ public final class R {
      * @see #LinearLayoutCompat_showDividers
      */
     public static final int[] LinearLayoutCompat={
-        0x010100af, 0x010100c4, 0x01010126, 0x01010127, 
-        0x01010128, 0x7f03007d, 0x7f03007f, 0x7f0300e0, 
-        0x7f03011c
-      };
+      0x010100af, 0x010100c4, 0x01010126, 0x01010127, 
+      0x01010128, 0x7f03007d, 0x7f03007f, 0x7f0300e0, 
+      0x7f03011c
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
      * attribute's value can be found in the {@link #LinearLayoutCompat} array.
@@ -9319,8 +9319,8 @@ public final class R {
      * @see #LinearLayoutCompat_Layout_android_layout_weight
      */
     public static final int[] LinearLayoutCompat_Layout={
-        0x010100b3, 0x010100f4, 0x010100f5, 0x01010181
-      };
+      0x010100b3, 0x010100f4, 0x010100f5, 0x01010181
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
      * attribute's value can be found in the {@link #LinearLayoutCompat_Layout} array.
@@ -9419,8 +9419,8 @@ public final class R {
      * @see #ListPopupWindow_android_dropDownVerticalOffset
      */
     public static final int[] ListPopupWindow={
-        0x010102ac, 0x010102ad
-      };
+      0x010102ac, 0x010102ad
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#dropDownHorizontalOffset}
      * attribute's value can be found in the {@link #ListPopupWindow} array.
@@ -9463,8 +9463,8 @@ public final class R {
      * @see #LoadingImageView_imageAspectRatioAdjust
      */
     public static final int[] LoadingImageView={
-        0x7f030050, 0x7f0300b6, 0x7f0300b7
-      };
+      0x7f030050, 0x7f0300b6, 0x7f0300b7
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#circleCrop}
      * attribute's value can be found in the {@link #LoadingImageView} array.
@@ -9524,9 +9524,9 @@ public final class R {
      * @see #MenuGroup_android_checkableBehavior
      */
     public static final int[] MenuGroup={
-        0x0101000e, 0x010100d0, 0x01010194, 0x010101de, 
-        0x010101df, 0x010101e0
-      };
+      0x0101000e, 0x010100d0, 0x01010194, 0x010101de, 
+      0x010101df, 0x010101e0
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#enabled}
      * attribute's value can be found in the {@link #MenuGroup} array.
@@ -9661,13 +9661,13 @@ public final class R {
      * @see #MenuItem_tooltipText
      */
     public static final int[] MenuItem={
-        0x01010002, 0x0101000e, 0x010100d0, 0x01010106, 
-        0x01010194, 0x010101de, 0x010101df, 0x010101e1, 
-        0x010101e2, 0x010101e3, 0x010101e4, 0x010101e5, 
-        0x0101026f, 0x7f03000d, 0x7f03001f, 0x7f030020, 
-        0x7f030029, 0x7f030064, 0x7f0300b3, 0x7f0300b4, 
-        0x7f0300e7, 0x7f03011b, 0x7f030170
-      };
+      0x01010002, 0x0101000e, 0x010100d0, 0x01010106, 
+      0x01010194, 0x010101de, 0x010101df, 0x010101e1, 
+      0x010101e2, 0x010101e3, 0x010101e4, 0x010101e5, 
+      0x0101026f, 0x7f03000d, 0x7f03001f, 0x7f030020, 
+      0x7f030029, 0x7f030064, 0x7f0300b3, 0x7f0300b4, 
+      0x7f0300e7, 0x7f03011b, 0x7f030170
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#icon}
      * attribute's value can be found in the {@link #MenuItem} array.
@@ -9984,10 +9984,10 @@ public final class R {
      * @see #MenuView_subMenuArrow
      */
     public static final int[] MenuView={
-        0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e, 
-        0x0101012f, 0x01010130, 0x01010131, 0x7f0300fb, 
-        0x7f03012d
-      };
+      0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e, 
+      0x0101012f, 0x01010130, 0x01010131, 0x7f0300fb, 
+      0x7f03012d
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
      * attribute's value can be found in the {@link #MenuView} array.
@@ -10127,10 +10127,10 @@ public final class R {
      * @see #NavigationView_menu
      */
     public static final int[] NavigationView={
-        0x010100d4, 0x010100dd, 0x0101011f, 0x7f030089, 
-        0x7f0300aa, 0x7f0300bf, 0x7f0300c0, 0x7f0300c2, 
-        0x7f0300c3, 0x7f0300e1
-      };
+      0x010100d4, 0x010100dd, 0x0101011f, 0x7f030089, 
+      0x7f0300aa, 0x7f0300bf, 0x7f0300c0, 0x7f0300c2, 
+      0x7f0300c3, 0x7f0300e1
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#background}
      * attribute's value can be found in the {@link #NavigationView} array.
@@ -10268,8 +10268,8 @@ public final class R {
      * @see #PopupWindow_overlapAnchor
      */
     public static final int[] PopupWindow={
-        0x01010176, 0x010102c9, 0x7f0300e8
-      };
+      0x01010176, 0x010102c9, 0x7f0300e8
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
      * attribute's value can be found in the {@link #PopupWindow} array.
@@ -10319,8 +10319,8 @@ public final class R {
      * @see #PopupWindowBackgroundState_state_above_anchor
      */
     public static final int[] PopupWindowBackgroundState={
-        0x7f030128
-      };
+      0x7f030128
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#state_above_anchor}
      * attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
@@ -10345,8 +10345,8 @@ public final class R {
      * @see #RecycleListView_paddingTopNoTitle
      */
     public static final int[] RecycleListView={
-        0x7f0300e9, 0x7f0300ec
-      };
+      0x7f0300e9, 0x7f0300ec
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#paddingBottomNoButtons}
      * attribute's value can be found in the {@link #RecycleListView} array.
@@ -10405,10 +10405,10 @@ public final class R {
      * @see #RecyclerView_stackFromEnd
      */
     public static final int[] RecyclerView={
-        0x010100c4, 0x010100f1, 0x7f030097, 0x7f030098, 
-        0x7f030099, 0x7f03009a, 0x7f03009b, 0x7f0300c6, 
-        0x7f030105, 0x7f030121, 0x7f030127
-      };
+      0x010100c4, 0x010100f1, 0x7f030097, 0x7f030098, 
+      0x7f030099, 0x7f03009a, 0x7f03009b, 0x7f0300c6, 
+      0x7f030105, 0x7f030121, 0x7f030127
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
      * attribute's value can be found in the {@link #RecyclerView} array.
@@ -10553,8 +10553,8 @@ public final class R {
      * @see #ScrimInsetsFrameLayout_insetForeground
      */
     public static final int[] ScrimInsetsFrameLayout={
-        0x7f0300bd
-      };
+      0x7f0300bd
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#insetForeground}
      * attribute's value can be found in the {@link #ScrimInsetsFrameLayout} array.
@@ -10582,8 +10582,8 @@ public final class R {
      * @see #ScrollingViewBehavior_Layout_behavior_overlapTop
      */
     public static final int[] ScrollingViewBehavior_Layout={
-        0x7f03003a
-      };
+      0x7f03003a
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#behavior_overlapTop}
      * attribute's value can be found in the {@link #ScrollingViewBehavior_Layout} array.
@@ -10641,12 +10641,12 @@ public final class R {
      * @see #SearchView_voiceIcon
      */
     public static final int[] SearchView={
-        0x010100da, 0x0101011f, 0x01010220, 0x01010264, 
-        0x7f030051, 0x7f030063, 0x7f030079, 0x7f0300a9, 
-        0x7f0300b5, 0x7f0300c5, 0x7f0300ff, 0x7f030100, 
-        0x7f03010d, 0x7f03010e, 0x7f03012e, 0x7f030134, 
-        0x7f03017a
-      };
+      0x010100da, 0x0101011f, 0x01010220, 0x01010264, 
+      0x7f030051, 0x7f030063, 0x7f030079, 0x7f0300a9, 
+      0x7f0300b5, 0x7f0300c5, 0x7f0300ff, 0x7f030100, 
+      0x7f03010d, 0x7f03010e, 0x7f03012e, 0x7f030134, 
+      0x7f03017a
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#focusable}
      * attribute's value can be found in the {@link #SearchView} array.
@@ -10931,9 +10931,9 @@ public final class R {
      * @see #Section_subsectionSeparator
      */
     public static final int[] Section={
-        0x7f0300ba, 0x7f0300e6, 0x7f030107, 0x7f030112, 
-        0x7f030113, 0x7f030115, 0x7f03012f
-      };
+      0x7f0300ba, 0x7f0300e6, 0x7f030107, 0x7f030112, 
+      0x7f030113, 0x7f030115, 0x7f03012f
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#indexPrefixes}
      * attribute's value can be found in the {@link #Section} array.
@@ -11025,8 +11025,8 @@ public final class R {
      * @see #SectionFeature_featureType
      */
     public static final int[] SectionFeature={
-        0x7f03009c
-      };
+      0x7f03009c
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#featureType}
      * attribute's value can be found in the {@link #SectionFeature} array.
@@ -11064,8 +11064,8 @@ public final class R {
      * @see #SignInButton_scopeUris
      */
     public static final int[] SignInButton={
-        0x7f030049, 0x7f030061, 0x7f030109
-      };
+      0x7f030049, 0x7f030061, 0x7f030109
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#buttonSize}
      * attribute's value can be found in the {@link #SignInButton} array.
@@ -11140,8 +11140,8 @@ public final class R {
      * @see #SnackbarLayout_maxActionInlineWidth
      */
     public static final int[] SnackbarLayout={
-        0x0101011f, 0x7f030089, 0x7f0300de
-      };
+      0x0101011f, 0x7f030089, 0x7f0300de
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
      * attribute's value can be found in the {@link #SnackbarLayout} array.
@@ -11201,9 +11201,9 @@ public final class R {
      * @see #Spinner_popupTheme
      */
     public static final int[] Spinner={
-        0x010100b2, 0x01010176, 0x0101017b, 0x01010262, 
-        0x7f0300f9
-      };
+      0x010100b2, 0x01010176, 0x0101017b, 0x01010262, 
+      0x7f0300f9
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#entries}
      * attribute's value can be found in the {@link #Spinner} array.
@@ -11316,11 +11316,11 @@ public final class R {
      * @see #SwitchCompat_trackTintMode
      */
     public static final int[] SwitchCompat={
-        0x01010124, 0x01010125, 0x01010142, 0x7f03011d, 
-        0x7f030125, 0x7f030135, 0x7f030136, 0x7f030138, 
-        0x7f030157, 0x7f030158, 0x7f030159, 0x7f030171, 
-        0x7f030172, 0x7f030173
-      };
+      0x01010124, 0x01010125, 0x01010142, 0x7f03011d, 
+      0x7f030125, 0x7f030135, 0x7f030136, 0x7f030138, 
+      0x7f030157, 0x7f030158, 0x7f030159, 0x7f030171, 
+      0x7f030172, 0x7f030173
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textOn}
      * attribute's value can be found in the {@link #SwitchCompat} array.
@@ -11516,8 +11516,8 @@ public final class R {
      * @see #TabItem_android_text
      */
     public static final int[] TabItem={
-        0x01010002, 0x010100f2, 0x0101014f
-      };
+      0x01010002, 0x010100f2, 0x0101014f
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#icon}
      * attribute's value can be found in the {@link #TabItem} array.
@@ -11594,11 +11594,11 @@ public final class R {
      * @see #TabLayout_tabTextColor
      */
     public static final int[] TabLayout={
-        0x7f030139, 0x7f03013a, 0x7f03013b, 0x7f03013c, 
-        0x7f03013d, 0x7f03013e, 0x7f03013f, 0x7f030140, 
-        0x7f030141, 0x7f030142, 0x7f030143, 0x7f030144, 
-        0x7f030145, 0x7f030146, 0x7f030147, 0x7f030148
-      };
+      0x7f030139, 0x7f03013a, 0x7f03013b, 0x7f03013c, 
+      0x7f03013d, 0x7f03013e, 0x7f03013f, 0x7f030140, 
+      0x7f030141, 0x7f030142, 0x7f030143, 0x7f030144, 
+      0x7f030145, 0x7f030146, 0x7f030147, 0x7f030148
+    };
     /**
      * <p>This symbol is the offset where the {@link com.google.android.gms.oem.raktar.atvetel.R.attr#tabBackground}
      * attribute's value can be found in the {@link #TabLayout} array.
@@ -11843,11 +11843,11 @@ public final class R {
      * @see #TextAppearance_textAllCaps
      */
     public static final int[] TextAppearance={
-        0x01010095, 0x01010096, 0x01010097, 0x01010098, 
-        0x0101009a, 0x0101009b, 0x01010161, 0x01010162, 
-        0x01010163, 0x01010164, 0x010103ac, 0x7f03009e, 
-        0x7f030149
-      };
+      0x01010095, 0x01010096, 0x01010097, 0x01010098, 
+      0x0101009a, 0x0101009b, 0x01010161, 0x01010162, 
+      0x01010163, 0x01010164, 0x010103ac, 0x7f03009e, 
+      0x7f030149
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textSize}
      * attribute's value can be found in the {@link #TextAppearance} array.
@@ -12057,11 +12057,11 @@ public final class R {
      * @see #TextInputLayout_passwordToggleTintMode
      */
     public static final int[] TextInputLayout={
-        0x0101009a, 0x01010150, 0x7f030071, 0x7f030072, 
-        0x7f030073, 0x7f030074, 0x7f03008a, 0x7f03008b, 
-        0x7f0300ad, 0x7f0300ae, 0x7f0300af, 0x7f0300f2, 
-        0x7f0300f3, 0x7f0300f4, 0x7f0300f5, 0x7f0300f6
-      };
+      0x0101009a, 0x01010150, 0x7f030071, 0x7f030072, 
+      0x7f030073, 0x7f030074, 0x7f03008a, 0x7f03008b, 
+      0x7f0300ad, 0x7f0300ae, 0x7f0300af, 0x7f0300f2, 
+      0x7f0300f3, 0x7f0300f4, 0x7f0300f5, 0x7f0300f6
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textColorHint}
      * attribute's value can be found in the {@link #TextInputLayout} array.
@@ -12315,15 +12315,15 @@ public final class R {
      * @see #Toolbar_titleTextColor
      */
     public static final int[] Toolbar={
-        0x010100af, 0x01010140, 0x7f030046, 0x7f030053, 
-        0x7f030054, 0x7f030065, 0x7f030066, 0x7f030067, 
-        0x7f030068, 0x7f030069, 0x7f03006a, 0x7f0300dc, 
-        0x7f0300dd, 0x7f0300df, 0x7f0300e3, 0x7f0300e4, 
-        0x7f0300f9, 0x7f030130, 0x7f030131, 0x7f030132, 
-        0x7f03015f, 0x7f030161, 0x7f030162, 0x7f030163, 
-        0x7f030164, 0x7f030165, 0x7f030166, 0x7f030167, 
-        0x7f030168
-      };
+      0x010100af, 0x01010140, 0x7f030046, 0x7f030053, 
+      0x7f030054, 0x7f030065, 0x7f030066, 0x7f030067, 
+      0x7f030068, 0x7f030069, 0x7f03006a, 0x7f0300dc, 
+      0x7f0300dd, 0x7f0300df, 0x7f0300e3, 0x7f0300e4, 
+      0x7f0300f9, 0x7f030130, 0x7f030131, 0x7f030132, 
+      0x7f03015f, 0x7f030161, 0x7f030162, 0x7f030163, 
+      0x7f030164, 0x7f030165, 0x7f030166, 0x7f030167, 
+      0x7f030168
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
      * attribute's value can be found in the {@link #Toolbar} array.
@@ -12716,9 +12716,9 @@ public final class R {
      * @see #View_theme
      */
     public static final int[] View={
-        0x01010000, 0x010100da, 0x7f0300ea, 0x7f0300eb, 
-        0x7f030155
-      };
+      0x01010000, 0x010100da, 0x7f0300ea, 0x7f0300eb, 
+      0x7f030155
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#theme}
      * attribute's value can be found in the {@link #View} array.
@@ -12803,8 +12803,8 @@ public final class R {
      * @see #ViewBackgroundHelper_backgroundTintMode
      */
     public static final int[] ViewBackgroundHelper={
-        0x010100d4, 0x7f030035, 0x7f030036
-      };
+      0x010100d4, 0x7f030035, 0x7f030036
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#background}
      * attribute's value can be found in the {@link #ViewBackgroundHelper} array.
@@ -12868,8 +12868,8 @@ public final class R {
      * @see #ViewStubCompat_android_inflatedId
      */
     public static final int[] ViewStubCompat={
-        0x010100d0, 0x010100f2, 0x010100f3
-      };
+      0x010100d0, 0x010100f2, 0x010100f3
+    };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#id}
      * attribute's value can be found in the {@link #ViewStubCompat} array.

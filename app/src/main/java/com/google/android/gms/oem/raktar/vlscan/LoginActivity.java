@@ -257,14 +257,21 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     //Todo: meg kell nezni, hogy van-e error message mielott tostringet hivsz ra....
                     public void onErrorResponse(VolleyError error) {
-//suriel                        Toast.makeText(LoginActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
-                        Toast.makeText(LoginActivity.this, "aaa", Toast.LENGTH_LONG).show();
+//san suriel                        Toast.makeText(LoginActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, "Nem sikerült kapcsolódni!", Toast.LENGTH_LONG).show();
                     }
                 });
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
+
+// StringRequest Timeout, empty cache
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                5000,
+                0,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        stringRequest.setShouldCache(false);
+
         requestQueue.add(stringRequest);
-        //barcodeInfo.setText(id);
     }
 
     //*** LOGIN SHOWJSON ***

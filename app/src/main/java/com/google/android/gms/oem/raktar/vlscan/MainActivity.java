@@ -41,6 +41,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -287,8 +288,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 });
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-//san itt tartok
-        stringRequest.setShouldCache(false);
+
+// san suriel
+// StringRequest Timeout, empty cache
+            stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                5000,
+                0,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            stringRequest.setShouldCache(false);
+
         requestQueue.add(stringRequest);
 
         //VONALKOD

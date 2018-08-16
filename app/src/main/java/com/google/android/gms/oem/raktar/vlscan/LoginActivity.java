@@ -52,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int RC_QRCODE_LOGIN = 9001;
     private TextView vevonevLogin;
+    Boolean devmode = true;
 
     //*** LOGIN ONCREATE ***
     @Override
@@ -68,7 +69,9 @@ public class LoginActivity extends AppCompatActivity {
         loginInputVevokod = (EditText) findViewById(R.id.input_vevokod);
         loginInputVevokod.setInputType(InputType.TYPE_CLASS_NUMBER);
         loginInputPassword = (EditText) findViewById(R.id.input_password);
-        loginInputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+//san.suriel loginInputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        loginInputPassword.setInputType(InputType.TYPE_CLASS_NUMBER);
         vevonevLogin = (TextView) findViewById(R.id.loginVevonev);
         Button btnlogin = (Button) findViewById(R.id.btn_login);
         Button btnQRCode = (Button) findViewById(R.id.btn_qrcode);
@@ -101,7 +104,10 @@ public class LoginActivity extends AppCompatActivity {
 
         //WIFI ELLENŐRZÉS
         if(!globalSsid.equals("\"VLEURO\"")) {
-            allowLogin = false;
+
+// san.suriel
+// LOGIN INFO CHECK OVERRIDE allowLogin = false;
+            allowLogin = true;
             View view = View.inflate(this, R.layout.alert_dialog_net, null);
 
             //CSATLAKOZÁS A VLEURO WIFI-HEZ
@@ -136,7 +142,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 loginUser(loginInputVevokod.getText().toString(),
                         loginInputPassword.getText().toString());
-            }
+                            }
 
         });
 

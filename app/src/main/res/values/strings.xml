@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
+
     <string name="ok">OK</string>
     <string name="permission_camera_rationale">A kamera nem elérhető!</string>
     <string name="no_camera_permission">Ez az app nem tud elindulni ezen a készüléken. Kamera jogosultságra van szükség!</string>
@@ -22,5 +25,7 @@
     <string name="multiprocessor">Gyors mód</string>
     <string name="title_activity_login">VL-Scan Raktár</string>
     <string name="action_settings">Beállítások</string>
+    <string name="field_login_vevokod">Vevőkód</string>
+    <string name="field_login_vevojelszo">Jelszó</string>
 
 </resources>

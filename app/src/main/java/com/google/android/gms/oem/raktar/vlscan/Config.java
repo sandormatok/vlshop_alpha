@@ -2,18 +2,14 @@ package com.google.android.gms.oem.raktar.vlscan;
 
 
 public class Config {
-    public static final String DATA_RAKTAR_URL = "http://www.one.oneeuro.hu/droid/bolti_keszlet.php?id=";
-    public static final String DATA_URL = "http://www.one.oneeuro.hu/droid/bolti_keszlet.php?id=";
-    public static final String DATA_RAKTAR_ATVETEL_URL = "http://www.one.oneeuro.hu/droid/raktar_atvetel.php?id=";
-
     // URL, vagy IP !!!
     //public static final String DATA_RAKTAR_KESZLET_URL = "http://webserver.vleuro.hu/raktar_keszlet_san.php?id=";
-    public static final String DATA_RAKTAR_KESZLET_URL = "http://192.168.111.104/raktar_keszlet_san.php?id=";
+    public static final String DATA_RAKTAR_KESZLET_URL = "http://192.168.0.19/raktar_keszlet_san.php?id=";
 
     //nem működik most...
-    public static final String DATA_RAKTAR_KESZLET_REMOTE_URL = "http://109.74.54.14:11011/raktar_keszlet_san.php?id=";
+    public static final String DATA_RAKTAR_KESZLET_REMOTE_URL = "http://109.74.54.14:10019/raktar_keszlet_san.php?id=";
 
-    //
+    //egyenlőre leszavazták az akciós termékek megjelenítését
     public static final String DATA_RAKTAR_AKCIO_URL = "http://webserver.vleuro.hu/raktar_akcio.php?aroszt=";
 
     public static final String KEY_MARKA = "marka";

@@ -67,13 +67,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //*** MAIN UI ELEMEK ***
 
     private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
-
+    //aaa
     //GLOBÁLIS VÁLTOZÓK
     String bruttoRound,nettoRound;
     String globalAroszt,url;
     public static String barcode3;
     String globalvevoKod = "";
     private static final int RC_BARCODE_CAPTURE = 9001;
+
+
 
     private static final String TAG = "BarcodeMain";
     private String m_Text = "";
@@ -210,6 +212,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mp.start();
 
                     barcode3 = data.getStringExtra("barcode3");
+                    tableRow02.setText(barcode3);
                     getData();
                     Log.d(TAG, "Vonalkód (MainActivity) " + barcode3);
                 } else {
@@ -230,9 +233,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tableRow02.setText("");
         String ssid = "";
         //WIFI Bekapcsolása, csatlakozás a VLEURO wifihez
-
-        WifiManager wifiManager=(WifiManager)getSystemService(WIFI_SERVICE);
-
+/*
         WifiInfo wifiInfo;
         wifiInfo = wifiManager.getConnectionInfo();
         if (wifiInfo.getSupplicantState() == SupplicantState.COMPLETED) {
@@ -241,7 +242,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ssid = "NON";
         }
 
-  /*          if (!ssid.equals("\"VLEURO\"")) {
+           if (!ssid.equals("\"VLEURO\"")) {
 
                 if (devMode) {
                 } else {
@@ -253,12 +254,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     tableRow42.setText("");
                     tableRow52.setText("");
                     return;
-
                 }
         }*/
 
         String id = barcode3;
-        Toast.makeText(MainActivity.this, barcode3, Toast.LENGTH_LONG).show();
+        // Toast.makeText(MainActivity.this, barcode3, Toast.LENGTH_LONG).show();
         if (manualInput.equals("YES")) {
             id = m_Text;
             barcode3 = m_Text;
@@ -267,9 +267,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
 
-
-        Toast toast= Toast.makeText(getApplicationContext(),id +", " + globalvevoKod, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
+        //Toast toast= Toast.makeText(getApplicationContext(),id +", " + globalvevoKod, Toast.LENGTH_LONG);
+        //toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -281,7 +280,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this, "aaa", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Hibás lekérdezés!", Toast.LENGTH_LONG).show();
                         //Toast.makeText(MainActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
                     }
                 });
@@ -290,7 +289,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 // san suriel
 // StringRequest Timeout, empty cache
             stringRequest.setRetryPolicy(new DefaultRetryPolicy(
-                5000,
+                3000,
                 0,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             stringRequest.setShouldCache(false);
@@ -301,7 +300,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //*** MAIN SHOW JSON ***
     private void showJSON(String response) {
-        Toast.makeText(MainActivity.this, "I'm in showJSON !!!", Toast.LENGTH_LONG).show();
+        //Toast.makeText(MainActivity.this, "showJSON !!!", Toast.LENGTH_LONG).show();
         String marka = "";
         String termek = "";
         String ar = "";
@@ -382,14 +381,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override //index
     public void onStart() {
         super.onStart();
-
-
     }
 
     @Override //index
     public void onStop() {
         super.onStop();
-
     }
 
     @Override

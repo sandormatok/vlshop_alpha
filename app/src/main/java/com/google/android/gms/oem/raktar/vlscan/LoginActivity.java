@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
 import android.util.Log;
+//import android.view.Gravity;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -117,14 +118,14 @@ public class LoginActivity extends AppCompatActivity {
         //Toast toast= Toast.makeText(getApplicationContext(),globalSsid, Toast.LENGTH_LONG);
         // toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
 
-
 //WIFI ELLENŐRZÉS
 // san.suriel       if(!globalSsid.equals(wifissid);
         if (!globalSsid.equals("\"VLEURO\"") ||
-            !globalSsid.equals("\"asterisk\"")) {
+                (!globalSsid.equals("\"asterisk\"") ||
+                   (!globalSsid.equals("\"asterisk_5G\"")))) {
 
 // LOGIN INFO CHECK OVERRIDE allowLogin = false;
-                allowLogin = true;
+                allowLogin = false;
                 View view = View.inflate(this, R.layout.alert_dialog_net, null);
 
                 //CSATLAKOZÁS A VLEURO WIFI-HEZ
@@ -162,7 +163,7 @@ public class LoginActivity extends AppCompatActivity {
                     loginUser(loginInputVevokod.getText().toString(),
                             loginInputPassword.getText().toString());
                 } else {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Nem csatlakozik a \"VLEURO\" Wi-Fi Hálózathoz!" , Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(), "aaa" , Toast.LENGTH_LONG);
                 }
             }
         });
@@ -220,9 +221,8 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Log.d(TAG, "No barcode captured, intent data is null");
                 }
-            } else {
-//
-               }
+            }
+
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
@@ -352,11 +352,5 @@ public class LoginActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
-
-
 
 }

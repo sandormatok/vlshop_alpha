@@ -96,10 +96,9 @@ public class LoginActivity extends AppCompatActivity {
         //WIFI KONFIGURÁCIÓ
 //san suriel
         wifissid = "VLEURO";
-        wifissiddev = "asterisk";
 
         wifipass = "\"vleurokft\"";
-        wifipassdev = "\"Genius911$\"";
+
 
         final WifiConfiguration wifiConfig = new WifiConfiguration();
 
@@ -120,9 +119,7 @@ public class LoginActivity extends AppCompatActivity {
 
 //WIFI ELLENŐRZÉS
 // san.suriel       if(!globalSsid.equals(wifissid);
-        if (!globalSsid.equals("\"VLEURO\"") ||
-                (!globalSsid.equals("\"asterisk\"") ||
-                   (!globalSsid.equals("\"asterisk_5G\"")))) {
+        if (!globalSsid.equals("\"VLEURO\"")) {
 
 // LOGIN INFO CHECK OVERRIDE allowLogin = false;
                 allowLogin = false;
@@ -150,7 +147,8 @@ public class LoginActivity extends AppCompatActivity {
                                 allowLogin = true;
                             }
                         });
-
+            String globalSsidCHK = wifiInfo.getSSID();
+            Toast toast = Toast.makeText(getApplicationContext(),globalSsidCHK , Toast.LENGTH_LONG);
                 alert.show();
             }
 
@@ -163,7 +161,7 @@ public class LoginActivity extends AppCompatActivity {
                     loginUser(loginInputVevokod.getText().toString(),
                             loginInputPassword.getText().toString());
                 } else {
-                    Toast toast = Toast.makeText(getApplicationContext(), "aaa" , Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(), "Nincs kapcsolat a kiszolgálóval!" , Toast.LENGTH_LONG);
                 }
             }
         });

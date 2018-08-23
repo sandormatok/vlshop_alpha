@@ -38,7 +38,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL;
+import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL_ONLINE;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -55,7 +59,12 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int RC_QRCODE_LOGIN = 9001;
     private TextView vevonevLogin;
-    Boolean devmode = true;
+    Boolean devmode  = true;
+    Boolean onlinemode = false;
+
+//san suriel ADMIN VEVŐKÓDOK: (egyenlóre a MainActivity-n is meg kell őket adni)
+    String[] adminok = new String[]{"0120401"};
+    List<String> adminokList = Arrays.asList(adminok);
 
     //*** LOGIN ONCREATE ***
     @Override
@@ -99,7 +108,6 @@ public class LoginActivity extends AppCompatActivity {
 
         wifipass = "\"vleurokft\"";
 
-
         final WifiConfiguration wifiConfig = new WifiConfiguration();
 
 //san suriel
@@ -120,8 +128,6 @@ public class LoginActivity extends AppCompatActivity {
 //WIFI ELLENŐRZÉS
 // san.suriel       if(!globalSsid.equals(wifissid);
         if (!globalSsid.equals("\"VLEURO\"")) {
-
-// LOGIN INFO CHECK OVERRIDE allowLogin = false;
                 allowLogin = false;
                 View view = View.inflate(this, R.layout.alert_dialog_net, null);
 
@@ -151,7 +157,6 @@ public class LoginActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(getApplicationContext(),globalSsidCHK , Toast.LENGTH_LONG);
                 alert.show();
             }
-
 
         //BEJELENTKEZÉS GOMB
         btnlogin.setOnClickListener(new View.OnClickListener() {
@@ -230,6 +235,8 @@ public class LoginActivity extends AppCompatActivity {
     //*** LOGIN ***
     private void loginUser( final String vevokod, final String password) {
 
+// LOGIN INFO CHECK OVERRIDE allowLogin = false;
+
         if (qrcodeLogin) {
             getData2();
         } else {
@@ -241,10 +248,18 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
     //*** LOGIN GET DATA ***
     private void getData2() {
         String id = "5997076721852";
-        String url = DATA_RAKTAR_KESZLET_URL + id + "&vkod=" + globalVevokod;
+        String url = "";
+
+        //Admin user-ek az online adatbázishoz kapcsolódnak...
+       if(adminokList.contains(globalVevokod)){
+            url = DATA_RAKTAR_KESZLET_URL_ONLINE + id + "&vkod=" + globalVevokod;
+        } else {
+            url = DATA_RAKTAR_KESZLET_URL + id + "&vkod=" + globalVevokod;
+        }
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -326,7 +341,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-
     //*** OPTIONS MENU ***
     // todo: kijelentkezés, gyors mód,
     @Override
@@ -345,6 +359,12 @@ public class LoginActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.action_online) {
+
+
             return true;
         }
 

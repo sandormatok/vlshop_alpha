@@ -25,6 +25,8 @@
     <string name="multiprocessor">Gyors mód</string>
     <string name="title_activity_login">VL-Scan Raktár</string>
     <string name="action_settings">Beállítások</string>
+    <string name="action_online">Online bejelentkezés</string>
+
     <string name="field_login_vevokod">Vevőkód</string>
     <string name="field_login_vevojelszo">Jelszó</string>
 

@@ -19,32 +19,23 @@ package com.google.android.gms.oem.raktar.vlscan;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.net.Uri;
-import android.net.wifi.SupplicantState;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
-import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.CommonStatusCodes;
 
 import com.android.volley.RequestQueue;
@@ -58,9 +49,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-//import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL;
-//import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL;
+import java.util.Arrays;
+import java.util.List;
 
+import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL;
+import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL_ONLINE;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -75,7 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String globalvevoKod = "";
     private static final int RC_BARCODE_CAPTURE = 9001;
 
-
+//san suriel ADMIN VEVŐKÓDOK: (egyenlóre a LoginActivity-n is meg kell őket adni)
+    String[] adminok = new String[]{"0120401"};
+    List<String> adminokList = Arrays.asList(adminok);
 
     private static final String TAG = "BarcodeMain";
     private String m_Text = "";
@@ -264,8 +259,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             barcode3 = m_Text;
             manualInput = "NO";
         }
+//san suriel
+        if(adminokList.contains(globalvevoKod)){
+            url = DATA_RAKTAR_KESZLET_URL_ONLINE + id + "&vkod=" + globalvevoKod;
+        } else {
+            url = DATA_RAKTAR_KESZLET_URL + id + "&vkod=" + globalvevoKod;
+        }
 
-            url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
+//            url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
 
         //Toast toast= Toast.makeText(getApplicationContext(),id +", " + globalvevoKod, Toast.LENGTH_LONG);
         //toast.setGravity(Gravity.BOTTOM,0,20); toast.show();

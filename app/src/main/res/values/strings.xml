@@ -26,6 +26,11 @@
     <string name="title_activity_login">VL-Scan Raktár</string>
     <string name="action_settings">Beállítások</string>
     <string name="action_online">Online bejelentkezés</string>
+    <string name="termeknevEditTextString">Terméknév</string>
+    <string name="mennyisegEditTextString">#</string>
+    <string name="torlesImageButtonString">Törlés</string>
+    <string name="enter_mennyiseg">MENNYISÉG JAVÍTÁSA...</string>
+
 
     <string name="field_login_vevokod">Vevőkód</string>
     <string name="field_login_vevojelszo">Jelszó</string>

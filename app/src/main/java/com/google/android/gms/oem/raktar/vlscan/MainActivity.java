@@ -17,12 +17,14 @@
 package com.google.android.gms.oem.raktar.vlscan;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
@@ -31,7 +33,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,17 +55,20 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL;
 import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL_ONLINE;
+import static com.google.android.gms.oem.raktar.vlscan.R.id.itemListView;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     //*** MAIN UI ELEMEK ***
 
-    private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
+    //private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
     //aaa
     //GLOBÁLIS VÁLTOZÓK
     String bruttoRound,nettoRound;
@@ -78,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String manualInput = "NO";
     boolean devMode = false;
 
-//san suriel
+//san suriel global variables for showJSON
 String marka = "";
     String termek = "";
     String ar = "";
@@ -89,6 +97,24 @@ String marka = "";
     Boolean akcios = false;
     //
     String akciosstring;
+
+//suriel vl_shop ListView array-ek
+    ArrayList<String> barcodeList = new ArrayList<String>();
+    ArrayList<String> markaList = new ArrayList<String>();
+    ArrayList<String> termekList = new ArrayList<String>();
+    ArrayList<String> mennyisegList = new ArrayList<String>();
+    //mergedlist
+    ArrayList<String> mergedList = new ArrayList<String>();
+    //extra
+    ArrayList<String> barcodeListExtra = new ArrayList<String>();
+
+    //String Arrays
+    String barcodeArray[];
+    String barcodeExtraArray[];
+    String mennyisegArray[];
+    String markaArray[];
+    String termekArray[];
+    String mergedArray[];
 
 
     /**
@@ -111,6 +137,7 @@ String marka = "";
           TextView toptextView = (TextView) findViewById(R.id.toptextView);
 
         //tablerows
+        /*
         tableRow02 = (TextView) findViewById(R.id.table02);
         tableRow12 = (TextView) findViewById(R.id.table12);
         tableRow22 = (TextView) findViewById(R.id.table22);
@@ -119,7 +146,7 @@ String marka = "";
         tableRow52 = (TextView) findViewById(R.id.table52);
         tableRow61 = (TextView) findViewById(R.id.table61);
         tableRow62 = (TextView) findViewById(R.id.table62);
-
+*/
 
         //todo: nem hiszem, hogy átjön a vevőnév! ???
         Intent intent = getIntent();
@@ -223,16 +250,16 @@ String marka = "";
                     mp.start();
 
                     barcode3 = data.getStringExtra("barcode3");
-                    tableRow02.setText(barcode3);
+                    //tableRow02.setText(barcode3);
                     getData();
                     Log.d(TAG, "Vonalkód (MainActivity) " + barcode3);
                 } else {
-                    tableRow22.setText(R.string.barcode_failure);
+                    //tableRow22.setText(R.string.barcode_failure);
                     Log.d(TAG, "No barcode captured, intent data is null");
                 }
             } else {
-                tableRow22.setText(String.format(getString(R.string.barcode_error),
-                        CommonStatusCodes.getStatusCodeString(resultCode)));
+                //tableRow22.setText(String.format(getString(R.string.barcode_error),
+                        CommonStatusCodes.getStatusCodeString(resultCode);
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
@@ -241,7 +268,7 @@ String marka = "";
 
     //*** MAIN GETDATA ***
     private void getData() {
-        tableRow02.setText("");
+        //tableRow02.setText("");
         String ssid = "";
         //WIFI Bekapcsolása, csatlakozás a VLEURO wifihez
 /*
@@ -284,7 +311,7 @@ String marka = "";
 
 //            url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
 
-        Toast toast= Toast.makeText(getApplicationContext(),id +", " + globalvevoKod +", url:" + url, Toast.LENGTH_LONG);
+        Toast toast= Toast.makeText(getApplicationContext(), url , Toast.LENGTH_LONG);
         toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
@@ -293,6 +320,7 @@ String marka = "";
                 //        loading.dismiss();
                 showJSON(response);
                 fillTables();
+                fillArrays();
             }
         },
                 new Response.ErrorListener() {
@@ -313,12 +341,12 @@ String marka = "";
             stringRequest.setShouldCache(false);
         requestQueue.add(stringRequest);
         //VONALKOD
-        tableRow02.setText(id);
+        //tableRow02.setText(id);
     }
 
     //*** MAIN SHOW JSON ***
     private void showJSON(String response) {
-        Toast.makeText(MainActivity.this, "showJSON !!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "showJSON()", Toast.LENGTH_SHORT).show();
 
 //san suriel
         /*
@@ -349,25 +377,94 @@ String marka = "";
             e.printStackTrace();
         }
 
+//san suriel
 //a fő fügvényből nem akar lefutni a fillTables(), de miert?
+
+//átmehetne alfügvénybe valahogy... (fillArrays)
+        //finals for intent extras
+        final String ar1 = ar;
+        final String barcode1 = barcode3;
+        final String marka1 = marka;
+        final String termek1 = termek;
 
 
     }
 //-----------------------------------------------------------------
 
+//san suriel - új fügvény a bevásárlólista tömbjeinek feltöltésére...
+private void fillArrays() {
+    if (barcodeList.contains(barcode3)) {
+        Toast toast = Toast.makeText(getApplicationContext(),"MÁR SZEREPEL A LISTÁN!", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+        //error already scanned vibrate
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        long[] pattern = {0, 200, 100, 200};
+        assert v != null;
+        v.vibrate(pattern, -1);
+    } else if (marka == "null") {
+        Toast toast = Toast.makeText(getApplicationContext(),"ISMERETLEN VONALKÓD!", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.BOTTOM, 0, 300);
+        toast.show();
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        long[] pattern = {0, 50, 50, 50, 50, 50};
+        assert v != null;
+        v.vibrate(pattern, -1);
+    } else {
+        barcodeList.add(barcode3);
+        mennyisegList.add(ar);
+        termekList.add(termek);
+        markaList.add(marka);
+        mergedList.add(marka+"\n"+termek + "\n" + ar + "db");
+    }
+
+    barcodeArray = barcodeList.toArray(new String[barcodeList.size()]);
+    mennyisegArray = mennyisegList.toArray(new String[mennyisegList.size()]);
+    termekArray = termekList.toArray(new String[termekList.size()]);
+    markaArray = markaList.toArray(new String[markaList.size()]);
+    mergedArray = mergedList.toArray(new String[mergedList.size()]);
+
+    ListView itemsListView = (ListView) findViewById(itemListView);
+    ArrayAdapter<String> listViewAdapter =
+            //new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mergedArray);
+            new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
+    itemsListView.setAdapter(listViewAdapter);
+
+    itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position,
+                                long id) {
+            String item = ((TextView)view).getText().toString();
+            Intent intent = new Intent(view.getContext(),DetailsActivity.class);
+
+            intent.putExtra("positionExtra",position);
+            intent.putExtra("itemExtra",item);
+            intent.putExtra("barcodeExtra",barcodeArray);
+            intent.putExtra("dbExtra",mennyisegArray);
+            intent.putExtra("markaExtra",markaArray);
+            intent.putExtra("termekExtra",termekArray);
+
+            //Toast toast = Toast.makeText(getApplicationContext(),"1:"+marka1+","+termek1+","+ar1+", Toast.LENGTH_LONG);
+            //toast.setGravity(Gravity.CENTER, 0, 0);
+            //toast.show();
+
+            startActivity(intent);
+        }
+    });
 
 
-//san suriel -
+} //fillArrays!
+
+//san suriel - új fügvény, a showJSON-ból kibontva, úgy néz ki getData-ból meghívva működik...
 private void fillTables() {
-    Toast.makeText(MainActivity.this, "fillTables", Toast.LENGTH_LONG).show();
-
-
+    Toast.makeText(MainActivity.this, "fillTables()", Toast.LENGTH_SHORT).show();
     //   String akciosstring;
     if (akcios) {
         akciosstring = "igen";
     } else {
         akciosstring = "nem";
     }
+/*
 
     if (marka.equals("null")) {
         //barcodeValue.setTextColor(0xFFFF033A);
@@ -400,8 +497,13 @@ private void fillTables() {
         }
 
 
-    }
+    }*/
 }
+
+
+
+
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.

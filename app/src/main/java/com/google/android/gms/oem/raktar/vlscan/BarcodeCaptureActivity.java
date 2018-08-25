@@ -60,6 +60,7 @@ import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 /**
@@ -80,6 +81,9 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
     public static final String AutoFocus = "AutoFocus";
     public static final String UseFlash = "UseFlash";
     public static final String BarcodeObject = "Barcode";
+    public static final String BarcodeObject2 = "barcodeList";
+    //ListView array-ek
+    ArrayList<String> barcodeList = new ArrayList<String>();
 
     private CameraSource mCameraSource;
     private CameraSourcePreview mPreview;
@@ -493,6 +497,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                     Intent qrcodetoLogin = new Intent(BarcodeCaptureActivity.this, LoginActivity.class);
                     qrcodetoLogin.putExtra("qrcodetoLogin", true);
                     qrcodetoLogin.putExtra(BarcodeObject, barcode);
+
                     //todo: QRCode értelmezés!!!
 
 
@@ -515,8 +520,12 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
 
                 }
 
+                if (!barcodeList.contains(barcode3)) {
+                    barcodeList.add(barcode3);
+                }
                 Intent data = new Intent();
                 data.putExtra(BarcodeObject, barcode);
+                data.putExtra(BarcodeObject2, barcodeList);
                 setResult(CommonStatusCodes.SUCCESS, data);
                 //finish();
             }

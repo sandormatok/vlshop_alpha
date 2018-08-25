@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="visible" type="id"/>
-    <item name="masked" type="id"/>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
 
     <string name="ok">OK</string>
     <string name="permission_camera_rationale">A kamera nem elérhető!</string>
@@ -29,5 +29,6 @@
 
     <string name="field_login_vevokod">Vevőkód</string>
     <string name="field_login_vevojelszo">Jelszó</string>
+    <string name="title_activity_barcode_reader2">BarcodeReader2</string>
 
 </resources>

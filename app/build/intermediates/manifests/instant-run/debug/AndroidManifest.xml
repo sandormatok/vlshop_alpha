@@ -15,7 +15,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.camera.autofocus" />
-<!--     WIFI HÁLÓZAT NEVÉNEK KIOLVASÁSÁHOZ -->
+    <!-- WIFI HÁLÓZAT NEVÉNEK KIOLVASÁSÁHOZ -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -45,8 +45,7 @@
             android:name="com.google.android.gms.oem.raktar.vlscan.MainActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name="com.google.android.gms.oem.raktar.vlscan.BarcodeCaptureActivity"
             android:label="Válassz ki egy vonalkódot..."

@@ -128,7 +128,7 @@ public class LoginActivity extends AppCompatActivity {
 //WIFI ELLENŐRZÉS
 // san.suriel       if(!globalSsid.equals(wifissid);
         if (!globalSsid.equals("\"VLEURO\"")) {
-                allowLogin = false;
+                allowLogin = true;
                 View view = View.inflate(this, R.layout.alert_dialog_net, null);
 
                 //CSATLAKOZÁS A VLEURO WIFI-HEZ

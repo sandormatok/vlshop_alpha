@@ -26,6 +26,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -76,6 +77,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String m_Text = "";
     private String manualInput = "NO";
     boolean devMode = false;
+
+//san suriel
+String marka = "";
+    String termek = "";
+    String ar = "";
+    String menny = "";
+    String vevonev= "";
+    Double netto = 0.00;
+    Double afa = 0.00;
+    Boolean akcios = false;
+    //
+    String akciosstring;
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -160,6 +174,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     m_Text = input.getText().toString();
                     manualInput = "YES";
                     getData();
+                    //átrakom a getData-ba, ha nem jó akkor a showJSON-ba...
+                    // fillTables();
                 }
             });
             builder.setNegativeButton("Mégse", new DialogInterface.OnClickListener() {
@@ -268,14 +284,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //            url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
 
-        //Toast toast= Toast.makeText(getApplicationContext(),id +", " + globalvevoKod, Toast.LENGTH_LONG);
-        //toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
+        Toast toast= Toast.makeText(getApplicationContext(),id +", " + globalvevoKod +", url:" + url, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 //        loading.dismiss();
                 showJSON(response);
+                fillTables();
             }
         },
                 new Response.ErrorListener() {
@@ -301,7 +318,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //*** MAIN SHOW JSON ***
     private void showJSON(String response) {
-        //Toast.makeText(MainActivity.this, "showJSON !!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "showJSON !!!", Toast.LENGTH_LONG).show();
+
+//san suriel
+        /*
         String marka = "";
         String termek = "";
         String ar = "";
@@ -310,6 +330,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Double netto = 0.00;
         Double afa = 0.00;
         Boolean akcios = false;
+        */
 
         //Válasz adatok tárolása
         try {
@@ -328,45 +349,60 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         }
 
-        String akciosstring;
+//a fő fügvényből nem akar lefutni a fillTables(), de miert?
 
-        if(akcios) {
-             akciosstring = "igen";
-        } else {
-             akciosstring = "nem";
-        }
 
-        if (marka.equals("null")) {
-            //barcodeValue.setTextColor(0xFFFF033A);
-            tableRow22.setText("A VONALKÓD NINCS A RAKTÁRI RENDSZERBEN");
-            tableRow22.setBackgroundColor(Color.RED);
-            tableRow12.setText("");
-            tableRow32.setText("");
-            tableRow42.setText("");
-            tableRow52.setText("");
-
-        } else {
-            tableRow22.setBackgroundColor(0xFF0C4593);
-            Double brutto = 0.00;
-            brutto = netto * (afa + 100) / 100;
-            bruttoRound = String.format("%.2f", brutto);
-            nettoRound = String.format("%.2f", netto);
-            tableRow12.setText(marka);
-            tableRow22.setText(termek);
-            tableRow32.setText(nettoRound + " Ft");
-            tableRow42.setText(bruttoRound + " Ft");
-            tableRow52.setText(menny + " db");
-            if(akcios){
-                tableRow62.setBackgroundColor(Color.RED);
-                tableRow61.setBackgroundColor(Color.RED);
-                tableRow62.setText("IGEN");
-            } else {
-                tableRow62.setText("NEM");
-                tableRow62.setBackgroundColor(0xFF0C4593);
-                tableRow61.setBackgroundColor(0xFF0C4593);
-            }
-        }
     }
+//-----------------------------------------------------------------
+
+
+
+//san suriel -
+private void fillTables() {
+    Toast.makeText(MainActivity.this, "fillTables", Toast.LENGTH_LONG).show();
+
+
+    //   String akciosstring;
+    if (akcios) {
+        akciosstring = "igen";
+    } else {
+        akciosstring = "nem";
+    }
+
+    if (marka.equals("null")) {
+        //barcodeValue.setTextColor(0xFFFF033A);
+        tableRow22.setText("A VONALKÓD NINCS A RAKTÁRI RENDSZERBEN");
+        tableRow22.setBackgroundColor(Color.RED);
+        tableRow12.setText("");
+        tableRow32.setText("");
+        tableRow42.setText("");
+        tableRow52.setText("");
+
+    } else {
+        tableRow22.setBackgroundColor(0xFF0C4593);
+        Double brutto = 0.00;
+        brutto = netto * (afa + 100) / 100;
+        bruttoRound = String.format("%.2f", brutto);
+        nettoRound = String.format("%.2f", netto);
+        tableRow12.setText(marka);
+        tableRow22.setText(termek);
+        tableRow32.setText(nettoRound + " Ft");
+        tableRow42.setText(bruttoRound + " Ft");
+        tableRow52.setText(menny + " db");
+        if (akcios) {
+            tableRow62.setBackgroundColor(Color.RED);
+            tableRow61.setBackgroundColor(Color.RED);
+            tableRow62.setText("IGEN");
+        } else {
+            tableRow62.setText("NEM");
+            tableRow62.setBackgroundColor(0xFF0C4593);
+            tableRow61.setBackgroundColor(0xFF0C4593);
+        }
+
+
+    }
+}
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.

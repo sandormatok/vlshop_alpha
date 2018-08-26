@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -82,14 +81,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     List<String> adminokList = Arrays.asList(adminok);
 
     private static final String TAG = "BarcodeMain";
-    private String m_Text = "";
     private String manualInput = "NO";
     boolean devMode = false;
+
+    private String m_Text,m_Text2 = "";
 
 //san suriel global variables for showJSON
 String marka = "";
     String termek = "";
     String ar = "";
+    String nettoString = "";
+    //String realnettoString ="";
+    String afaString = "";
     String menny = "";
     String vevonev= "";
     Double netto = 0.00;
@@ -103,9 +106,14 @@ String marka = "";
     ArrayList<String> markaList = new ArrayList<String>();
     ArrayList<String> termekList = new ArrayList<String>();
     ArrayList<String> mennyisegList = new ArrayList<String>();
+    ArrayList<String> shopammountList = new ArrayList<String>();
+    ArrayList<String> nettoStringList = new ArrayList<String>();
+    ArrayList<String> afaStringList = new ArrayList<String>();
+    ArrayList<String> vevonevList = new ArrayList<String>();
+    ArrayList<Boolean> akciosList = new ArrayList<Boolean>();
     //mergedlist
     ArrayList<String> mergedList = new ArrayList<String>();
-    //extra
+    //extra ???
     ArrayList<String> barcodeListExtra = new ArrayList<String>();
 
     //String Arrays
@@ -114,6 +122,13 @@ String marka = "";
     String mennyisegArray[];
     String markaArray[];
     String termekArray[];
+    String shopammountArray[];
+    String nettoStringArray[];
+    String afaStringArray[];
+    String vevonevArray[];
+    Boolean akciosArray[];
+
+    //mergedArray
     String mergedArray[];
 
 
@@ -131,7 +146,7 @@ String marka = "";
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        //getSupportActionBar().setTitle("Raktári Készletellenörző");
+          //getSupportActionBar().setTitle("Raktári Készletellenörző");
 
         setContentView(R.layout.activity_main);
           TextView toptextView = (TextView) findViewById(R.id.toptextView);
@@ -154,7 +169,7 @@ String marka = "";
             String vevonev = getIntent().getExtras().getString("intentvevonev");
             globalAroszt = getIntent().getExtras().getString("intentaroszt");
             globalvevoKod = getIntent().getExtras().getString("intentvevokod");
-            toptextView.setText(vevonev);
+            toptextView.setText("MEGRENDELT TERMÉKEK LISTÁJA");
         }
 
         //*** MAIN ONCLICK LISTENERS ***
@@ -269,7 +284,16 @@ String marka = "";
     //*** MAIN GETDATA ***
     private void getData() {
         //tableRow02.setText("");
-        String ssid = "";
+//san suriel a bruttó számítást a "netto" miatt kikapcsolom egy kicsit...
+        /*
+        Double brutto = 0.00;
+        brutto = netto * (afa + 100) / 100;
+        bruttoRound = String.format("%.2f", brutto);
+        nettoRound = String.format("%.2f", netto);
+        */
+
+//TODO: LEHET, HOGY VISSZA KELLENE RAKNI A "VLEURO" WIFI ELLENŐRZÉST, CSAK NE TABLEROW-BA ADJA A HIBÁT!!!
+        //String ssid = "";
         //WIFI Bekapcsolása, csatlakozás a VLEURO wifihez
 /*
         WifiInfo wifiInfo;
@@ -311,16 +335,19 @@ String marka = "";
 
 //            url = Config.DATA_RAKTAR_KESZLET_URL + id + "&vkod="+globalvevoKod;
 
-        Toast toast= Toast.makeText(getApplicationContext(), url , Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
+        //Toast toast= Toast.makeText(getApplicationContext(), url , Toast.LENGTH_LONG);
+        //toast.setGravity(Gravity.BOTTOM,0,20); toast.show();
 
         StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 //        loading.dismiss();
                 showJSON(response);
-                fillTables();
-                fillArrays();
+//san suriel
+//a table k szanálva, helyette az arrayList-et kell szépen megformázni, feltölteni...
+                //fillTables();
+                shopAmmount();
+                //fillArrays();
             }
         },
                 new Response.ErrorListener() {
@@ -346,7 +373,7 @@ String marka = "";
 
     //*** MAIN SHOW JSON ***
     private void showJSON(String response) {
-        Toast.makeText(MainActivity.this, "showJSON()", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "showJSON()", Toast.LENGTH_SHORT).show();
 
 //san suriel
         /*
@@ -365,13 +392,19 @@ String marka = "";
             JSONObject jsonObject = new JSONObject(response);
             JSONArray result = jsonObject.getJSONArray(Config.JSON_ARRAY);
             JSONObject termekData = result.getJSONObject(0);
-            marka = termekData.getString(Config.KEY_MARKA);
+                    marka = termekData.getString(Config.KEY_MARKA);
             termek = termekData.getString(Config.KEY_TERMEK);
             menny = termekData.getString(Config.KEY_KESZLET);
-            netto = termekData.getDouble(Config.KEY_NETTO);
-            afa = termekData.getDouble(Config.KEY_AFA);
+            nettoString = termekData.getString(Config.KEY_NETTO);
+            //realnettoString = String.valueOf(nettoString);
+            afaString = termekData.getString(Config.KEY_AFA);
+
             akcios = termekData.getBoolean(Config.KEY_AKCIO);
             vevonev = termekData.getString(Config.KEY_VEVONEV);
+
+//            Toast toast = Toast.makeText(getApplicationContext(),"marka:" + marka + " termek:" + termek + " menny:" + menny + " netto:" + netto + " afa:" + afa, Toast.LENGTH_LONG);
+            //toast.setGravity(Gravity.CENTER, 0, 0);
+            //toast.show();
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -393,8 +426,11 @@ String marka = "";
 
 //san suriel - új fügvény a bevásárlólista tömbjeinek feltöltésére...
 private void fillArrays() {
+    Toast toast = Toast.makeText(getApplicationContext(),"fillArrays()" + m_Text2, Toast.LENGTH_LONG);
+    toast.setGravity(Gravity.CENTER, 0, 0);
+    toast.show();
     if (barcodeList.contains(barcode3)) {
-        Toast toast = Toast.makeText(getApplicationContext(),"MÁR SZEREPEL A LISTÁN!", Toast.LENGTH_LONG);
+        toast = Toast.makeText(getApplicationContext(),"MÁR SZEREPEL A LISTÁN!", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
         //error already scanned vibrate
@@ -403,7 +439,7 @@ private void fillArrays() {
         assert v != null;
         v.vibrate(pattern, -1);
     } else if (marka == "null") {
-        Toast toast = Toast.makeText(getApplicationContext(),"ISMERETLEN VONALKÓD!", Toast.LENGTH_LONG);
+        toast = Toast.makeText(getApplicationContext(),"ISMERETLEN VONALKÓD!", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.BOTTOM, 0, 300);
         toast.show();
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -411,18 +447,42 @@ private void fillArrays() {
         assert v != null;
         v.vibrate(pattern, -1);
     } else {
+        toast = Toast.makeText(getApplicationContext(),"marka:" + marka + " termek:" + termek + " menny:" + menny + " netto:" + netto + " afa:" + afa, Toast.LENGTH_LONG);
+
+
         barcodeList.add(barcode3);
-        mennyisegList.add(ar);
+        mennyisegList.add(menny);
         termekList.add(termek);
         markaList.add(marka);
-        mergedList.add(marka+"\n"+termek + "\n" + ar + "db");
+        shopammountList.add(m_Text2);
+//san suriel
+        nettoStringList.add(nettoString);
+        afaStringList.add(afaString);
+        vevonevList.add(vevonev);
+        akciosList.add(akcios);
+
+        mergedList.add(marka + "\n" + termek + "\n" + ar + "db" + "\n" + m_Text2 + "db");
+    }
+
+    if (akcios) {
+        akciosstring = "igen";
+    } else {
+        akciosstring = "nem";
     }
 
     barcodeArray = barcodeList.toArray(new String[barcodeList.size()]);
     mennyisegArray = mennyisegList.toArray(new String[mennyisegList.size()]);
     termekArray = termekList.toArray(new String[termekList.size()]);
     markaArray = markaList.toArray(new String[markaList.size()]);
+    shopammountArray = shopammountList.toArray(new String[shopammountList.size()]);
+    nettoStringArray = nettoStringList.toArray(new String[nettoStringList.size()]);
+    afaStringArray = afaStringList.toArray(new String[afaStringList.size()]);
+    vevonevArray = vevonevList.toArray(new String[vevonevList.size()]);
+    //akciosArray = akciosList.toArray(new Boolean[akciosList.size()]);
+
     mergedArray = mergedList.toArray(new String[mergedList.size()]);
+
+
 
     ListView itemsListView = (ListView) findViewById(itemListView);
     ArrayAdapter<String> listViewAdapter =
@@ -443,6 +503,12 @@ private void fillArrays() {
             intent.putExtra("dbExtra",mennyisegArray);
             intent.putExtra("markaExtra",markaArray);
             intent.putExtra("termekExtra",termekArray);
+            intent.putExtra("shopammountExtra",shopammountArray);
+
+            intent.putExtra("nettoStringExtra",nettoStringArray);
+            intent.putExtra("afaStringExtra",afaStringArray);
+            intent.putExtra("vevonevExtra",vevonevArray);
+            intent.putExtra("akciosExtra",akciosArray);
 
             //Toast toast = Toast.makeText(getApplicationContext(),"1:"+marka1+","+termek1+","+ar1+", Toast.LENGTH_LONG);
             //toast.setGravity(Gravity.CENTER, 0, 0);
@@ -455,15 +521,43 @@ private void fillArrays() {
 
 } //fillArrays!
 
+
+//san suriel - új fügvény, bekéri a vásárolt mennyiséget...
+private void shopAmmount() {
+    AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
+    builder2.setTitle("Írja be a vásárolt mennyiséget:");
+    // Set up the input
+    final EditText input2 = new EditText(this);
+    // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+    input2.setInputType(InputType.TYPE_CLASS_NUMBER);
+    builder2.setView(input2);
+    // Set up the buttons
+    builder2.setPositiveButton("Rendben", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            m_Text2 = input2.getText().toString();
+            fillArrays();
+            Toast toast= Toast.makeText(getApplicationContext(),"ok pressed" + m_Text2, Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER,0,0); toast.show();
+
+        }
+    });
+    builder2.setNegativeButton("Mégsem rendelek", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            dialog.cancel();
+        }
+    });
+    builder2.show();
+    //Toast.makeText(MainActivity.this, m_Text2, Toast.LENGTH_SHORT).show();
+}
+
 //san suriel - új fügvény, a showJSON-ból kibontva, úgy néz ki getData-ból meghívva működik...
 private void fillTables() {
-    Toast.makeText(MainActivity.this, "fillTables()", Toast.LENGTH_SHORT).show();
+//
+// Toast.makeText(MainActivity.this, "fillTables()", Toast.LENGTH_SHORT).show();
     //   String akciosstring;
-    if (akcios) {
-        akciosstring = "igen";
-    } else {
-        akciosstring = "nem";
-    }
+
 /*
 
     if (marka.equals("null")) {

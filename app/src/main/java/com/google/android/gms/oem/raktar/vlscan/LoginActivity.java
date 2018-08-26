@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
         //TOOLBAR
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("VL-SCAN Raktár");
+        getSupportActionBar().setTitle("VL-Shop 1.0alpha");
 
         //UI ELEMEK
         loginInputVevokod = findViewById(R.id.input_vevokod);

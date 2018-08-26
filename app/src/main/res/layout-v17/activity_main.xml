@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7491a6"
+    android:background="#759f70"
     xmlns:tools="http://schemas.android.com/tools"
 
     tools:context="com.google.android.gms.oem.raktar.vlscan.MainActivity">
@@ -12,10 +12,10 @@
         android:id="@+id/toptextView"
         android:textAllCaps="true"
         android:layout_height="wrap_content"
-        android:background="#7491a6"
+        android:background="#ffb050"
         android:textAlignment="center"
         android:textSize="16sp"
-        android:padding="4dp"
+        android:padding="2dp"
         android:textStyle="normal|bold"
         android:textColor="?android:attr/textColorPrimary"
         android:layout_alignParentTop="true"
@@ -69,9 +69,14 @@
     <ListView
         android:id="@+id/itemListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="537dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:minLines="4"
+        android:singleLine="false"
         android:textSize="20sp">
+
     </ListView>
 
 </RelativeLayout>

@@ -16,7 +16,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-
     }
 }
 
@@ -29,14 +28,11 @@ dependencies {
 
     //compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     implementation 'com.android.volley:volley:1.1.1'
-
     implementation 'com.google.firebase:firebase-appindexing:16.0.1'
 
 //Jó lenne leszakadni a google vision-ról...
     //implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     //implementation 'com.google.zxing:core:3.3.1'
-
-
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 }
 

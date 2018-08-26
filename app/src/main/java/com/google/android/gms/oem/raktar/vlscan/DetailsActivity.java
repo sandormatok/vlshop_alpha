@@ -3,12 +3,14 @@ package com.google.android.gms.oem.raktar.vlscan;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,17 +19,19 @@ import static com.google.android.gms.oem.raktar.vlscan.R.id.termekValue;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    private TextView markaValueTextView;
-    private TextView termekValueTextView;
-    private TextView mennyisegValueTextView;
-    private TextView vonalkodValueTextView;
     private String m_Text,m_Text2 = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         setContentView(R.layout.activity_details);
-        setTitle("Termék információk");
+        TextView toptextView = (TextView) findViewById(R.id.toptextView);
+        toptextView.setText("TERMÉKINFORMÁCIÓ");
+
+        //setTitle("Termék információk");
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent intent  = getIntent();
@@ -50,18 +54,43 @@ intent.putExtra("boltnevExtra",boltnev);
         String[] mennyisegArray = extras.getStringArray("dbExtra");
         String[] markaArray = extras.getStringArray("markaExtra");
         String[] termekArray = extras.getStringArray("termekExtra");
+        String[] shopammountArray = extras.getStringArray("shopammountExtra");
+//san  suriel extra arrays
+        String[] nettoStringArray = extras.getStringArray("nettoStringExtra");
+        String[] afaStringArray = extras.getStringArray("afaStringExtra");
+        String[] vevonevArray = extras.getStringArray("vevonevExtra");
+        //boolean[] akciosArray = extras.getBooleanArray("akciosExtra");
 
-        markaValueTextView = (TextView)findViewById(R.id.markaValue);
+
+
+        TextView markaValueTextView = (TextView) findViewById(R.id.markaValue);
         markaValueTextView.setText(markaArray[position]);
 
-        termekValueTextView = (TextView)findViewById(R.id.termekValue);
+        TextView termekValueTextView = (TextView) findViewById(R.id.termekValue);
         termekValueTextView.setText(termekArray[position]);
 
-        mennyisegValueTextView = (TextView)findViewById(R.id.mennyisegValue);
+        TextView mennyisegValueTextView = (TextView) findViewById(R.id.mennyisegValue);
         mennyisegValueTextView.setText(mennyisegArray[position]);
 
-        vonalkodValueTextView = (TextView)findViewById(R.id.vonalkodValue);
+        TextView shopammountValueTextView = (TextView) findViewById(R.id.rendelesValue);
+        shopammountValueTextView.setText(shopammountArray[position]);
+
+        TextView vonalkodValueTextView = (TextView) findViewById(R.id.vonalkodValue);
         vonalkodValueTextView.setText(barcodeArray[position]);
+
+
+        TextView nettoValueTextView = (TextView) findViewById(R.id.nettoValue);
+        nettoValueTextView.setText(nettoStringArray[position]);
+
+        TextView afaValueTextView = (TextView) findViewById(R.id.afaValue);
+        afaValueTextView.setText(afaStringArray[position]);
+
+        //TextView vevonevValueTextView = (TextView) findViewById(R.id.vevonevValue);
+        //vevonevValueTextView.setText(vevonevArray[position]);
+
+        //TextView akciosValueTextView = (TextView) findViewById(R.id.akciosValue);
+        //akciosValueTextView.setText(akciosArray[position]);
+
 
 
         //View changeButton = findViewById(R.id.enter_mennyiseg);

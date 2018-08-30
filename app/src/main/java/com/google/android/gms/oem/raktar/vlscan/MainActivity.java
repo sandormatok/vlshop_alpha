@@ -137,6 +137,9 @@ String marka = "";
     //mergedArray
     String mergedArray[];
 
+
+
+    //suriel todo: beolvasott lista mentése/visszatöltése (sharedpref, array-XJSON/JSON->array)
     //GET SHARED PREFS
 
     /*
@@ -160,7 +163,7 @@ String marka = "";
      */
     private GoogleApiClient client;
 
-    //todo: visszaírás mysql-be (php, direkt, ...?)
+
 
     //*** MAIN ONCREATE ***
     @Override
@@ -193,7 +196,10 @@ String marka = "";
         tableRow62 = (TextView) findViewById(R.id.table62);
 */
 
-        //todo: nem hiszem, hogy átjön a vevőnév! ???
+
+        //todo: nem hiszem, hogy átjön a vevőnév! KELL EZ???
+        //nem töltöm ezt már sharedpref-ből rég??? :)
+
         Intent intent = getIntent();
         if(intent.hasExtra("intentvevonev")) {
             String vevonev = getIntent().getExtras().getString("intentvevonev");
@@ -201,6 +207,7 @@ String marka = "";
             globalvevoKod = getIntent().getExtras().getString("intentvevokod");
             toptextView.setText("MEGRENDELT TERMÉKEK LISTÁJA");
         }
+
 
         //*** MAIN ONCLICK LISTENERS ***
         findViewById(R.id.read_barcode).setOnClickListener(this);
@@ -354,7 +361,7 @@ String marka = "";
             barcode3 = m_Text;
             manualInput = "NO";
         }
-//san suriel
+//san suriel ONLINEMODE
         if(adminokList.contains(globalvevoKod)){
             url = DATA_RAKTAR_KESZLET_URL_ONLINE + id + "&vkod=" + globalvevoKod;
         } else {
@@ -522,8 +529,8 @@ private void fillArrays() {
     ArrayAdapter<String> listViewAdapter =
             //new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mergedArray);
             //new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
-//new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
-  new ArrayAdapter<String>(this, android.R.layout.simple_list_item_2, mergedArray);
+new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
+
     itemsListView.setAdapter(listViewAdapter);
 
     itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -534,7 +541,7 @@ private void fillArrays() {
            // Intent intent = new Intent(view.getContext(),DetailsActivity.class);
             Intent intent = new Intent(view.getContext(),DetailsActivity.class);
 
-
+            //suriel todo: elég lenne a tömb 1-1 elemét átadni a DetailsActivity nek
             intent.putExtra("positionExtra",position);
             intent.putExtra("itemExtra",item);
             intent.putExtra("barcodeExtra",barcodeArray);
@@ -586,6 +593,7 @@ private void fillArrays() {
 
 
 //san suriel - új fügvény, bekéri a vásárolt mennyiséget...
+    //innen hívom meg a fillArays t
 private void shopAmmount() {
     AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
     builder2.setTitle("Írja be a vásárolt mennyiséget:");

@@ -66,7 +66,7 @@
 
     <ListView
         android:id="@+id/itemListView"
-        android:layout_width="match_parent"
+                android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -83,7 +83,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/fakeView"
         android:layout_weight="2"
-        android:drawSelectorOnTop="false">
+                   android:drawSelectorOnTop="false">
        </ListView>
 
     <TextView

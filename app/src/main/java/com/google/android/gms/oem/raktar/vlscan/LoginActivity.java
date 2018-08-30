@@ -342,7 +342,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     //*** OPTIONS MENU ***
-    // todo: kijelentkezés, gyors mód,
+    //suriel todo: kijelentkezés, online mode
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

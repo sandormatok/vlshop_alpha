@@ -27,7 +27,7 @@ public class DetailsActivity extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.activity_details_classic);
         TextView toptextView = (TextView) findViewById(R.id.toptextView);
         toptextView.setText("TERMÉKINFORMÁCIÓ");
 
@@ -63,26 +63,26 @@ intent.putExtra("boltnevExtra",boltnev);
 
 
 
-        TextView markaValueTextView = (TextView) findViewById(R.id.markaValue);
+        TextView markaValueTextView = (TextView) findViewById(R.id.table12);
         markaValueTextView.setText(markaArray[position]);
 
-        TextView termekValueTextView = (TextView) findViewById(R.id.termekValue);
+        TextView termekValueTextView = (TextView) findViewById(R.id.table22);
         termekValueTextView.setText(termekArray[position]);
 
-        TextView mennyisegValueTextView = (TextView) findViewById(R.id.mennyisegValue);
+        TextView mennyisegValueTextView = (TextView) findViewById(R.id.table52);
         mennyisegValueTextView.setText(mennyisegArray[position]);
 
-        TextView shopammountValueTextView = (TextView) findViewById(R.id.rendelesValue);
+        TextView shopammountValueTextView = (TextView) findViewById(R.id.table72);
         shopammountValueTextView.setText(shopammountArray[position]);
 
-        TextView vonalkodValueTextView = (TextView) findViewById(R.id.vonalkodValue);
+        TextView vonalkodValueTextView = (TextView) findViewById(R.id.table02);
         vonalkodValueTextView.setText(barcodeArray[position]);
 
 
-        TextView nettoValueTextView = (TextView) findViewById(R.id.nettoValue);
+        TextView nettoValueTextView = (TextView) findViewById(R.id.table42);
         nettoValueTextView.setText(nettoStringArray[position]);
 
-        TextView afaValueTextView = (TextView) findViewById(R.id.afaValue);
+        TextView afaValueTextView = (TextView) findViewById(R.id.table32);
         afaValueTextView.setText(afaStringArray[position]);
 
         //TextView vevonevValueTextView = (TextView) findViewById(R.id.vevonevValue);

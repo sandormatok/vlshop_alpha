@@ -30,6 +30,8 @@
     <string name="mennyisegEditTextString">#</string>
     <string name="torlesImageButtonString">Törlés</string>
     <string name="enter_mennyiseg">MENNYISÉG JAVÍTÁSA...</string>
+    <string name="hello">Hello World, MyCustomListView!</string>
+    <string name="app_name">Custom List View</string>
 
 
     <string name="field_login_vevokod">Vevőkód</string>

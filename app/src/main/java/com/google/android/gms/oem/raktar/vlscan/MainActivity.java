@@ -20,10 +20,12 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
@@ -63,6 +65,7 @@ import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLE
 import static com.google.android.gms.oem.raktar.vlscan.R.id.itemListView;
 
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     //*** MAIN UI ELEMEK ***
@@ -70,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
     //aaa
     //GLOBÁLIS VÁLTOZÓK
-    String bruttoRound,nettoRound;
+    String bruttoRound,nettoRound,nettototalRound;
     String globalAroszt,url;
     public static String barcode3;
     String globalvevoKod = "";
@@ -86,6 +89,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String m_Text,m_Text2 = "";
 
+    public static final String MY_PREFS_NAME = "MainPrefs";
+
 //san suriel global variables for showJSON
 String marka = "";
     String termek = "";
@@ -96,6 +101,7 @@ String marka = "";
     String menny = "";
     String vevonev= "";
     Double netto = 0.00;
+    Double brutto = 0.00;
     Double afa = 0.00;
     Boolean akcios = false;
     //
@@ -131,6 +137,22 @@ String marka = "";
     //mergedArray
     String mergedArray[];
 
+    //GET SHARED PREFS
+
+    /*
+    SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+    String prefsbarcodeArray = prefs.getString("barcodeArray", "");
+    String prefsmennyisegArray = prefs.getString("mennyisegArray", "");
+    String markaArray = prefs.getString("markaArray", "");
+    String prefsshopammountArray = prefs.getString("shopammountArray", "");
+    String prefsnettoStringArray = prefs.getString("nettoStringArray", "");
+    String prefsafaStringArray = prefs.getString("afaStringArray", "");
+    String prefsvevonevArray = prefs.getString("vevonevArray", "");
+    String prefsakciosArray = prefs.getString("akciosArray", "");
+    String prefsmergedArray = prefs.getString("mergedArray", "");
+    */
+
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -150,6 +172,14 @@ String marka = "";
 
         setContentView(R.layout.activity_main);
           TextView toptextView = (TextView) findViewById(R.id.toptextView);
+
+/*
+        TinyDB tinydb = new TinyDB(this);
+        tinydb.putListString("BarcodeArray", barcodeArray);
+        tinydb.getListString("BarcodeArray");
+*/
+
+
 
         //tablerows
         /*
@@ -284,13 +314,11 @@ String marka = "";
     //*** MAIN GETDATA ***
     private void getData() {
         //tableRow02.setText("");
+
 //san suriel a bruttó számítást a "netto" miatt kikapcsolom egy kicsit...
-        /*
-        Double brutto = 0.00;
-        brutto = netto * (afa + 100) / 100;
-        bruttoRound = String.format("%.2f", brutto);
-        nettoRound = String.format("%.2f", netto);
-        */
+
+
+
 
 //TODO: LEHET, HOGY VISSZA KELLENE RAKNI A "VLEURO" WIFI ELLENŐRZÉST, CSAK NE TABLEROW-BA ADJA A HIBÁT!!!
         //String ssid = "";
@@ -461,7 +489,16 @@ private void fillArrays() {
         vevonevList.add(vevonev);
         akciosList.add(akcios);
 
-        mergedList.add(marka + "\n" + termek + "\n" + ar + "db" + "\n" + m_Text2 + "db");
+
+
+        Double brutto = 0.00;
+        brutto = netto * (afa + 100) / 100;
+        bruttoRound = String.format("%.2f", brutto);
+        nettoRound = String.format("%.2f", netto);
+
+        Double nettoTotal = (netto*brutto);
+        nettototalRound = String.format("%.2f", nettoTotal);
+                mergedList.add(marka + " / " + termek + "\n" + "Raktáron: " + menny + " db / Rendlés: " + m_Text2 + " db" + "\n" + "Nettó: " + nettoRound + "Ft / Bruttó: " + bruttoRound + "Ft / Nettó Össz.:" + nettototalRound + "Ft");
     }
 
     if (akcios) {
@@ -481,13 +518,12 @@ private void fillArrays() {
     //akciosArray = akciosList.toArray(new Boolean[akciosList.size()]);
 
     mergedArray = mergedList.toArray(new String[mergedList.size()]);
-
-
-
     ListView itemsListView = (ListView) findViewById(itemListView);
     ArrayAdapter<String> listViewAdapter =
             //new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mergedArray);
-            new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
+            //new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
+//new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
+  new ArrayAdapter<String>(this, android.R.layout.simple_list_item_2, mergedArray);
     itemsListView.setAdapter(listViewAdapter);
 
     itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -495,7 +531,9 @@ private void fillArrays() {
         public void onItemClick(AdapterView<?> parent, View view, int position,
                                 long id) {
             String item = ((TextView)view).getText().toString();
+           // Intent intent = new Intent(view.getContext(),DetailsActivity.class);
             Intent intent = new Intent(view.getContext(),DetailsActivity.class);
+
 
             intent.putExtra("positionExtra",position);
             intent.putExtra("itemExtra",item);
@@ -513,6 +551,31 @@ private void fillArrays() {
             //Toast toast = Toast.makeText(getApplicationContext(),"1:"+marka1+","+termek1+","+ar1+", Toast.LENGTH_LONG);
             //toast.setGravity(Gravity.CENTER, 0, 0);
             //toast.show();
+
+            //WRITE SHARED PREFERENCES
+
+/*
+            SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+            editor.put("barcodeArray”, prefsbarcodeArray);
+                                                                                                        editor.apply();
+*/
+            /*
+            String prefsbarcodeArray = prefs.getString("barcodeArray", "");
+            String prefsmennyisegArray = prefs.getString("mennyisegArray", "");
+            String markaArray = prefs.getString("markaArray", "");
+            String prefsshopammountArray = prefs.getString("shopammountArray", "");
+            String prefsnettoStringArray = prefs.getString("nettoStringArray", "");
+            String prefsafaStringArray = prefs.getString("afaStringArray", "");
+            String prefsvevonevArray = prefs.getString("vevonevArray", "");
+            String prefsakciosArray = prefs.getString("akciosArray", "");
+            String prefsmergedArray = prefs.getString("mergedArray", "");
+*/
+
+
+
+
+
+
 
             startActivity(intent);
         }

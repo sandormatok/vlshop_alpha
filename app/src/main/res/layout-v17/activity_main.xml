@@ -74,22 +74,43 @@
         android:minLines="4"
         android:singleLine="false"
         android:textSize="20sp">
+
     </ListView>
 
-       <ListView
-        android:id="@id/android:list"
-        android:layout_width="fill_parent"
-        android:layout_height="214dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/fakeView"
-        android:layout_weight="2"
-                   android:drawSelectorOnTop="false">
-       </ListView>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@id/android:empty"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="No data" />
+        <TextView
+            android:id="@+id/line_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Márka / Termék"
+            android:background="#0c4593"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/line_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="raktáron: / rendelés:"
+
+            android:background="#3f78c6"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/line_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nettó: / bruttó"
+            android:background="#3f78c6"
+            android:textColor="#ffec5f"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
 </RelativeLayout>

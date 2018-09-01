@@ -38,6 +38,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,6 +59,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 import static com.google.android.gms.oem.raktar.vlscan.Config.DATA_RAKTAR_KESZLET_URL;
@@ -529,9 +531,34 @@ private void fillArrays() {
     ArrayAdapter<String> listViewAdapter =
             //new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mergedArray);
             //new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
+
+  
+      //suriel todo: bruttostringArray, bruttostringList
+
 new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
 
     itemsListView.setAdapter(listViewAdapter);
+
+        ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String,String>>();
+        for(int i=0;i<termekArray.length;i++){
+            HashMap<String, String> item = new HashMap<String, String>();
+            item.put( "line1", termekArray[i]+ "\n" + "Raktáron: " + mennyisegArray[i]);
+        item.put( "line2", "Rendlés: " + shopammountArray[i]);
+        item.put( "line3", "Nettó: " + nettoStringArray[i] + "Ft / Bruttó: " + afaStringArray[i]);
+        //+ "Ft / Nettó Össz.:" + nettototalRound[i][2] + "Ft"
+        list.add( item );
+            toast = Toast.makeText(getApplicationContext(),termekArray[i], Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+
+        }
+
+
+    SimpleAdapter sa = new SimpleAdapter(this, list,
+            R.layout.itemlist_threelines,
+            new String[]{"line1", "line2", "line3"},
+            new int[]{R.id.line_a, R.id.line_b, R.id.line_c});
+
 
     itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         @Override
@@ -608,8 +635,8 @@ private void shopAmmount() {
         public void onClick(DialogInterface dialog, int which) {
             m_Text2 = input2.getText().toString();
             fillArrays();
-            Toast toast= Toast.makeText(getApplicationContext(),"ok pressed" + m_Text2, Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER,0,0); toast.show();
+            //Toast toast= Toast.makeText(getApplicationContext(),"ok pressed" + m_Text2, Toast.LENGTH_SHORT);
+            //toast.setGravity(Gravity.CENTER,0,0); toast.show();
 
         }
     });

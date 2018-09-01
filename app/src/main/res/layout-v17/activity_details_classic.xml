@@ -108,9 +108,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="1dp"
                 android:layout_weight="1"
-                android:background="#0c4593"
                 android:gravity="center"
                 android:padding="4dip"
+                android:background="#0c4593"
                 android:textColor="#ffffff"
                 android:textSize="24sp"
 

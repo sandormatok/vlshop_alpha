@@ -20,12 +20,10 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
@@ -34,8 +32,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -75,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //private TextView tableRow02,tableRow12,tableRow22,tableRow32,tableRow42,tableRow52,tableRow62,tableRow61;
     //aaa
     //GLOBÁLIS VÁLTOZÓK
-    String bruttoRound,nettoRound,nettototalRound;
+    String bruttoRound,nettoRound,nettototalRound,bruttototalRound;
     String globalAroszt,url;
     public static String barcode3;
     String globalvevoKod = "";
@@ -93,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static final String MY_PREFS_NAME = "MainPrefs";
 
-//san suriel global variables for showJSON
+//san suriel global variables seems more sutable for showJSON
 String marka = "";
     String termek = "";
     String ar = "";
@@ -116,11 +112,21 @@ String marka = "";
     ArrayList<String> mennyisegList = new ArrayList<String>();
     ArrayList<String> shopammountList = new ArrayList<String>();
     ArrayList<String> nettoStringList = new ArrayList<String>();
+    ArrayList<String> bruttoStringList = new ArrayList<String>();
+
     ArrayList<String> afaStringList = new ArrayList<String>();
     ArrayList<String> vevonevList = new ArrayList<String>();
+
+    ArrayList<String> totalnettoStringList = new ArrayList<String>();
+    ArrayList<String> totalbruttoStringList = new ArrayList<String>();
+
     ArrayList<Boolean> akciosList = new ArrayList<Boolean>();
+
+
+//san suriel nem kell már
     //mergedlist
-    ArrayList<String> mergedList = new ArrayList<String>();
+    //ArrayList<String> mergedList = new ArrayList<String>();
+
     //extra ???
     ArrayList<String> barcodeListExtra = new ArrayList<String>();
 
@@ -132,8 +138,14 @@ String marka = "";
     String termekArray[];
     String shopammountArray[];
     String nettoStringArray[];
+    String bruttoStringArray[];
     String afaStringArray[];
     String vevonevArray[];
+
+    //san suriel
+    String totalnettoStringArray[];
+    String totalbruttoStringArray[];
+
     Boolean akciosArray[];
 
     //mergedArray
@@ -173,11 +185,15 @@ String marka = "";
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-          //getSupportActionBar().setTitle("Raktári Készletellenörző");
+          //getSupportActionBar().setTitle("Vl-Shop 1.0a");
 
         setContentView(R.layout.activity_main);
           TextView toptextView = (TextView) findViewById(R.id.toptextView);
 
+
+
+
+          //todo: tinydb/alternative
 /*
         TinyDB tinydb = new TinyDB(this);
         tinydb.putListString("BarcodeArray", barcodeArray);
@@ -201,6 +217,7 @@ String marka = "";
 
         //todo: nem hiszem, hogy átjön a vevőnév! KELL EZ???
         //nem töltöm ezt már sharedpref-ből rég??? :)
+
 
         Intent intent = getIntent();
         if(intent.hasExtra("intentvevonev")) {
@@ -463,11 +480,11 @@ String marka = "";
 
 //san suriel - új fügvény a bevásárlólista tömbjeinek feltöltésére...
 private void fillArrays() {
-    Toast toast = Toast.makeText(getApplicationContext(),"fillArrays()" + m_Text2, Toast.LENGTH_LONG);
+    Toast toast = Toast.makeText(getApplicationContext(), "fillArrays()" + m_Text2, Toast.LENGTH_LONG);
     toast.setGravity(Gravity.CENTER, 0, 0);
     toast.show();
     if (barcodeList.contains(barcode3)) {
-        toast = Toast.makeText(getApplicationContext(),"MÁR SZEREPEL A LISTÁN!", Toast.LENGTH_LONG);
+        toast = Toast.makeText(getApplicationContext(), "MÁR SZEREPEL A LISTÁN!", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
         //error already scanned vibrate
@@ -476,7 +493,7 @@ private void fillArrays() {
         assert v != null;
         v.vibrate(pattern, -1);
     } else if (marka == "null") {
-        toast = Toast.makeText(getApplicationContext(),"ISMERETLEN VONALKÓD!", Toast.LENGTH_LONG);
+        toast = Toast.makeText(getApplicationContext(), "ISMERETLEN VONALKÓD!", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.BOTTOM, 0, 300);
         toast.show();
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -484,30 +501,49 @@ private void fillArrays() {
         assert v != null;
         v.vibrate(pattern, -1);
     } else {
-        toast = Toast.makeText(getApplicationContext(),"marka:" + marka + " termek:" + termek + " menny:" + menny + " netto:" + netto + " afa:" + afa, Toast.LENGTH_LONG);
+       // toast = Toast.makeText(getApplicationContext(), "marka:" + marka + " termek:" + termek + " menny:" + menny + " netto:" + netto + " afa:" + afa, Toast.LENGTH_LONG);
 
 
+//san suriel tömbök feltöltése
         barcodeList.add(barcode3);
         mennyisegList.add(menny);
         termekList.add(termek);
         markaList.add(marka);
         shopammountList.add(m_Text2);
-//san suriel
+
+//san suriel nu
         nettoStringList.add(nettoString);
         afaStringList.add(afaString);
         vevonevList.add(vevonev);
         akciosList.add(akcios);
 
-
-
+//san suriel brutto
         Double brutto = 0.00;
         brutto = netto * (afa + 100) / 100;
-        bruttoRound = String.format("%.2f", brutto);
-        nettoRound = String.format("%.2f", netto);
 
-        Double nettoTotal = (netto*brutto);
+        nettoRound = String.format("%.2f", netto);
+        bruttoRound = String.format("%.2f", brutto);
+
+        String bruttoString = String.valueOf(bruttoRound);
+
+        bruttoStringList.add(bruttoString);
+
+        Double nettoTotal = (netto * brutto);
+        Double bruttoTotal = (nettoTotal * 1.27);
+
         nettototalRound = String.format("%.2f", nettoTotal);
-                mergedList.add(marka + " / " + termek + "\n" + "Raktáron: " + menny + " db / Rendlés: " + m_Text2 + " db" + "\n" + "Nettó: " + nettoRound + "Ft / Bruttó: " + bruttoRound + "Ft / Nettó Össz.:" + nettototalRound + "Ft");
+        bruttototalRound = String.format("%.2f", bruttoTotal);
+
+        String nettototalString = String.valueOf(nettototalRound);
+        String bruttototalString = String.valueOf(bruttototalRound);
+
+        //
+        totalnettoStringList.add(nettototalString);
+        totalbruttoStringList.add(bruttototalString);
+
+//san suriel mergedlist/array-t kivezethetném mindenhol...
+
+        //mergedList.add(marka + " / " + termek + "\n" + "Raktáron: " + menny + " db / Rendlés: " + m_Text2 + " db" + "\n" + "Nettó: " + nettoRound + "Ft / Bruttó: " + bruttoRound + "Ft / Nettó Össz.:" + nettototalRound + "Ft");
     }
 
     if (akcios) {
@@ -522,45 +558,53 @@ private void fillArrays() {
     markaArray = markaList.toArray(new String[markaList.size()]);
     shopammountArray = shopammountList.toArray(new String[shopammountList.size()]);
     nettoStringArray = nettoStringList.toArray(new String[nettoStringList.size()]);
+    bruttoStringArray = bruttoStringList.toArray(new String[bruttoStringList.size()]);
     afaStringArray = afaStringList.toArray(new String[afaStringList.size()]);
     vevonevArray = vevonevList.toArray(new String[vevonevList.size()]);
     //akciosArray = akciosList.toArray(new Boolean[akciosList.size()]);
 
-    mergedArray = mergedList.toArray(new String[mergedList.size()]);
+    //san suriel
+    totalnettoStringArray = totalnettoStringList.toArray(new String[totalnettoStringList.size()]);
+    totalbruttoStringArray = totalbruttoStringList.toArray(new String[totalbruttoStringList.size()]);
+
+//san suriel már nem kell:
+    //mergedArray
+    //mergedArray = mergedList.toArray(new String[mergedList.size()]);
+
+    //san gááányol...
+
+    //suriel todo: bruttostringArray, bruttostringList
+
+    // headerlisView :) faszom!
+
+    ListView headerItemListView = (ListView) findViewById(R.id.headeritemListView2);
+    SimpleAdapter headerAdapter = new SimpleAdapter(this, list,
+            R.layout.itemlist_multi_header,
+            new String[]{"line2_a", "line2_b", "line2_c", "line2_d", "line2_e"},
+            new int[]{R.id.line2_a, R.id.line2_a, R.id.line2_b, R.id.line2_c, R.id.line2_d, R.id.line2_e}
+    );
+    populateheaderList();
+    headerItemListView.setAdapter(headerAdapter);
+
+
+
+    //-------------- itt kezdődik az arraylist
+
     ListView itemsListView = (ListView) findViewById(itemListView);
-    ArrayAdapter<String> listViewAdapter =
-            //new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mergedArray);
-            //new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
-
-  
-      //suriel todo: bruttostringArray, bruttostringList
-
-new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mergedArray);
-
-    itemsListView.setAdapter(listViewAdapter);
-
-        ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String,String>>();
-        for(int i=0;i<termekArray.length;i++){
-            HashMap<String, String> item = new HashMap<String, String>();
-            item.put( "line1", termekArray[i]+ "\n" + "Raktáron: " + mennyisegArray[i]);
-        item.put( "line2", "Rendlés: " + shopammountArray[i]);
-        item.put( "line3", "Nettó: " + nettoStringArray[i] + "Ft / Bruttó: " + afaStringArray[i]);
-        //+ "Ft / Nettó Össz.:" + nettototalRound[i][2] + "Ft"
-        list.add( item );
-            toast = Toast.makeText(getApplicationContext(),termekArray[i], Toast.LENGTH_LONG);
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();
-
-        }
+    SimpleAdapter adapter = new SimpleAdapter(this, list,
+            R.layout.itemlist_multi,
+            new String[]{"line1_a", "line1_b", "line2_a", "line2_b", "line2_c", "line2_d", "line2_e"},
+            new int[]{R.id.line1_a, R.id.line1_b, R.id.line2_a, R.id.line2_b, R.id.line2_c, R.id.line2_d, R.id.line2_e}
+    );
+    populateList();
+    itemsListView.setAdapter(adapter);
 
 
-    SimpleAdapter sa = new SimpleAdapter(this, list,
-            R.layout.itemlist_threelines,
-            new String[]{"line1", "line2", "line3"},
-            new int[]{R.id.line_a, R.id.line_b, R.id.line_c});
 
 
-    itemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+/*
+    SimpleAdapter.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,
                                 long id) {
@@ -588,13 +632,12 @@ new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mer
 
             //WRITE SHARED PREFERENCES
 
-/*
+
             SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
             editor.put("barcodeArray”, prefsbarcodeArray);
                                                                                                         editor.apply();
-*/
-            /*
-            String prefsbarcodeArray = prefs.getString("barcodeArray", "");
+
+                       String prefsbarcodeArray = prefs.getString("barcodeArray", "");
             String prefsmennyisegArray = prefs.getString("mennyisegArray", "");
             String markaArray = prefs.getString("markaArray", "");
             String prefsshopammountArray = prefs.getString("shopammountArray", "");
@@ -603,7 +646,6 @@ new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mer
             String prefsvevonevArray = prefs.getString("vevonevArray", "");
             String prefsakciosArray = prefs.getString("akciosArray", "");
             String prefsmergedArray = prefs.getString("mergedArray", "");
-*/
 
 
 
@@ -612,11 +654,15 @@ new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, mer
 
 
             startActivity(intent);
+
+
         }
+
+
     });
+*/
 
-
-} //fillArrays!
+    } //fillArrays!
 
 
 //san suriel - új fügvény, bekéri a vásárolt mennyiséget...
@@ -692,9 +738,57 @@ private void fillTables() {
     }*/
 }
 
+//suriel san
+
+//header
+
+
+    static final ArrayList<HashMap<String, String>> headerList = new ArrayList<HashMap<String, String>>();
+
+    private void populateheaderList () {
+
+        HashMap<String, String> item = new HashMap<String, String>();
+        item.put("line1_a", "Nettó");
+        item.put("line1_b", "Bruttó");
+        item.put("line1_c", "Raktáron");
+        item.put("line1_d", "Rendelés");
+        item.put("line1_e", "Totál");
+
+        headerList.add(item);
+
+        Toast toast = Toast.makeText(getApplicationContext(), "hepopulateheaderList()", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
 
 
 
+//termekList
+    static final ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
+
+    private void populateList () {
+
+        for (int i = 0; i < termekArray.length; i++) {
+            HashMap<String, String> item = new HashMap<String, String>();
+            item.put("line1_a", markaArray[i]);
+            item.put("line1_b", termekArray[i]);
+            item.put("line2_a", nettoStringArray[i]);
+//san suriel debug
+            item.put("line2_b", bruttoStringArray[i]);
+            item.put("line2_c", mennyisegArray[i]);
+            item.put("line2_d", shopammountArray[i]);
+            item.put("line2_e", totalbruttoStringArray[i]);
+
+
+            //+ "Ft / Nettó Össz.:" + nettototalRound[i][2] + "Ft"
+            list.add(item);
+
+            Toast toast = Toast.makeText(getApplicationContext(), termekArray[i], Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+        }
+
+    }
 
 
     /**

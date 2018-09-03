@@ -1,0 +1,89 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TextView
+            android:id="@+id/line1_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nettó"
+            android:gravity="center"
+            android:layout_span="2"
+            android:background="#0c4593"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/line1_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:text="Bruttó"
+
+        android:layout_span="2"
+
+        android:background="#3f78c6"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/line1_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Raktáron"
+        android:gravity="center"
+        android:layout_span="2"
+        android:background="#0c4593"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/line1_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rendelés"
+            android:gravity="center"
+            android:layout_span="2"
+            android:background="#3f78c6"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/line1_e"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="2"
+
+            android:gravity="center"
+            android:text="Totál"
+            android:background="#0c4593"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+
+
+    </TableRow>
+
+
+    </TableLayout>
